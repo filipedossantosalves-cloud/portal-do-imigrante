@@ -58,6 +58,7 @@ A local server is optional because the portal uses `data/services.js` and the Re
 - `app.js`: public portal search, filters, checklist, favorites, and language support.
 - `guia/`: multilingual guide to rights, documents, and current official channels.
 - `research-desk/`: internal research and validation dashboard.
+- The Research Desk also tracks the official sources behind the national rights and documents guide without mixing them into city service records.
 - `data/services.json`: consolidated public dataset.
 - `data/services.js`: browser-ready copy of the public dataset.
 - `data/estados/`: modular state/city workspace.

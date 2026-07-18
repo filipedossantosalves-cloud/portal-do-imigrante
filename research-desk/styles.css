@@ -147,6 +147,139 @@ select {
   text-decoration: none;
 }
 
+.guidance-audit {
+  margin: 24px clamp(16px, 4vw, 48px) 32px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--teal);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.guidance-head {
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.guidance-lead {
+  max-width: 780px;
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.guidance-status {
+  min-width: 210px;
+  display: grid;
+  justify-items: end;
+  gap: 7px;
+}
+
+.guidance-status small {
+  color: var(--muted);
+}
+
+.guidance-status a {
+  color: var(--teal);
+  font-weight: 800;
+}
+
+.guidance-warning {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  padding: 12px 14px;
+  border-left: 4px solid #d99b2b;
+  border-radius: 6px;
+  background: #fff8e8;
+  font-size: .9rem;
+}
+
+.guidance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 18px;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.guidance-grid a {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 130px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  min-height: 68px;
+  padding: 12px 14px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+}
+
+.guidance-grid a:hover {
+  background: var(--surface-2);
+}
+
+.guidance-grid span {
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.guidance-grid b {
+  min-width: 0;
+  font-size: .9rem;
+}
+
+.guidance-grid em {
+  padding: 4px 7px;
+  border-radius: 4px;
+  background: #e5f4e9;
+  color: var(--green);
+  font-size: .72rem;
+  font-style: normal;
+  font-weight: 850;
+}
+
+@media (max-width: 820px) {
+  .guidance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guidance-status {
+    min-width: 0;
+    justify-items: start;
+  }
+}
+
+@media (max-width: 560px) {
+  .top-actions {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .top-actions a {
+    flex: 0 0 auto;
+  }
+
+  .guidance-audit {
+    padding: 18px;
+  }
+
+  .guidance-warning,
+  .guidance-grid a {
+    grid-template-columns: 1fr;
+  }
+
+  .guidance-grid a {
+    gap: 5px;
+  }
+
+  .guidance-grid em {
+    justify-self: start;
+  }
+}
+
 button {
   cursor: pointer;
   padding: 0 14px;
