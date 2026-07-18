@@ -765,3 +765,11 @@ pre {
     text-align: left;
   }
 }
+
+.site-credit {
+  padding: 24px clamp(16px, 4vw, 48px) 36px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-align: center;
+}
