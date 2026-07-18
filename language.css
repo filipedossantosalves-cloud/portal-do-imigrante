@@ -20,8 +20,12 @@
 }
 
 .language-flag {
-  font-size: 1rem;
-  line-height: 1;
+  display: block;
+  width: 22px;
+  height: 16px;
+  border-radius: 2px;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px rgba(8, 41, 71, 0.18);
 }
 
 @media (max-width: 680px) {

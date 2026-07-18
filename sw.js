@@ -1,4 +1,4 @@
-const CACHE = "portal-imigrante-v28";
+const CACHE = "portal-imigrante-v29";
 const CORE = [
   "./",
   "index.html",
@@ -8,6 +8,9 @@ const CORE = [
   "manifest.webmanifest",
   "assets/logo.png",
   "assets/brand.css",
+  "assets/flags/br.svg",
+  "assets/flags/us.svg",
+  "assets/flags/es.svg",
   "data/services.json",
   "data/services.js",
   "data/",

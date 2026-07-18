@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 20" role="img" aria-label="Espana">
+  <rect width="28" height="20" rx="1" fill="#AA151B" />
+  <path d="M0 5h28v10H0z" fill="#F1BF00" />
+  <g transform="translate(8 10)">
+    <rect x="-1.7" y="-2.3" width="3.4" height="4.6" rx=".4" fill="#AA151B" />
+    <path d="M-2.3-3h4.6v.8h-4.6z" fill="#AA151B" />
+  </g>
+</svg>
