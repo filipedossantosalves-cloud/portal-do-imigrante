@@ -1,5 +1,7 @@
 # Portal do Imigrante
 
+<img src="assets/logo.png" alt="Portal do Imigrante logo" width="120">
+
 Portal estatico e Research Desk para mapear, validar e publicar servicos publicos e redes de apoio para migrantes e refugiados no Brasil.
 
 Created by Filipe dos Santos Alves for OpenAI Build Week 2026.

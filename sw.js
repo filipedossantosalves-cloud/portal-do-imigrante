@@ -6,6 +6,7 @@ const CORE = [
   "language.css",
   "app.js",
   "manifest.webmanifest",
+  "assets/logo.png",
   "data/services.json",
   "data/services.js",
   "data/",
