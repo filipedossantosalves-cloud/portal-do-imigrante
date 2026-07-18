@@ -42,6 +42,7 @@
       trustDataText: "Informacoes nao validadas aparecem com aviso claro.",
       trustSourcesTitle: "Fontes oficiais primeiro",
       trustSourcesText: "Os links nacionais levam diretamente a paginas do governo.",
+      trustAria: "Compromissos do portal",
       stepsKicker: "Jornada essencial",
       stepsTitle: "Seus 6 primeiros passos",
       resetSteps: "Reiniciar checklist",
@@ -51,6 +52,7 @@
       mappedServices: "servicos mapeados",
       officialSource: "com fonte oficial",
       reviewedUnits: "unidades revisadas",
+      baseStatusAria: "Situacao da base",
       queryLabel: "O que voce procura?",
       queryPlaceholder: "Ex.: hospital, CRAS, emprego",
       regionLabel: "Regiao",
@@ -139,6 +141,7 @@
       favoriteRemoved: "Servico removido dos salvos.",
       prevPage: "Pagina anterior",
       nextPage: "Proxima pagina",
+      paginationAria: "Paginacao dos servicos",
       docs: {
         saude: "Se tiver: documento de identificacao, CPF ou Cartao SUS. A falta desses documentos nao deve impedir acolhimento inicial.",
         assistencia: "Se tiver: documento pessoal, CPF e comprovante de residencia. Confirme exigencias com a unidade.",
@@ -180,6 +183,7 @@
       trustDataText: "Unvalidated information is shown with a clear warning.",
       trustSourcesTitle: "Official sources first",
       trustSourcesText: "National links go directly to government pages.",
+      trustAria: "Portal commitments",
       stepsKicker: "Essential journey",
       stepsTitle: "Your first 6 steps",
       resetSteps: "Reset checklist",
@@ -189,6 +193,7 @@
       mappedServices: "mapped services",
       officialSource: "with official source",
       reviewedUnits: "reviewed units",
+      baseStatusAria: "Database status",
       queryLabel: "What are you looking for?",
       queryPlaceholder: "Ex.: hospital, CRAS, job",
       regionLabel: "Region",
@@ -277,6 +282,7 @@
       favoriteRemoved: "Service removed from saved items.",
       prevPage: "Previous page",
       nextPage: "Next page",
+      paginationAria: "Service pagination",
       docs: {
         saude: "If available: ID document, CPF or SUS Card. Missing documents should not block initial care.",
         assistencia: "If available: personal document, CPF and proof of address. Confirm requirements with the unit.",
@@ -318,6 +324,7 @@
       trustDataText: "La informacion no validada aparece con una advertencia clara.",
       trustSourcesTitle: "Fuentes oficiales primero",
       trustSourcesText: "Los enlaces nacionales llevan directamente a paginas del gobierno.",
+      trustAria: "Compromisos del portal",
       stepsKicker: "Ruta esencial",
       stepsTitle: "Sus 6 primeros pasos",
       resetSteps: "Reiniciar checklist",
@@ -327,6 +334,7 @@
       mappedServices: "servicios mapeados",
       officialSource: "con fuente oficial",
       reviewedUnits: "unidades revisadas",
+      baseStatusAria: "Situacion de la base",
       queryLabel: "Que busca?",
       queryPlaceholder: "Ej.: hospital, CRAS, empleo",
       regionLabel: "Region",
@@ -415,6 +423,7 @@
       favoriteRemoved: "Servicio eliminado de guardados.",
       prevPage: "Pagina anterior",
       nextPage: "Pagina siguiente",
+      paginationAria: "Paginacion de servicios",
       docs: {
         saude: "Si tiene: documento de identidad, CPF o Tarjeta SUS. La falta de documentos no debe impedir la atencion inicial.",
         assistencia: "Si tiene: documento personal, CPF y comprobante de domicilio. Confirme requisitos con la unidad.",
@@ -520,6 +529,10 @@
         [/Confirme cadastro, encaminhamento ou documento exigido antes de se deslocar/gi, "Confirm registration, referral or required document before traveling"],
         [/Atendimento por agendamento/gi, "Service by appointment"],
         [/Atendimento informado como mediante agendamento pr[eé]vio/gi, "Service reported as requiring prior appointment"],
+        [/N[aã]o encaminhar diretamente sem confirma[cç][aã]o pela rede socioassistencial/gi, "Do not refer directly without confirmation from the social assistance network"],
+        [/A unidade informa atendimento direto e possibilidade de acolhimento provis[oó]rio/gi, "The unit reports direct service and possible temporary shelter"],
+        [/Solicite e confirme vaga com a Gest[aã]o de Acolhimento Institucional antes de se deslocar/gi, "Request and confirm a slot with Institutional Shelter Management before traveling"],
+        [/Confirme hor[aá]rio e modalidade de atendimento diretamente com a organiza[cç][aã]o/gi, "Confirm hours and service mode directly with the organization"],
         [/Em emerg[eê]ncia, acione 192/gi, "In an emergency, call 192"],
         [/Em risco imediato, acione tamb[eé]m 190 ou 192/gi, "If there is immediate risk, also call 190 or 192"],
         [/Por seguran[cç]a, o endere[cç]o [eé] sigiloso/gi, "For safety, the address is confidential"],
@@ -543,6 +556,10 @@
         [/Confirme cadastro, encaminhamento ou documento exigido antes de se deslocar/gi, "Confirme registro, derivacion o documento exigido antes de desplazarse"],
         [/Atendimento por agendamento/gi, "Atencion con cita"],
         [/Atendimento informado como mediante agendamento pr[eé]vio/gi, "Atencion informada con cita previa"],
+        [/N[aã]o encaminhar diretamente sem confirma[cç][aã]o pela rede socioassistencial/gi, "No derive directamente sin confirmacion de la red socioasistencial"],
+        [/A unidade informa atendimento direto e possibilidade de acolhimento provis[oó]rio/gi, "La unidad informa atencion directa y posibilidad de acogida temporal"],
+        [/Solicite e confirme vaga com a Gest[aã]o de Acolhimento Institucional antes de se deslocar/gi, "Solicite y confirme cupo con la Gestion de Acogida Institucional antes de desplazarse"],
+        [/Confirme hor[aá]rio e modalidade de atendimento diretamente com a organiza[cç][aã]o/gi, "Confirme horario y modalidad de atencion directamente con la organizacion"],
         [/Em emerg[eê]ncia, acione 192/gi, "En emergencia, llame al 192"],
         [/Em risco imediato, acione tamb[eé]m 190 ou 192/gi, "En riesgo inmediato, llame tambien al 190 o 192"],
         [/Por seguran[cç]a, o endere[cç]o [eé] sigiloso/gi, "Por seguridad, la direccion es confidencial"],
@@ -605,6 +622,7 @@
         .replace(/das /gi, "from ")
         .replace(/aos /gi, "to ")
         .replace(/\b[aà]s\b/gi, "to")
+        .replace(/\bas\b/gi, "to")
         .replace(/ e das /gi, " and from ")
         .replace(/; confirmar/gi, "; confirm")
         .replace(/confirmar dias de atendimento/gi, "confirm service days")
@@ -629,6 +647,7 @@
         .replace(/Hor[aá]rio Comercial/gi, "horario comercial")
         .replace(/das /gi, "de ")
         .replace(/\b[aà]s\b/gi, "a las")
+        .replace(/\bas\b/gi, "a las")
         .replace(/ e das /gi, " y de ")
         .replace(/; confirmar/gi, "; confirmar")
         .replace(/confirmar dias de atendimento/gi, "confirmar dias de atencion")
@@ -748,6 +767,9 @@
     $("contrastButton").textContent = t("contrast");
     $("contrastButton").setAttribute("aria-label", t("contrastAria"));
     attr(".emergency-bar", "aria-label", t("emergencyAria"));
+    attr(".trust", "aria-label", t("trustAria"));
+    attr(".base-stats", "aria-label", t("baseStatusAria"));
+    attr("#pagination", "aria-label", t("paginationAria"));
     text(".emergency-row > strong", t("emergencyTitle"));
     text('.emergency-row a[href="tel:190"] span', t("police"));
     text('.emergency-row a[href="tel:192"] span', t("ambulance"));
