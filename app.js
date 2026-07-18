@@ -25,6 +25,8 @@
       emergencyAria: "Canais nacionais de emergencia",
       emergencyTitle: "Precisa de ajuda agora?",
       police: "Policia",
+      ambulance: "SAMU",
+      firefighters: "Bombeiros",
       women: "Violencia contra a mulher",
       humanRights: "Direitos Humanos",
       free: "Gratuito - sem cadastro - sem intermediarios",
@@ -118,6 +120,13 @@
       reviewPriority: "prioridade de revisao",
       checkedAt: "conferido em",
       confirmTravel: "confirme antes do deslocamento",
+      priorityLabels: {
+        Urgente: "Urgente",
+        Alta: "Alta",
+        Media: "Media",
+        "Média": "Média",
+        Baixa: "Baixa",
+      },
       service: "servico",
       foundOne: "encontrado",
       foundMany: "encontrados",
@@ -154,6 +163,8 @@
       emergencyAria: "National emergency channels",
       emergencyTitle: "Need help now?",
       police: "Police",
+      ambulance: "Ambulance",
+      firefighters: "Firefighters",
       women: "Violence against women",
       humanRights: "Human Rights",
       free: "Free - no registration - no intermediaries",
@@ -247,6 +258,13 @@
       reviewPriority: "review priority",
       checkedAt: "checked on",
       confirmTravel: "confirm before traveling",
+      priorityLabels: {
+        Urgente: "Urgent",
+        Alta: "High",
+        Media: "Medium",
+        "Média": "Medium",
+        Baixa: "Low",
+      },
       service: "service",
       foundOne: "found",
       foundMany: "found",
@@ -283,6 +301,8 @@
       emergencyAria: "Canales nacionales de emergencia",
       emergencyTitle: "Necesita ayuda ahora?",
       police: "Policia",
+      ambulance: "SAMU",
+      firefighters: "Bomberos",
       women: "Violencia contra la mujer",
       humanRights: "Derechos Humanos",
       free: "Gratis - sin registro - sin intermediarios",
@@ -376,6 +396,13 @@
       reviewPriority: "prioridad de revision",
       checkedAt: "verificado el",
       confirmTravel: "confirme antes del desplazamiento",
+      priorityLabels: {
+        Urgente: "Urgente",
+        Alta: "Alta",
+        Media: "Media",
+        "Média": "Media",
+        Baixa: "Baja",
+      },
       service: "servicio",
       foundOne: "encontrado",
       foundMany: "encontrados",
@@ -420,6 +447,10 @@
     return t("categories")[category] || category;
   }
 
+  function priorityLabel(priority) {
+    return t("priorityLabels")[priority] || priority;
+  }
+
   function escapeHTML(value) {
     return String(value == null ? "" : value).replace(/[&<>"']/g, function (char) {
       return {
@@ -434,6 +465,253 @@
 
   function normalize(value) {
     return String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  }
+
+  function translateKnownValue(value) {
+    if (currentLang === "pt") return value;
+    var raw = String(value || "").trim();
+    var key = normalize(raw);
+    var en = {
+      "nao confirmado": "Not confirmed",
+      "nao informado": "Not informed",
+      "nao informado na fonte oficial": "Not published by the official source",
+      "localizacao sigilosa": "Confidential location",
+      "localizacoes diversas no municipio": "Multiple locations in the city",
+      "rede municipal de atendimento consulte o servico desejado": "Municipal service network; check the specific service",
+      "atendimento acionado por telefone ou pelo centro pop": "Service requested by phone or through Centro Pop",
+      "confirmar no canal oficial": "Confirm with the official channel",
+      "informacao de referencia confirme no canal oficial antes de se deslocar": "Reference information. Confirm with the official channel before traveling.",
+    };
+    var es = {
+      "nao confirmado": "No confirmado",
+      "nao informado": "No informado",
+      "nao informado na fonte oficial": "No publicado por la fuente oficial",
+      "localizacao sigilosa": "Ubicacion confidencial",
+      "localizacoes diversas no municipio": "Varias ubicaciones en el municipio",
+      "rede municipal de atendimento consulte o servico desejado": "Red municipal de atencion; consulte el servicio especifico",
+      "atendimento acionado por telefone ou pelo centro pop": "Atencion solicitada por telefono o por el Centro Pop",
+      "confirmar no canal oficial": "Confirme con el canal oficial",
+      "informacao de referencia confirme no canal oficial antes de se deslocar": "Informacion de referencia. Confirme con el canal oficial antes de desplazarse.",
+    };
+    return (currentLang === "en" ? en[key] : es[key]) || raw;
+  }
+
+  function translateDateVerb(text) {
+    if (currentLang === "pt") return text;
+    return text.replace(/Fonte oficial consultada em ([0-9/]+)\./gi, currentLang === "en" ? "Official source checked on $1." : "Fuente oficial consultada el $1.");
+  }
+
+  function translateDataText(value) {
+    if (currentLang === "pt") return value;
+    var textValue = translateKnownValue(value);
+    if (!textValue) return textValue;
+
+    var replacements = currentLang === "en"
+      ? [
+        [/Informa[cç][aã]o de refer[eê]ncia\./gi, "Reference information."],
+        [/Confirme no canal oficial antes de se deslocar/gi, "Confirm with the official channel before traveling"],
+        [/Confirme antes de se deslocar/gi, "Confirm before traveling"],
+        [/Confirme hor[aá]rio antes de se deslocar/gi, "Confirm hours before traveling"],
+        [/Confirme canal, hor[aá]rio e forma de atendimento antes de encaminhar/gi, "Confirm channel, hours and service flow before referring someone"],
+        [/Confirme exig[eê]ncias e agendamento antes de se deslocar/gi, "Confirm requirements and appointment before traveling"],
+        [/Confirme disponibilidade de vaga antes de se deslocar/gi, "Confirm slot availability before traveling"],
+        [/Confirme documentos exigidos e hor[aá]rio antes de se deslocar/gi, "Confirm required documents and hours before traveling"],
+        [/Confirme documentos e necessidade de agendamento antes de se deslocar/gi, "Confirm documents and appointment requirements before traveling"],
+        [/Confirme cadastro, encaminhamento ou documento exigido antes de se deslocar/gi, "Confirm registration, referral or required document before traveling"],
+        [/Atendimento por agendamento/gi, "Service by appointment"],
+        [/Atendimento informado como mediante agendamento pr[eé]vio/gi, "Service reported as requiring prior appointment"],
+        [/Em emerg[eê]ncia, acione 192/gi, "In an emergency, call 192"],
+        [/Em risco imediato, acione tamb[eé]m 190 ou 192/gi, "If there is immediate risk, also call 190 or 192"],
+        [/Por seguran[cç]a, o endere[cç]o [eé] sigiloso/gi, "For safety, the address is confidential"],
+        [/Busque orienta[cç][aã]o pela rede oficial antes de deslocamento/gi, "Seek guidance from the official network before traveling"],
+        [/A unidade articula politicas e rede; confirme se realiza atendimento direto antes de se deslocar/gi, "This unit coordinates policies and the network; confirm whether it provides direct service before traveling"],
+        [/Procure o Centro Pop para cadastro e encaminhamento; vagas e regras podem variar/gi, "Go to Centro Pop for registration and referral; slots and rules may vary"],
+        [/vagas, inscri[cç][aã]o e calend[aá]rio/gi, "slots, registration and schedule"],
+        [/Leve documento de identifica[cç][aã]o e Carteira de Trabalho/gi, "Bring an ID document and Work Card"],
+        [/Confirme funcionamento antes de ir/gi, "Confirm opening before going"],
+      ]
+      : [
+        [/Informa[cç][aã]o de refer[eê]ncia\./gi, "Informacion de referencia."],
+        [/Confirme no canal oficial antes de se deslocar/gi, "Confirme con el canal oficial antes de desplazarse"],
+        [/Confirme antes de se deslocar/gi, "Confirme antes de desplazarse"],
+        [/Confirme hor[aá]rio antes de se deslocar/gi, "Confirme el horario antes de desplazarse"],
+        [/Confirme canal, hor[aá]rio e forma de atendimento antes de encaminhar/gi, "Confirme canal, horario y forma de atencion antes de derivar"],
+        [/Confirme exig[eê]ncias e agendamento antes de se deslocar/gi, "Confirme requisitos y cita antes de desplazarse"],
+        [/Confirme disponibilidade de vaga antes de se deslocar/gi, "Confirme disponibilidad de cupo antes de desplazarse"],
+        [/Confirme documentos exigidos e hor[aá]rio antes de se deslocar/gi, "Confirme documentos exigidos y horario antes de desplazarse"],
+        [/Confirme documentos e necessidade de agendamento antes de se deslocar/gi, "Confirme documentos y necesidad de cita antes de desplazarse"],
+        [/Confirme cadastro, encaminhamento ou documento exigido antes de se deslocar/gi, "Confirme registro, derivacion o documento exigido antes de desplazarse"],
+        [/Atendimento por agendamento/gi, "Atencion con cita"],
+        [/Atendimento informado como mediante agendamento pr[eé]vio/gi, "Atencion informada con cita previa"],
+        [/Em emerg[eê]ncia, acione 192/gi, "En emergencia, llame al 192"],
+        [/Em risco imediato, acione tamb[eé]m 190 ou 192/gi, "En riesgo inmediato, llame tambien al 190 o 192"],
+        [/Por seguran[cç]a, o endere[cç]o [eé] sigiloso/gi, "Por seguridad, la direccion es confidencial"],
+        [/Busque orienta[cç][aã]o pela rede oficial antes de deslocamento/gi, "Busque orientacion en la red oficial antes de desplazarse"],
+        [/A unidade articula politicas e rede; confirme se realiza atendimento direto antes de se deslocar/gi, "La unidad articula politicas y red; confirme si realiza atencion directa antes de desplazarse"],
+        [/Procure o Centro Pop para cadastro e encaminhamento; vagas e regras podem variar/gi, "Busque el Centro Pop para registro y derivacion; cupos y reglas pueden variar"],
+        [/vagas, inscri[cç][aã]o e calend[aá]rio/gi, "cupos, inscripcion y calendario"],
+        [/Leve documento de identifica[cç][aã]o e Carteira de Trabalho/gi, "Lleve documento de identidad y Tarjeta de Trabajo"],
+        [/Confirme funcionamento antes de ir/gi, "Confirme funcionamiento antes de ir"],
+      ];
+
+    var result = translateDateVerb(textValue);
+    replacements.forEach(function (item) {
+      result = result.replace(item[0], item[1]);
+    });
+    return result;
+  }
+
+  function translateAddress(value) {
+    if (currentLang === "pt") return value;
+    var raw = translateKnownValue(value);
+    if (!raw) return raw;
+    if (currentLang === "en") {
+      return raw
+        .replace(/^Solicitacao pelo Centro Pop/i, "Request through Centro Pop")
+        .replace(/^Solicitação pelo Centro Pop/i, "Request through Centro Pop")
+        .replace(/^Localizacoes diversas no municipio/i, "Multiple locations in the city")
+        .replace(/^Localizações diversas no município/i, "Multiple locations in the city")
+        .replace(/^Rede municipal de atendimento; consulte o servico desejado/i, "Municipal service network; check the specific service")
+        .replace(/^Rede municipal de atendimento; consulte o serviço desejado/i, "Municipal service network; check the specific service")
+        .replace(/^Atendimento acionado por telefone ou pelo Centro Pop/i, "Service requested by phone or through Centro Pop");
+    }
+    return raw
+      .replace(/^Solicitacao pelo Centro Pop/i, "Solicitud por el Centro Pop")
+      .replace(/^Solicitação pelo Centro Pop/i, "Solicitud por el Centro Pop")
+      .replace(/^Localizacoes diversas no municipio/i, "Varias ubicaciones en el municipio")
+      .replace(/^Localizações diversas no município/i, "Varias ubicaciones en el municipio")
+      .replace(/^Rede municipal de atendimento; consulte o servico desejado/i, "Red municipal de atencion; consulte el servicio especifico")
+      .replace(/^Rede municipal de atendimento; consulte o serviço desejado/i, "Red municipal de atencion; consulte el servicio especifico")
+      .replace(/^Atendimento acionado por telefone ou pelo Centro Pop/i, "Atencion solicitada por telefono o por el Centro Pop");
+  }
+
+  function translateHours(value) {
+    if (currentLang === "pt") return value;
+    var raw = translateKnownValue(value);
+    if (!raw) return raw;
+    var result = raw;
+    if (currentLang === "en") {
+      result = result
+        .replace(/24 horas|24h por dia/gi, "24 hours")
+        .replace(/24h/gi, "24 hours")
+        .replace(/Todos os dias/gi, "Every day")
+        .replace(/Segunda a sexta-feira|Segunda a sexta|Segunda à sexta|Segunda a Sexta/gi, "Monday to Friday")
+        .replace(/Segunda a quinta/gi, "Monday to Thursday")
+        .replace(/sexta-feira|sexta/gi, "Friday")
+        .replace(/s[aá]bado/gi, "Saturday")
+        .replace(/domingo/gi, "Sunday")
+        .replace(/dias [uú]teis/gi, "business days")
+        .replace(/Hor[aá]rio Comercial/gi, "business hours")
+        .replace(/das /gi, "from ")
+        .replace(/aos /gi, "to ")
+        .replace(/\b[aà]s\b/gi, "to")
+        .replace(/ e das /gi, " and from ")
+        .replace(/; confirmar/gi, "; confirm")
+        .replace(/confirmar dias de atendimento/gi, "confirm service days")
+        .replace(/confirmar hor[aá]rio/gi, "confirm hours")
+        .replace(/exceto feriados e pontos facultativos/gi, "except holidays and optional government closure days")
+        .replace(/exceto feriados/gi, "except holidays")
+        .replace(/mediante agendamento pr[eé]vio/gi, "by prior appointment")
+        .replace(/Atendimento regular a confirmar no canal oficial/gi, "Regular service to be confirmed with the official channel")
+        .replace(/Funcionamento ininterrupto/gi, "Continuous operation")
+        .replace(/Atendimento porta aberta, sem agendamento/gi, "Walk-in service, no appointment");
+    } else {
+      result = result
+        .replace(/24 horas|24h por dia/gi, "24 horas")
+        .replace(/24h/gi, "24 horas")
+        .replace(/Todos os dias/gi, "Todos los dias")
+        .replace(/Segunda a sexta-feira|Segunda a sexta|Segunda à sexta|Segunda a Sexta/gi, "Lunes a viernes")
+        .replace(/Segunda a quinta/gi, "Lunes a jueves")
+        .replace(/sexta-feira|sexta/gi, "viernes")
+        .replace(/s[aá]bado/gi, "sabado")
+        .replace(/domingo/gi, "domingo")
+        .replace(/dias [uú]teis/gi, "dias habiles")
+        .replace(/Hor[aá]rio Comercial/gi, "horario comercial")
+        .replace(/das /gi, "de ")
+        .replace(/\b[aà]s\b/gi, "a las")
+        .replace(/ e das /gi, " y de ")
+        .replace(/; confirmar/gi, "; confirmar")
+        .replace(/confirmar dias de atendimento/gi, "confirmar dias de atencion")
+        .replace(/confirmar hor[aá]rio/gi, "confirmar horario")
+        .replace(/exceto feriados e pontos facultativos/gi, "excepto feriados y cierres administrativos")
+        .replace(/exceto feriados/gi, "excepto feriados")
+        .replace(/mediante agendamento pr[eé]vio/gi, "con cita previa")
+        .replace(/Atendimento regular a confirmar no canal oficial/gi, "Atencion regular a confirmar en el canal oficial")
+        .replace(/Funcionamento ininterrupto/gi, "Funcionamiento continuo")
+        .replace(/Atendimento porta aberta, sem agendamento/gi, "Atencion sin cita");
+    }
+    return result;
+  }
+
+  function translateReason(reason) {
+    if (currentLang === "pt") return reason;
+    var exact = {
+      en: {
+        "Fonte não registrada": "Official source not registered",
+        "Fonte nao registrada": "Official source not registered",
+        "Telefone não confirmado": "Phone not confirmed",
+        "Telefone nao confirmado": "Phone not confirmed",
+        "Cidade não informada": "City not informed",
+        "Cidade nao informada": "City not informed",
+        "Horário a confirmar": "Hours to be confirmed",
+        "Horario a confirmar": "Hours to be confirmed",
+        "Endereço a confirmar": "Address to be confirmed",
+        "Endereco a confirmar": "Address to be confirmed",
+        "Telefone direto não informado na fonte": "Direct phone not published by the source",
+        "Telefone direto nao informado na fonte": "Direct phone not published by the source",
+        "Telefone direto não informado na fonte oficial": "Direct phone not published by the official source",
+        "Telefone direto nao informado na fonte oficial": "Direct phone not published by the official source",
+        "Horário não informado na fonte oficial": "Hours not published by the official source",
+        "Horario nao informado na fonte oficial": "Hours not published by the official source",
+        "Atendimento mediante agendamento prévio": "Service by prior appointment",
+        "Atendimento juridico": "Legal assistance",
+        "Regularizacao migratoria": "Migration regularization",
+        "Cadastro de Pessoas Fisicas para imigrante": "CPF registration for immigrants",
+        "Intermediacao de vagas e orientacao profissional": "Job placement and career guidance",
+        "Curso de lingua portuguesa para estrangeiros": "Portuguese language course for foreigners",
+        "Atendimento a pessoas em situacao de rua": "Service for people experiencing homelessness",
+        "Encaminha para rede de acolhimento": "Refers to the shelter network",
+        "Equipamento publico de seguranca alimentar": "Public food security service",
+        "Endereco nao divulgado por seguranca": "Address not disclosed for safety",
+        "Acesso por encaminhamento, nao por chegada direta": "Access by referral, not by direct arrival",
+      },
+      es: {
+        "Fonte não registrada": "Fuente oficial no registrada",
+        "Fonte nao registrada": "Fuente oficial no registrada",
+        "Telefone não confirmado": "Telefono no confirmado",
+        "Telefone nao confirmado": "Telefono no confirmado",
+        "Cidade não informada": "Ciudad no informada",
+        "Cidade nao informada": "Ciudad no informada",
+        "Horário a confirmar": "Horario a confirmar",
+        "Horario a confirmar": "Horario a confirmar",
+        "Endereço a confirmar": "Direccion a confirmar",
+        "Endereco a confirmar": "Direccion a confirmar",
+        "Telefone direto não informado na fonte": "Telefono directo no publicado por la fuente",
+        "Telefone direto nao informado na fonte": "Telefono directo no publicado por la fuente",
+        "Telefone direto não informado na fonte oficial": "Telefono directo no publicado por la fuente oficial",
+        "Telefone direto nao informado na fonte oficial": "Telefono directo no publicado por la fuente oficial",
+        "Horário não informado na fonte oficial": "Horario no publicado por la fuente oficial",
+        "Horario nao informado na fonte oficial": "Horario no publicado por la fuente oficial",
+        "Atendimento mediante agendamento prévio": "Atencion con cita previa",
+        "Atendimento juridico": "Asistencia juridica",
+        "Regularizacao migratoria": "Regularizacion migratoria",
+        "Cadastro de Pessoas Fisicas para imigrante": "Registro CPF para inmigrantes",
+        "Intermediacao de vagas e orientacao profissional": "Intermediacion de vacantes y orientacion profesional",
+        "Curso de lingua portuguesa para estrangeiros": "Curso de portugues para extranjeros",
+        "Atendimento a pessoas em situacao de rua": "Atencion a personas en situacion de calle",
+        "Encaminha para rede de acolhimento": "Deriva a la red de acogida",
+        "Equipamento publico de seguranca alimentar": "Servicio publico de seguridad alimentaria",
+        "Endereco nao divulgado por seguranca": "Direccion no divulgada por seguridad",
+        "Acesso por encaminhamento, nao por chegada direta": "Acceso por derivacion, no por llegada directa",
+      },
+    };
+    if (exact[currentLang][reason]) return exact[currentLang][reason];
+    return translateDataText(reason);
+  }
+
+  function translateReasons(reasons) {
+    if (!reasons || !reasons.length) return t("basicData");
+    return reasons.map(translateReason).join(" - ");
   }
 
   function showToast(text) {
@@ -472,6 +750,8 @@
     attr(".emergency-bar", "aria-label", t("emergencyAria"));
     text(".emergency-row > strong", t("emergencyTitle"));
     text('.emergency-row a[href="tel:190"] span', t("police"));
+    text('.emergency-row a[href="tel:192"] span', t("ambulance"));
+    text('.emergency-row a[href="tel:193"] span', t("firefighters"));
     text('.emergency-row a[href="tel:180"] span', t("women"));
     text('.emergency-row a[href="tel:100"] span', t("humanRights"));
 
@@ -632,21 +912,22 @@
     var route = canRoute ? '<a class="route" href="' + escapeHTML(service.map) + '" target="_blank" rel="noopener noreferrer">' + t("route") + "</a>" : "";
     var source = service.sourceUrl ? '<a href="' + escapeHTML(service.sourceUrl) + '" target="_blank" rel="noopener noreferrer">' + t("source") + "</a>" : "";
     var saved = favorites.has(service.id);
-    var reasons = service.reasons && service.reasons.length ? service.reasons.join(" - ") : t("basicData");
+    var reasons = translateReasons(service.reasons);
     var verified = service.verified ? " - " + t("checkedAt") + " " + escapeHTML(service.verified) : "";
+    var notice = service.notice ? translateDataText(service.notice) : "";
 
     return [
       '<article class="service-card">',
       "<header><div><h3>" + escapeHTML(service.name) + '</h3><div class="location">' + escapeHTML(service.city) + " - " + escapeHTML(service.state) + '</div></div><span class="tag">' + escapeHTML(categoryLabel(service.category)) + "</span></header>",
       '<div class="warning"><b>' + t("confirmBefore") + "</b> " + escapeHTML(reasons) + ".</div>",
       '<dl class="meta">',
-      "<div><dt>" + t("address") + "</dt><dd>" + escapeHTML(service.address || t("notConfirmed")) + "</dd></div>",
-      "<div><dt>" + t("phone") + "</dt><dd>" + escapeHTML(service.phoneLabel || t("notConfirmed")) + "</dd></div>",
-      "<div><dt>" + t("hours") + "</dt><dd>" + escapeHTML(service.hours || t("notConfirmed")) + "</dd></div>",
+      "<div><dt>" + t("address") + "</dt><dd>" + escapeHTML(translateAddress(service.address || t("notConfirmed"))) + "</dd></div>",
+      "<div><dt>" + t("phone") + "</dt><dd>" + escapeHTML(translateKnownValue(service.phoneLabel || t("notConfirmed"))) + "</dd></div>",
+      "<div><dt>" + t("hours") + "</dt><dd>" + escapeHTML(translateHours(service.hours || t("notConfirmed"))) + "</dd></div>",
       "<div><dt>" + t("bring") + "</dt><dd>" + escapeHTML(documentsFor(service.category)) + "</dd></div>",
       "</dl>",
       '<div class="service-actions">' + phone + route + source + '<button type="button" data-favorite="' + escapeHTML(service.id) + '" class="' + (saved ? "saved" : "") + '">' + (saved ? t("saved") : t("save")) + "</button></div>",
-      '<div class="service-note">' + t("recordNote") + " - " + t("reviewPriority") + ": " + escapeHTML(service.priority) + verified + " - " + t("confirmTravel") + "</div>",
+      '<div class="service-note">' + t("recordNote") + " - " + t("reviewPriority") + ": " + escapeHTML(priorityLabel(service.priority)) + verified + " - " + (notice ? escapeHTML(notice) : t("confirmTravel")) + "</div>",
       "</article>",
     ].join("");
   }
