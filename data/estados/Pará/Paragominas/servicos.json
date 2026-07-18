@@ -1,0 +1,34 @@
+{
+  "uf": "PA",
+  "state": "Pará",
+  "city": "Paragominas",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00084-pa-paragominas-hospital-regional-publico-do-leste",
+      "name": "Hospital Regional Público do Leste",
+      "category": "saude",
+      "region": "Norte",
+      "uf": "PA",
+      "state": "Pará",
+      "city": "Paragominas",
+      "address": "Hospital Regional Público do Leste, Paragominas - PA",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Regional+P%C3%BAblico+do+Leste%2C+Paragominas+-+PA",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24h",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "uf": "AL",
+  "state": "Alagoas",
+  "coverageKey": "alagoas",
+  "coverage": {
+    "cities": [
+      "Maceió",
+      "Arapiraca",
+      "Rio Largo",
+      "Palmeira dos Índios",
+      "Marechal Deodoro"
+    ],
+    "selection": "Cinco municípios mais populosos segundo as Estimativas da População 2025 do IBGE",
+    "source": "https://ftp.ibge.gov.br/Estimativas_de_Populacao/Estimativas_2025/estimativa_dou_2025.pdf",
+    "records": 20,
+    "verified": "2026-06-28"
+  },
+  "cityCount": 5,
+  "serviceCount": 26,
+  "officialServiceCount": 20,
+  "cities": [
+    {
+      "name": "Arapiraca",
+      "folder": "Arapiraca",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Maceió",
+      "folder": "Maceió",
+      "serviceCount": 10,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Marechal Deodoro",
+      "folder": "Marechal Deodoro",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Palmeira dos Índios",
+      "folder": "Palmeira dos Índios",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Rio Largo",
+      "folder": "Rio Largo",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    }
+  ]
+}

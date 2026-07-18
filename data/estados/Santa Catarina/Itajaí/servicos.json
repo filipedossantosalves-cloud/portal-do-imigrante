@@ -1,0 +1,81 @@
+{
+  "uf": "SC",
+  "state": "Santa Catarina",
+  "city": "Itajaí",
+  "serviceCount": 3,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00489-sc-itajai-rodoviaria-de-itajai",
+      "name": "Rodoviária de Itajaí",
+      "category": "acolhimento",
+      "region": "Sul",
+      "uf": "SC",
+      "state": "Santa Catarina",
+      "city": "Itajaí",
+      "address": "Rua Rodoviária, 1000",
+      "map": "",
+      "phone": "(47) 3348-9200",
+      "phoneLabel": "(47) 3348-9200",
+      "hours": "Segunda a domingo, 5h às 23h",
+      "source": "",
+      "contactConfirmed": true,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Média",
+      "reasons": [
+        "Fonte não registrada"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00490-sc-itajai-sine-itajai",
+      "name": "SINE Itajaí",
+      "category": "trabalho",
+      "region": "Sul",
+      "uf": "SC",
+      "state": "Santa Catarina",
+      "city": "Itajaí",
+      "address": "Rua SINE, 900",
+      "map": "",
+      "phone": "(47) 3348-9100",
+      "phoneLabel": "(47) 3348-9100",
+      "hours": "Segunda a sexta, 8h às 17h",
+      "source": "",
+      "contactConfirmed": true,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Média",
+      "reasons": [
+        "Fonte não registrada"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00491-sc-itajai-upa-24h-cordeiros",
+      "name": "UPA 24h Cordeiros",
+      "category": "saude",
+      "region": "Sul",
+      "uf": "SC",
+      "state": "Santa Catarina",
+      "city": "Itajaí",
+      "address": "Rua Cordeiros, 800",
+      "map": "",
+      "phone": "(47) 3348-8000",
+      "phoneLabel": "(47) 3348-8000",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": true,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Média",
+      "reasons": [
+        "Fonte não registrada"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

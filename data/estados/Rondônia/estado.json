@@ -1,0 +1,59 @@
+{
+  "uf": "RO",
+  "state": "Rondônia",
+  "coverageKey": null,
+  "coverage": null,
+  "cityCount": 8,
+  "serviceCount": 44,
+  "officialServiceCount": 0,
+  "cities": [
+    {
+      "name": "Alta Floresta",
+      "folder": "Alta Floresta",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Ariquemes",
+      "folder": "Ariquemes",
+      "serviceCount": 4,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Cacoal",
+      "folder": "Cacoal",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Ji-Paraná",
+      "folder": "Ji-Paraná",
+      "serviceCount": 6,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Não informado",
+      "folder": "Não informado",
+      "serviceCount": 5,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Porto Velho",
+      "folder": "Porto Velho",
+      "serviceCount": 23,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "São Francisco do Guaporé",
+      "folder": "São Francisco do Guaporé",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Vilhena",
+      "folder": "Vilhena",
+      "serviceCount": 3,
+      "officialServiceCount": 0
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "uf": "DF",
+  "state": "Distrito Federal",
+  "city": "Recanto das Emas",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00307-df-recanto-das-emas-upa-recanto-das-emas",
+      "name": "UPA Recanto das Emas",
+      "category": "saude",
+      "region": "Centro-Oeste",
+      "uf": "DF",
+      "state": "Distrito Federal",
+      "city": "Recanto das Emas",
+      "address": "",
+      "map": "",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": false,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado",
+        "Endereço a confirmar"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

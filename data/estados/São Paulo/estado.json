@@ -1,0 +1,41 @@
+{
+  "uf": "SP",
+  "state": "São Paulo",
+  "coverageKey": null,
+  "coverage": null,
+  "cityCount": 5,
+  "serviceCount": 15,
+  "officialServiceCount": 0,
+  "cities": [
+    {
+      "name": "Campinas",
+      "folder": "Campinas",
+      "serviceCount": 3,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Santos",
+      "folder": "Santos",
+      "serviceCount": 2,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "São Paulo",
+      "folder": "São Paulo",
+      "serviceCount": 8,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Sorocaba",
+      "folder": "Sorocaba",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Taubaté",
+      "folder": "Taubaté",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    }
+  ]
+}

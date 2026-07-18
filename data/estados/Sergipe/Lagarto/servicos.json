@@ -1,0 +1,84 @@
+{
+  "uf": "SE",
+  "state": "Sergipe",
+  "city": "Lagarto",
+  "serviceCount": 3,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00249-se-lagarto-cras-lagarto",
+      "name": "CRAS Lagarto",
+      "category": "assistencia",
+      "region": "Nordeste",
+      "uf": "SE",
+      "state": "Sergipe",
+      "city": "Lagarto",
+      "address": "CRAS Lagarto, Lagarto - SE",
+      "map": "https://www.google.com/maps/search/?api=1&query=CRAS+Lagarto%2C+Lagarto+-+SE",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, 08:00 às 17:00",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Alta",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00250-se-lagarto-hospital-regional-de-lagarto-monsenhor-joao-batista-de-carvalho-daltro",
+      "name": "Hospital Regional de Lagarto (Monsenhor João Batista de Carvalho Daltro)",
+      "category": "saude",
+      "region": "Nordeste",
+      "uf": "SE",
+      "state": "Sergipe",
+      "city": "Lagarto",
+      "address": "Hospital Regional de Lagarto (Monsenhor João Batista de Carvalho Daltro), Lagarto - SE",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Regional+de+Lagarto+%28Monsenhor+Jo%C3%A3o+Batista+de+Carvalho+Daltro%29%2C+Lagarto+-+SE",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00251-se-lagarto-nat-lagarto",
+      "name": "NAT Lagarto",
+      "category": "trabalho",
+      "region": "Nordeste",
+      "uf": "SE",
+      "state": "Sergipe",
+      "city": "Lagarto",
+      "address": "NAT Lagarto, Lagarto - SE",
+      "map": "https://www.google.com/maps/search/?api=1&query=NAT+Lagarto%2C+Lagarto+-+SE",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, Horário Comercial",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Alta",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

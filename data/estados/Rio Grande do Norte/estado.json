@@ -1,0 +1,23 @@
+{
+  "uf": "RN",
+  "state": "Rio Grande do Norte",
+  "coverageKey": null,
+  "coverage": null,
+  "cityCount": 2,
+  "serviceCount": 7,
+  "officialServiceCount": 0,
+  "cities": [
+    {
+      "name": "Mossoró",
+      "folder": "Mossoró",
+      "serviceCount": 2,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Natal",
+      "folder": "Natal",
+      "serviceCount": 5,
+      "officialServiceCount": 0
+    }
+  ]
+}

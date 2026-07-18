@@ -1,0 +1,96 @@
+{
+  "uf": "DF",
+  "state": "Distrito Federal",
+  "coverageKey": "distritoFederal",
+  "coverage": {
+    "cities": [
+      "Ceilândia",
+      "Samambaia",
+      "Plano Piloto",
+      "Planaltina",
+      "Taguatinga"
+    ],
+    "territorialUnit": "Regiões administrativas",
+    "selection": "Cinco regiões administrativas mais populosas na projeção oficial de 2025 do IPEDF",
+    "source": "https://www.ipe.df.gov.br/documents/d/ipedf/estudo-projecoes-populacionais-para-as-regioes-administrativas-do-distrito-federal-2020-2030-resultados-pdf",
+    "records": 20,
+    "verified": "2026-06-29"
+  },
+  "cityCount": 12,
+  "serviceCount": 75,
+  "officialServiceCount": 20,
+  "cities": [
+    {
+      "name": "Brasília",
+      "folder": "Brasília",
+      "serviceCount": 10,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Brasília - DF",
+      "folder": "Brasília - DF",
+      "serviceCount": 35,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Ceilândia",
+      "folder": "Ceilândia",
+      "serviceCount": 5,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Estrutural",
+      "folder": "Estrutural",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Gama",
+      "folder": "Gama",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Itapoã",
+      "folder": "Itapoã",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Planaltina",
+      "folder": "Planaltina",
+      "serviceCount": 5,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Plano Piloto",
+      "folder": "Plano Piloto",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Recanto das Emas",
+      "folder": "Recanto das Emas",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Samambaia",
+      "folder": "Samambaia",
+      "serviceCount": 5,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Sobradinho",
+      "folder": "Sobradinho",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Taguatinga",
+      "folder": "Taguatinga",
+      "serviceCount": 6,
+      "officialServiceCount": 4
+    }
+  ]
+}

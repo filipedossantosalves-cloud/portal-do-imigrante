@@ -1,0 +1,84 @@
+{
+  "uf": "SP",
+  "state": "São Paulo",
+  "city": "Campinas",
+  "serviceCount": 3,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00399-sp-campinas-cras-campinas",
+      "name": "CRAS Campinas",
+      "category": "assistencia",
+      "region": "Sudeste",
+      "uf": "SP",
+      "state": "São Paulo",
+      "city": "Campinas",
+      "address": "CRAS Campinas, Campinas - SP",
+      "map": "https://www.google.com/maps/search/?api=1&query=CRAS+Campinas%2C+Campinas+-+SP",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, 08:00 às 17:00",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Alta",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00400-sp-campinas-hospital-municipal-de-campinas-dr-mario-gatti",
+      "name": "Hospital Municipal de Campinas (Dr. Mário Gatti)",
+      "category": "saude",
+      "region": "Sudeste",
+      "uf": "SP",
+      "state": "São Paulo",
+      "city": "Campinas",
+      "address": "Hospital Municipal de Campinas (Dr. Mário Gatti), Campinas - SP",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Municipal+de+Campinas+%28Dr.+M%C3%A1rio+Gatti%29%2C+Campinas+-+SP",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00401-sp-campinas-rodoviaria-de-campinas",
+      "name": "Rodoviária de Campinas",
+      "category": "acolhimento",
+      "region": "Sudeste",
+      "uf": "SP",
+      "state": "São Paulo",
+      "city": "Campinas",
+      "address": "Rodoviária de Campinas, Campinas - SP",
+      "map": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria+de+Campinas%2C+Campinas+-+SP",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, Horário Comercial",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

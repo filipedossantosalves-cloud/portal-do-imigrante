@@ -1,0 +1,88 @@
+{
+  "uf": "RR",
+  "state": "Roraima",
+  "city": "Não informado",
+  "serviceCount": 3,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00137-rr-nao-informado-creas-boa-vista",
+      "name": "CREAS Boa Vista",
+      "category": "assistencia",
+      "region": "Norte",
+      "uf": "RR",
+      "state": "Roraima",
+      "city": "Não informado",
+      "address": "",
+      "map": "",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, 08:00 às 17:00",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": false,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado",
+        "Endereço a confirmar",
+        "Cidade não informada"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00138-rr-nao-informado-hospital-regional-de-rorainopolis",
+      "name": "Hospital Regional de Rorainópolis",
+      "category": "saude",
+      "region": "Norte",
+      "uf": "RR",
+      "state": "Roraima",
+      "city": "Não informado",
+      "address": "Hospital Regional de Rorainópolis, Não informado - RR",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Regional+de+Rorain%C3%B3polis%2C+N%C3%A3o+informado+-+RR",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24h",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado",
+        "Cidade não informada"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00139-rr-nao-informado-terminal-rodoviario-de-boa-vista",
+      "name": "Terminal Rodoviário de Boa Vista",
+      "category": "acolhimento",
+      "region": "Norte",
+      "uf": "RR",
+      "state": "Roraima",
+      "city": "Não informado",
+      "address": "Terminal Rodoviário de Boa Vista, Não informado - RR",
+      "map": "https://www.google.com/maps/search/?api=1&query=Terminal+Rodovi%C3%A1rio+de+Boa+Vista%2C+N%C3%A3o+informado+-+RR",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, Horário Comercial",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado",
+        "Cidade não informada"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

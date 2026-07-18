@@ -1,0 +1,59 @@
+{
+  "uf": "AP",
+  "state": "Amapá",
+  "coverageKey": "amapa",
+  "coverage": {
+    "cities": [
+      "Macapá",
+      "Santana",
+      "Laranjal do Jari",
+      "Oiapoque",
+      "Mazagão"
+    ],
+    "selection": "Cinco municípios mais populosos segundo as Estimativas da População 2025 do IBGE",
+    "source": "https://ftp.ibge.gov.br/Estimativas_de_Populacao/Estimativas_2025/estimativa_dou_2025.pdf",
+    "records": 20,
+    "verified": "2026-06-28"
+  },
+  "cityCount": 6,
+  "serviceCount": 34,
+  "officialServiceCount": 20,
+  "cities": [
+    {
+      "name": "Laranjal do Jari",
+      "folder": "Laranjal do Jari",
+      "serviceCount": 5,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Macapá",
+      "folder": "Macapá",
+      "serviceCount": 11,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Mazagão",
+      "folder": "Mazagão",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Não informado",
+      "folder": "Não informado",
+      "serviceCount": 5,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Oiapoque",
+      "folder": "Oiapoque",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Santana",
+      "folder": "Santana",
+      "serviceCount": 5,
+      "officialServiceCount": 4
+    }
+  ]
+}

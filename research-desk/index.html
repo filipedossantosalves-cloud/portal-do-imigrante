@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Research Desk para validacao conservadora de servicos publicos para migrantes e refugiados no Brasil.">
+  <title>Portal do Imigrante Research Desk</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html" aria-label="Abrir Portal do Imigrante">
+      <span class="brand-mark">PI</span>
+      <span>
+        <strong>Research Desk</strong>
+        <small>Portal do Imigrante</small>
+      </span>
+    </a>
+    <nav class="top-actions" aria-label="Atalhos">
+      <a href="../index.html">Portal</a>
+      <a href="../data/estados/README.md">Dados</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <p class="eyebrow">OpenAI Build Week pilot</p>
+        <h1 id="heroTitle">Verified service research for migrants and refugees.</h1>
+        <p class="lead">State-by-state public-service mapping with official-source checks, isolated drafts, and a guarded export path to the public Portal do Imigrante.</p>
+      </div>
+      <div class="hero-panel" aria-label="Resumo do projeto">
+        <span class="status-pill">Live audit</span>
+        <strong id="pilotHeadline">Loading research status</strong>
+        <dl class="audit-list">
+          <div>
+            <dt>Pilot state</dt>
+            <dd id="pilotState">--</dd>
+          </div>
+          <div>
+            <dt>Next target</dt>
+            <dd id="nextState">--</dd>
+          </div>
+          <div>
+            <dt>Reviewed UFs</dt>
+            <dd id="reviewedUnits">--</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="Indicadores">
+      <div>
+        <span id="metricStates">--</span>
+        <small>UFs organized</small>
+      </div>
+      <div>
+        <span id="metricServices">--</span>
+        <small>UF-linked services</small>
+      </div>
+      <div>
+        <span id="metricOfficial">--</span>
+        <small>official-source records</small>
+      </div>
+      <div>
+        <span id="metricPending">--</span>
+        <small>pending UFs</small>
+      </div>
+    </section>
+
+    <section class="audit-strip" aria-label="Validação operacional">
+      <div class="audit-tile">
+        <strong>Public export</strong>
+        <span id="exportStatus">--</span>
+      </div>
+      <div class="audit-tile">
+        <strong>Evidence gate</strong>
+        <span id="evidenceStatus">--</span>
+      </div>
+      <div class="audit-tile accent">
+        <strong>Recommended next</strong>
+        <span id="nextTarget">--</span>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <aside class="state-list" aria-label="Estados">
+        <div class="section-head compact">
+          <div>
+            <p class="eyebrow">Pipeline</p>
+            <h2>States</h2>
+          </div>
+          <select id="statusFilter" aria-label="Filtrar estados">
+            <option value="all">All</option>
+            <option value="pending">Pending</option>
+            <option value="reviewed">Reviewed</option>
+          </select>
+        </div>
+        <div id="stateButtons" class="state-buttons"></div>
+      </aside>
+
+      <section class="detail" aria-live="polite">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow" id="selectedUf">--</p>
+            <h2 id="selectedState">Select a state</h2>
+          </div>
+          <div class="progress-label">
+            <span id="stateProgress">0%</span>
+            <small>official coverage</small>
+          </div>
+        </div>
+
+        <div class="progress-track" aria-hidden="true">
+          <span id="progressBar"></span>
+        </div>
+
+        <div class="state-insights" aria-label="Resumo do estado selecionado">
+          <div>
+            <span id="stateCityCount">--</span>
+            <small>cities in workspace</small>
+          </div>
+          <div>
+            <span id="stateOfficialCount">--</span>
+            <small>official records</small>
+          </div>
+          <div>
+            <span id="statePacketCount">--</span>
+            <small>research packets</small>
+          </div>
+        </div>
+
+        <div class="city-grid" id="cityGrid"></div>
+
+        <section class="research-flow" aria-labelledby="flowTitle">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">City workflow</p>
+              <h2 id="flowTitle">Research packet</h2>
+            </div>
+            <button id="copyPacket" type="button">Copy packet</button>
+          </div>
+
+          <div class="packet-summary" aria-label="Resumo de validação da cidade">
+            <div>
+              <span id="cityReady">--</span>
+              <small>publish-ready records</small>
+            </div>
+            <div>
+              <span id="cityReview">--</span>
+              <small>records needing review</small>
+            </div>
+            <div>
+              <span id="cityDrafts">--</span>
+              <small>draft records</small>
+            </div>
+          </div>
+
+          <div class="flow-layout">
+            <div class="checklist">
+              <h3>Official source checklist</h3>
+              <ul id="sourceChecklist"></ul>
+            </div>
+            <div class="report">
+              <h3 id="packetTitle">Choose a city</h3>
+              <pre id="packetOutput"></pre>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <section class="rules" aria-labelledby="rulesTitle">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Guardrails</p>
+          <h2 id="rulesTitle">Validation rules</h2>
+        </div>
+      </div>
+      <div id="ruleList" class="rule-list"></div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

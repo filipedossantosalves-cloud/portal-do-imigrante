@@ -1,0 +1,65 @@
+{
+  "uf": "AM",
+  "state": "Amazonas",
+  "coverageKey": "amazonas",
+  "coverage": {
+    "cities": [
+      "Manaus",
+      "Itacoatiara",
+      "Manacapuru",
+      "Parintins",
+      "Tefé"
+    ],
+    "selection": "Cinco municípios mais populosos segundo as Estimativas da População 2025 do IBGE",
+    "source": "https://ftp.ibge.gov.br/Estimativas_de_Populacao/Estimativas_2025/estimativa_dou_2025.pdf",
+    "records": 20,
+    "verified": "2026-06-28"
+  },
+  "cityCount": 7,
+  "serviceCount": 35,
+  "officialServiceCount": 20,
+  "cities": [
+    {
+      "name": "Eirunepé",
+      "folder": "Eirunepé",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Itacoatiara",
+      "folder": "Itacoatiara",
+      "serviceCount": 5,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Manacapuru",
+      "folder": "Manacapuru",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Manaus",
+      "folder": "Manaus",
+      "serviceCount": 12,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Não informado",
+      "folder": "Não informado",
+      "serviceCount": 4,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Parintins",
+      "folder": "Parintins",
+      "serviceCount": 5,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Tefé",
+      "folder": "Tefé",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "uf": "AC",
+  "state": "Acre",
+  "city": "Brasiléia",
+  "serviceCount": 3,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00002-ac-brasileia-cras-brasileia",
+      "name": "CRAS Brasiléia",
+      "category": "assistencia",
+      "region": "Norte",
+      "uf": "AC",
+      "state": "Acre",
+      "city": "Brasiléia",
+      "address": "CRAS Brasiléia, Brasiléia - AC",
+      "map": "https://www.google.com/maps/search/?api=1&query=CRAS+Brasil%C3%A9ia%2C+Brasil%C3%A9ia+-+AC",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, 08:00 às 17:00",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Alta",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00003-ac-brasileia-hospital-regional-do-alto-acre",
+      "name": "Hospital Regional do Alto Acre",
+      "category": "saude",
+      "region": "Norte",
+      "uf": "AC",
+      "state": "Acre",
+      "city": "Brasiléia",
+      "address": "Hospital Regional do Alto Acre, Brasiléia - AC",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Regional+do+Alto+Acre%2C+Brasil%C3%A9ia+-+AC",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00004-ac-brasileia-sine-brasileia",
+      "name": "SINE Brasiléia",
+      "category": "trabalho",
+      "region": "Norte",
+      "uf": "AC",
+      "state": "Acre",
+      "city": "Brasiléia",
+      "address": "SINE Brasiléia, Brasiléia - AC",
+      "map": "https://www.google.com/maps/search/?api=1&query=SINE+Brasil%C3%A9ia%2C+Brasil%C3%A9ia+-+AC",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, Horário Comercial",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Alta",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

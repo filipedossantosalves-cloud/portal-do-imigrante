@@ -1,0 +1,35 @@
+{
+  "uf": "RJ",
+  "state": "Rio de Janeiro",
+  "coverageKey": null,
+  "coverage": null,
+  "cityCount": 4,
+  "serviceCount": 14,
+  "officialServiceCount": 0,
+  "cities": [
+    {
+      "name": "Araruama",
+      "folder": "Araruama",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Niterói",
+      "folder": "Niterói",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Rio de Janeiro",
+      "folder": "Rio de Janeiro",
+      "serviceCount": 11,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Volta Redonda",
+      "folder": "Volta Redonda",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    }
+  ]
+}

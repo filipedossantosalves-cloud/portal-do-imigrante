@@ -1,0 +1,33 @@
+{
+  "uf": "SC",
+  "state": "Santa Catarina",
+  "city": "Araranguá",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00465-sc-ararangua-hospital-regional-deputado-affonso-guizzo",
+      "name": "Hospital Regional Deputado Affonso Guizzo",
+      "category": "saude",
+      "region": "Sul",
+      "uf": "SC",
+      "state": "Santa Catarina",
+      "city": "Araranguá",
+      "address": "Avenida Getúlio Vargas, 500",
+      "map": "",
+      "phone": "(48) 3522-5000",
+      "phoneLabel": "(48) 3522-5000",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": true,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Média",
+      "reasons": [
+        "Fonte não registrada"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

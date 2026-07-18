@@ -1,0 +1,59 @@
+{
+  "uf": "RN",
+  "state": "Rio Grande do Norte",
+  "city": "Mossoró",
+  "serviceCount": 2,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00204-rn-mossoro-hospital-municipal-de-mossoro",
+      "name": "Hospital Municipal de Mossoró",
+      "category": "saude",
+      "region": "Nordeste",
+      "uf": "RN",
+      "state": "Rio Grande do Norte",
+      "city": "Mossoró",
+      "address": "Hospital Municipal de Mossoró, Mossoró - RN",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Municipal+de+Mossor%C3%B3%2C+Mossor%C3%B3+-+RN",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, Horário Comercial",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00205-rn-mossoro-hospital-regional-tarcisio-maia",
+      "name": "Hospital Regional Tarcísio Maia",
+      "category": "saude",
+      "region": "Nordeste",
+      "uf": "RN",
+      "state": "Rio Grande do Norte",
+      "city": "Mossoró",
+      "address": "Hospital Regional Tarcísio Maia, Mossoró - RN",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Regional+Tarc%C3%ADsio+Maia%2C+Mossor%C3%B3+-+RN",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, Horário Comercial",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

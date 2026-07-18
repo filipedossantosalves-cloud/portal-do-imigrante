@@ -1,0 +1,41 @@
+{
+  "uf": "TO",
+  "state": "Tocantins",
+  "coverageKey": null,
+  "coverage": null,
+  "cityCount": 5,
+  "serviceCount": 14,
+  "officialServiceCount": 0,
+  "cities": [
+    {
+      "name": "Araguaína",
+      "folder": "Araguaína",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Gurupi",
+      "folder": "Gurupi",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "HGP",
+      "folder": "HGP",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Não informado",
+      "folder": "Não informado",
+      "serviceCount": 4,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Palmas",
+      "folder": "Palmas",
+      "serviceCount": 7,
+      "officialServiceCount": 0
+    }
+  ]
+}

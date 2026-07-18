@@ -1,0 +1,65 @@
+{
+  "uf": "SC",
+  "state": "Santa Catarina",
+  "coverageKey": null,
+  "coverage": null,
+  "cityCount": 9,
+  "serviceCount": 72,
+  "officialServiceCount": 0,
+  "cities": [
+    {
+      "name": "Araranguá",
+      "folder": "Araranguá",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Balneário Camboriú",
+      "folder": "Balneário Camboriú",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Blumenau",
+      "folder": "Blumenau",
+      "serviceCount": 6,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Florianópolis",
+      "folder": "Florianópolis",
+      "serviceCount": 16,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Itajaí",
+      "folder": "Itajaí",
+      "serviceCount": 3,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Joinville",
+      "folder": "Joinville",
+      "serviceCount": 42,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Navegantes",
+      "folder": "Navegantes",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "São José",
+      "folder": "São José",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "São Miguel do Oeste",
+      "folder": "São Miguel do Oeste",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    }
+  ]
+}

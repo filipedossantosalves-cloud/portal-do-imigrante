@@ -1,0 +1,109 @@
+{
+  "uf": "PR",
+  "state": "Paraná",
+  "city": "Cascavel",
+  "serviceCount": 4,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00415-pr-cascavel-caps-iii",
+      "name": "CAPS III",
+      "category": "saude",
+      "region": "Sul",
+      "uf": "PR",
+      "state": "Paraná",
+      "city": "Cascavel",
+      "address": "CAPS III, Cascavel - PR",
+      "map": "https://www.google.com/maps/search/?api=1&query=CAPS+III%2C+Cascavel+-+PR",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a sexta, 8h às 18h",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00416-pr-cascavel-cras-oeste",
+      "name": "CRAS Oeste",
+      "category": "assistencia",
+      "region": "Sul",
+      "uf": "PR",
+      "state": "Paraná",
+      "city": "Cascavel",
+      "address": "CRAS Oeste, Cascavel - PR",
+      "map": "https://www.google.com/maps/search/?api=1&query=CRAS+Oeste%2C+Cascavel+-+PR",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a sexta, 8h às 17h",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Alta",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00417-pr-cascavel-restaurante-popular-de-cascavel",
+      "name": "Restaurante Popular de Cascavel",
+      "category": "alimentacao",
+      "region": "Sul",
+      "uf": "PR",
+      "state": "Paraná",
+      "city": "Cascavel",
+      "address": "Restaurante Popular de Cascavel, Cascavel - PR",
+      "map": "https://www.google.com/maps/search/?api=1&query=Restaurante+Popular+de+Cascavel%2C+Cascavel+-+PR",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a sexta, 11h às 14h",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00418-pr-cascavel-upa-24h-cascavel",
+      "name": "UPA 24h Cascavel",
+      "category": "saude",
+      "region": "Sul",
+      "uf": "PR",
+      "state": "Paraná",
+      "city": "Cascavel",
+      "address": "UPA 24h Cascavel, Cascavel - PR",
+      "map": "https://www.google.com/maps/search/?api=1&query=UPA+24h+Cascavel%2C+Cascavel+-+PR",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

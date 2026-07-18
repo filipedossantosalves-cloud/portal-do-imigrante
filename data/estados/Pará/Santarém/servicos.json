@@ -1,0 +1,59 @@
+{
+  "uf": "PA",
+  "state": "Pará",
+  "city": "Santarém",
+  "serviceCount": 2,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00085-pa-santarem-hospital-municipal-de-santarem",
+      "name": "Hospital Municipal de Santarém",
+      "category": "saude",
+      "region": "Norte",
+      "uf": "PA",
+      "state": "Pará",
+      "city": "Santarém",
+      "address": "Não informado",
+      "map": "",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24h",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00086-pa-santarem-hospital-regional-do-baixo-amazonas",
+      "name": "Hospital Regional do Baixo Amazonas",
+      "category": "saude",
+      "region": "Norte",
+      "uf": "PA",
+      "state": "Pará",
+      "city": "Santarém",
+      "address": "Hospital Regional do Baixo Amazonas, Santarém - PA",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Regional+do+Baixo+Amazonas%2C+Santar%C3%A9m+-+PA",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24h",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "uf": "RO",
+  "state": "Rondônia",
+  "city": "Alta Floresta",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00087-ro-alta-floresta-hospital-municipal-vanessa-e-vania-fuzari",
+      "name": "Hospital Municipal Vanessa E Vania Fuzari",
+      "category": "saude",
+      "region": "Norte",
+      "uf": "RO",
+      "state": "Rondônia",
+      "city": "Alta Floresta",
+      "address": "Hospital Municipal Vanessa E Vania Fuzari, Alta Floresta - RO",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Municipal+Vanessa+E+Vania+Fuzari%2C+Alta+Floresta+-+RO",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

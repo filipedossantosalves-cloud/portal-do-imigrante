@@ -1,0 +1,65 @@
+{
+  "uf": "GO",
+  "state": "Goiás",
+  "coverageKey": "goias",
+  "coverage": {
+    "cities": [
+      "Goiânia",
+      "Aparecida de Goiânia",
+      "Anápolis",
+      "Águas Lindas de Goiás",
+      "Rio Verde"
+    ],
+    "selection": "Cinco municípios mais populosos de Goiás segundo as Estimativas da População 2025 do IBGE/SIDRA",
+    "source": "https://apisidra.ibge.gov.br/values/t/6579/n6/all/v/9324/p/2025",
+    "records": 20,
+    "verified": "2026-06-29"
+  },
+  "cityCount": 7,
+  "serviceCount": 36,
+  "officialServiceCount": 20,
+  "cities": [
+    {
+      "name": "Águas Lindas de Goiás",
+      "folder": "Águas Lindas de Goiás",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Anápolis",
+      "folder": "Anápolis",
+      "serviceCount": 7,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Aparecida de Goiânia",
+      "folder": "Aparecida de Goiânia",
+      "serviceCount": 7,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Formosa",
+      "folder": "Formosa",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Goiânia",
+      "folder": "Goiânia",
+      "serviceCount": 12,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Luziânia",
+      "folder": "Luziânia",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Rio Verde",
+      "folder": "Rio Verde",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    }
+  ]
+}

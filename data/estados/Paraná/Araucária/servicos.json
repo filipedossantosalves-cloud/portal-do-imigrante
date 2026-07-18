@@ -1,0 +1,34 @@
+{
+  "uf": "PR",
+  "state": "Paraná",
+  "city": "Araucária",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00414-pr-araucaria-hospital-municipal-de-araucaria",
+      "name": "Hospital Municipal de Araucária",
+      "category": "saude",
+      "region": "Sul",
+      "uf": "PR",
+      "state": "Paraná",
+      "city": "Araucária",
+      "address": "Hospital Municipal de Araucária, Araucária - PR",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Municipal+de+Arauc%C3%A1ria%2C+Arauc%C3%A1ria+-+PR",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

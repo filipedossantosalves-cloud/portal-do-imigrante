@@ -1,0 +1,34 @@
+{
+  "uf": "AC",
+  "state": "Acre",
+  "city": "Acrelândia",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00001-ac-acrelandia-hospital-municipal-de-acrelandia",
+      "name": "Hospital Municipal de Acrelândia",
+      "category": "saude",
+      "region": "Norte",
+      "uf": "AC",
+      "state": "Acre",
+      "city": "Acrelândia",
+      "address": "Hospital Municipal de Acrelândia, Acrelândia - AC",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Municipal+de+Acrel%C3%A2ndia%2C+Acrel%C3%A2ndia+-+AC",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

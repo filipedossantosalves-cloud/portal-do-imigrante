@@ -1,0 +1,34 @@
+{
+  "uf": "PI",
+  "state": "Piauí",
+  "city": "Picos",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00198-pi-picos-hospital-municipal-de-picos",
+      "name": "Hospital Municipal de Picos",
+      "category": "saude",
+      "region": "Nordeste",
+      "uf": "PI",
+      "state": "Piauí",
+      "city": "Picos",
+      "address": "Hospital Municipal de Picos, Picos - PI",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Municipal+de+Picos%2C+Picos+-+PI",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, Horário Comercial",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

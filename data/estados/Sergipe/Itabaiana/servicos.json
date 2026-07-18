@@ -1,0 +1,109 @@
+{
+  "uf": "SE",
+  "state": "Sergipe",
+  "city": "Itabaiana",
+  "serviceCount": 4,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00245-se-itabaiana-caps-itabaiana",
+      "name": "CAPS Itabaiana",
+      "category": "saude",
+      "region": "Nordeste",
+      "uf": "SE",
+      "state": "Sergipe",
+      "city": "Itabaiana",
+      "address": "CAPS Itabaiana, Itabaiana - SE",
+      "map": "https://www.google.com/maps/search/?api=1&query=CAPS+Itabaiana%2C+Itabaiana+-+SE",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, 08:00 às 17:00",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00246-se-itabaiana-cras-itabaiana",
+      "name": "CRAS Itabaiana",
+      "category": "assistencia",
+      "region": "Nordeste",
+      "uf": "SE",
+      "state": "Sergipe",
+      "city": "Itabaiana",
+      "address": "CRAS Itabaiana, Itabaiana - SE",
+      "map": "https://www.google.com/maps/search/?api=1&query=CRAS+Itabaiana%2C+Itabaiana+-+SE",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, 08:00 às 17:00",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Alta",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00247-se-itabaiana-hospital-regional-de-itabaiana",
+      "name": "Hospital Regional de Itabaiana",
+      "category": "saude",
+      "region": "Nordeste",
+      "uf": "SE",
+      "state": "Sergipe",
+      "city": "Itabaiana",
+      "address": "Hospital Regional de Itabaiana, Itabaiana - SE",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Regional+de+Itabaiana%2C+Itabaiana+-+SE",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, Horário Comercial",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00248-se-itabaiana-hospital-regional-de-itabaiana-dr-pedro-garcia-moreno-filho",
+      "name": "Hospital Regional de Itabaiana (Dr. Pedro Garcia Moreno Filho)",
+      "category": "saude",
+      "region": "Nordeste",
+      "uf": "SE",
+      "state": "Sergipe",
+      "city": "Itabaiana",
+      "address": "Hospital Regional de Itabaiana (Dr. Pedro Garcia Moreno Filho), Itabaiana - SE",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Regional+de+Itabaiana+%28Dr.+Pedro+Garcia+Moreno+Filho%29%2C+Itabaiana+-+SE",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

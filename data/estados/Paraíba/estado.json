@@ -1,0 +1,23 @@
+{
+  "uf": "PB",
+  "state": "Paraíba",
+  "coverageKey": null,
+  "coverage": null,
+  "cityCount": 2,
+  "serviceCount": 7,
+  "officialServiceCount": 0,
+  "cities": [
+    {
+      "name": "João Pessoa",
+      "folder": "João Pessoa",
+      "serviceCount": 6,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Patos",
+      "folder": "Patos",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    }
+  ]
+}

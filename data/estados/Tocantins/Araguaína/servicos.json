@@ -1,0 +1,34 @@
+{
+  "uf": "TO",
+  "state": "Tocantins",
+  "city": "Araguaína",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00141-to-araguaina-hospital-municipal-de-araguaina",
+      "name": "Hospital Municipal de Araguaína",
+      "category": "saude",
+      "region": "Norte",
+      "uf": "TO",
+      "state": "Tocantins",
+      "city": "Araguaína",
+      "address": "Hospital Municipal de Araguaína, Araguaína - TO",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Municipal+de+Aragua%C3%ADna%2C+Aragua%C3%ADna+-+TO",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24h",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

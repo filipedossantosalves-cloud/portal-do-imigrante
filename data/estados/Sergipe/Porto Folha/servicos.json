@@ -1,0 +1,34 @@
+{
+  "uf": "SE",
+  "state": "Sergipe",
+  "city": "Porto Folha",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00255-se-porto-folha-upa-24h-porto-folha",
+      "name": "UPA 24h Porto Folha",
+      "category": "saude",
+      "region": "Nordeste",
+      "uf": "SE",
+      "state": "Sergipe",
+      "city": "Porto Folha",
+      "address": "UPA 24h Porto Folha, Porto Folha - SE",
+      "map": "https://www.google.com/maps/search/?api=1&query=UPA+24h+Porto+Folha%2C+Porto+Folha+-+SE",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

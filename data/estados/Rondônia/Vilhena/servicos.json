@@ -1,0 +1,85 @@
+{
+  "uf": "RO",
+  "state": "Rondônia",
+  "city": "Vilhena",
+  "serviceCount": 3,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00128-ro-vilhena-creas-vilhena",
+      "name": "CREAS Vilhena",
+      "category": "assistencia",
+      "region": "Norte",
+      "uf": "RO",
+      "state": "Rondônia",
+      "city": "Vilhena",
+      "address": "CREAS Vilhena, Vilhena - RO",
+      "map": "https://www.google.com/maps/search/?api=1&query=CREAS+Vilhena%2C+Vilhena+-+RO",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, 08:00 às 17:00",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Alta",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00129-ro-vilhena-hospital-regional-de-vilhena",
+      "name": "Hospital Regional de Vilhena",
+      "category": "saude",
+      "region": "Norte",
+      "uf": "RO",
+      "state": "Rondônia",
+      "city": "Vilhena",
+      "address": "",
+      "map": "",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": false,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado",
+        "Endereço a confirmar"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00130-ro-vilhena-rodoviaria-de-vilhena",
+      "name": "Rodoviária de Vilhena",
+      "category": "acolhimento",
+      "region": "Norte",
+      "uf": "RO",
+      "state": "Rondônia",
+      "city": "Vilhena",
+      "address": "Rodoviária de Vilhena, Vilhena - RO",
+      "map": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria+de+Vilhena%2C+Vilhena+-+RO",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, Horário Comercial",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

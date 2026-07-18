@@ -1,0 +1,47 @@
+{
+  "uf": "PA",
+  "state": "Pará",
+  "coverageKey": null,
+  "coverage": null,
+  "cityCount": 6,
+  "serviceCount": 15,
+  "officialServiceCount": 0,
+  "cities": [
+    {
+      "name": "Ananindeua",
+      "folder": "Ananindeua",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Belém",
+      "folder": "Belém",
+      "serviceCount": 6,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Marabá",
+      "folder": "Marabá",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Não informado",
+      "folder": "Não informado",
+      "serviceCount": 4,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Paragominas",
+      "folder": "Paragominas",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Santarém",
+      "folder": "Santarém",
+      "serviceCount": 2,
+      "officialServiceCount": 0
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "uf": "ES",
+  "state": "Espírito Santo",
+  "coverageKey": "espiritoSanto",
+  "coverage": {
+    "cities": [
+      "Serra",
+      "Vila Velha",
+      "Cariacica",
+      "Vitória",
+      "Cachoeiro de Itapemirim"
+    ],
+    "selection": "Cinco municípios mais populosos do Espírito Santo segundo panorama/estimativas oficiais do IBGE",
+    "source": "https://cidades.ibge.gov.br/brasil/es/panorama",
+    "records": 20,
+    "verified": "2026-06-29"
+  },
+  "cityCount": 6,
+  "serviceCount": 32,
+  "officialServiceCount": 20,
+  "cities": [
+    {
+      "name": "Cachoeiro de Itapemirim",
+      "folder": "Cachoeiro de Itapemirim",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Cariacica",
+      "folder": "Cariacica",
+      "serviceCount": 6,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Colatina",
+      "folder": "Colatina",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Serra",
+      "folder": "Serra",
+      "serviceCount": 6,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Vila Velha",
+      "folder": "Vila Velha",
+      "serviceCount": 7,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Vitória",
+      "folder": "Vitória",
+      "serviceCount": 8,
+      "officialServiceCount": 4
+    }
+  ]
+}

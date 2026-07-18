@@ -1,0 +1,17 @@
+{
+  "uf": "",
+  "state": "Não informado",
+  "coverageKey": null,
+  "coverage": null,
+  "cityCount": 1,
+  "serviceCount": 28,
+  "officialServiceCount": 0,
+  "cities": [
+    {
+      "name": "Não informado",
+      "folder": "Não informado",
+      "serviceCount": 28,
+      "officialServiceCount": 0
+    }
+  ]
+}

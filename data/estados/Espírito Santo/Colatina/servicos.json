@@ -1,0 +1,34 @@
+{
+  "uf": "ES",
+  "state": "Espírito Santo",
+  "city": "Colatina",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00364-es-colatina-hospital-regional-de-colatina",
+      "name": "Hospital Regional de Colatina",
+      "category": "saude",
+      "region": "Sudeste",
+      "uf": "ES",
+      "state": "Espírito Santo",
+      "city": "Colatina",
+      "address": "Hospital Regional de Colatina, Colatina - ES",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Regional+de+Colatina%2C+Colatina+-+ES",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "uf": "PE",
+  "state": "Pernambuco",
+  "coverageKey": "pernambuco",
+  "coverage": {
+    "cities": [
+      "Recife",
+      "Jaboatão dos Guararapes",
+      "Petrolina",
+      "Caruaru",
+      "Olinda"
+    ],
+    "selection": "Cinco municípios mais populosos segundo as Estimativas da População 2025 do IBGE",
+    "source": "https://ftp.ibge.gov.br/Estimativas_de_Populacao/Estimativas_2025/estimativa_dou_2025.pdf",
+    "records": 19,
+    "verified": "2026-06-28"
+  },
+  "cityCount": 6,
+  "serviceCount": 27,
+  "officialServiceCount": 19,
+  "cities": [
+    {
+      "name": "Caruaru",
+      "folder": "Caruaru",
+      "serviceCount": 5,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Jaboatão",
+      "folder": "Jaboatão",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Jaboatão dos Guararapes",
+      "folder": "Jaboatão dos Guararapes",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Olinda",
+      "folder": "Olinda",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Petrolina",
+      "folder": "Petrolina",
+      "serviceCount": 3,
+      "officialServiceCount": 3
+    },
+    {
+      "name": "Recife",
+      "folder": "Recife",
+      "serviceCount": 10,
+      "officialServiceCount": 4
+    }
+  ]
+}

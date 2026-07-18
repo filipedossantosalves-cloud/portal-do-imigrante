@@ -1,0 +1,34 @@
+{
+  "uf": "PR",
+  "state": "Paraná",
+  "city": "Francisco Beltrão",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00438-pr-francisco-beltrao-hospital-regional-do-sudoeste",
+      "name": "Hospital Regional do Sudoeste",
+      "category": "saude",
+      "region": "Sul",
+      "uf": "PR",
+      "state": "Paraná",
+      "city": "Francisco Beltrão",
+      "address": "Hospital Regional do Sudoeste, Francisco Beltrão - PR",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Regional+do+Sudoeste%2C+Francisco+Beltr%C3%A3o+-+PR",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

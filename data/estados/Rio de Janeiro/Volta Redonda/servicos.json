@@ -1,0 +1,34 @@
+{
+  "uf": "RJ",
+  "state": "Rio de Janeiro",
+  "city": "Volta Redonda",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00398-rj-volta-redonda-hospital-regional-de-volta-redonda",
+      "name": "Hospital Regional de Volta Redonda",
+      "category": "saude",
+      "region": "Sudeste",
+      "uf": "RJ",
+      "state": "Rio de Janeiro",
+      "city": "Volta Redonda",
+      "address": "Hospital Regional de Volta Redonda, Volta Redonda - RJ",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Regional+de+Volta+Redonda%2C+Volta+Redonda+-+RJ",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

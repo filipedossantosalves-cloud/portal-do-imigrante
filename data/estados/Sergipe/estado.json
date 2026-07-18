@@ -1,0 +1,77 @@
+{
+  "uf": "SE",
+  "state": "Sergipe",
+  "coverageKey": null,
+  "coverage": null,
+  "cityCount": 11,
+  "serviceCount": 46,
+  "officialServiceCount": 0,
+  "cities": [
+    {
+      "name": "Aracaju",
+      "folder": "Aracaju",
+      "serviceCount": 28,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Aracaju/São Cristóvão",
+      "folder": "Aracaju São Cristóvão",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Boquim",
+      "folder": "Boquim",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Estância",
+      "folder": "Estância",
+      "serviceCount": 4,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Itabaiana",
+      "folder": "Itabaiana",
+      "serviceCount": 4,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Lagarto",
+      "folder": "Lagarto",
+      "serviceCount": 3,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Neópolis",
+      "folder": "Neópolis",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Nossa Senhora da Glória",
+      "folder": "Nossa Senhora da Glória",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Nossa Senhora do Socorro",
+      "folder": "Nossa Senhora do Socorro",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Porto Folha",
+      "folder": "Porto Folha",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Propriá",
+      "folder": "Propriá",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    }
+  ]
+}

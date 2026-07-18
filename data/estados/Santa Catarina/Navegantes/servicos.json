@@ -1,0 +1,33 @@
+{
+  "uf": "SC",
+  "state": "Santa Catarina",
+  "city": "Navegantes",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00534-sc-navegantes-hospital-municipal-de-navegantes",
+      "name": "Hospital Municipal de Navegantes",
+      "category": "saude",
+      "region": "Sul",
+      "uf": "SC",
+      "state": "Santa Catarina",
+      "city": "Navegantes",
+      "address": "Rua Navegantes, 1200",
+      "map": "",
+      "phone": "(47) 3348-9000",
+      "phoneLabel": "(47) 3348-9000",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": true,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Média",
+      "reasons": [
+        "Fonte não registrada"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

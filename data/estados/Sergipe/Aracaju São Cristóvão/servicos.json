@@ -1,0 +1,34 @@
+{
+  "uf": "SE",
+  "state": "Sergipe",
+  "city": "Aracaju/São Cristóvão",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00239-se-aracaju-sao-cristovao-clinica-escola-de-fisioterapia-ufs-aracaju-sao-cristovao",
+      "name": "Clínica-Escola de Fisioterapia (UFS - Aracaju/São Cristóvão)",
+      "category": "saude",
+      "region": "Nordeste",
+      "uf": "SE",
+      "state": "Sergipe",
+      "city": "Aracaju/São Cristóvão",
+      "address": "Clínica-Escola de Fisioterapia (UFS - Aracaju/São Cristóvão), Aracaju/São Cristóvão - SE",
+      "map": "https://www.google.com/maps/search/?api=1&query=Cl%C3%ADnica-Escola+de+Fisioterapia+%28UFS+-+Aracaju%2FS%C3%A3o+Crist%C3%B3v%C3%A3o%29%2C+Aracaju%2FS%C3%A3o+Crist%C3%B3v%C3%A3o+-+SE",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, Horário Comercial",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

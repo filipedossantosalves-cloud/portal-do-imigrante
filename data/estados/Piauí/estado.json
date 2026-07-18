@@ -1,0 +1,29 @@
+{
+  "uf": "PI",
+  "state": "Piauí",
+  "coverageKey": null,
+  "coverage": null,
+  "cityCount": 3,
+  "serviceCount": 7,
+  "officialServiceCount": 0,
+  "cities": [
+    {
+      "name": "Parnaíba",
+      "folder": "Parnaíba",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Picos",
+      "folder": "Picos",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Teresina",
+      "folder": "Teresina",
+      "serviceCount": 5,
+      "officialServiceCount": 0
+    }
+  ]
+}

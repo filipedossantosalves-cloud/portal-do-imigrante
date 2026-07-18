@@ -1,0 +1,29 @@
+{
+  "uf": "RR",
+  "state": "Roraima",
+  "coverageKey": null,
+  "coverage": null,
+  "cityCount": 3,
+  "serviceCount": 10,
+  "officialServiceCount": 0,
+  "cities": [
+    {
+      "name": "Boa Vista",
+      "folder": "Boa Vista",
+      "serviceCount": 6,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Não informado",
+      "folder": "Não informado",
+      "serviceCount": 3,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Rorainópolis",
+      "folder": "Rorainópolis",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    }
+  ]
+}

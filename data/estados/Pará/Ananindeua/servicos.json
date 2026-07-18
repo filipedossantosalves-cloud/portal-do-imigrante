@@ -1,0 +1,34 @@
+{
+  "uf": "PA",
+  "state": "Pará",
+  "city": "Ananindeua",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00072-pa-ananindeua-cras-aura",
+      "name": "CRAS Aurá",
+      "category": "assistencia",
+      "region": "Norte",
+      "uf": "PA",
+      "state": "Pará",
+      "city": "Ananindeua",
+      "address": "CRAS Aurá, Ananindeua - PA",
+      "map": "https://www.google.com/maps/search/?api=1&query=CRAS+Aur%C3%A1%2C+Ananindeua+-+PA",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "08:00 - 17:00",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Alta",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "uf": "MS",
+  "state": "Mato Grosso do Sul",
+  "coverageKey": "matoGrossoDoSul",
+  "coverage": {
+    "cities": [
+      "Campo Grande",
+      "Dourados",
+      "Três Lagoas",
+      "Corumbá",
+      "Ponta Porã"
+    ],
+    "selection": "Cinco municípios mais populosos de Mato Grosso do Sul segundo as Estimativas da População 2025 do IBGE/SIDRA",
+    "source": "https://apisidra.ibge.gov.br/values/t/6579/n6/all/v/9324/p/2025",
+    "records": 20,
+    "verified": "2026-07-02"
+  },
+  "cityCount": 6,
+  "serviceCount": 37,
+  "officialServiceCount": 20,
+  "cities": [
+    {
+      "name": "Campo Grande",
+      "folder": "Campo Grande",
+      "serviceCount": 14,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Corumbá",
+      "folder": "Corumbá",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Dourados",
+      "folder": "Dourados",
+      "serviceCount": 7,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Naviraí",
+      "folder": "Naviraí",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Ponta Porã",
+      "folder": "Ponta Porã",
+      "serviceCount": 5,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Três Lagoas",
+      "folder": "Três Lagoas",
+      "serviceCount": 6,
+      "officialServiceCount": 4
+    }
+  ]
+}

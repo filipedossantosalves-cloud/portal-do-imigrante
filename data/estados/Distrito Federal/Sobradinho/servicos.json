@@ -1,0 +1,35 @@
+{
+  "uf": "DF",
+  "state": "Distrito Federal",
+  "city": "Sobradinho",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00309-df-sobradinho-upa-sobradinho",
+      "name": "UPA Sobradinho",
+      "category": "saude",
+      "region": "Centro-Oeste",
+      "uf": "DF",
+      "state": "Distrito Federal",
+      "city": "Sobradinho",
+      "address": "",
+      "map": "",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": false,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado",
+        "Endereço a confirmar"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

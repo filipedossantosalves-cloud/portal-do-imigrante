@@ -1,0 +1,53 @@
+{
+  "uf": "MT",
+  "state": "Mato Grosso",
+  "coverageKey": "matoGrosso",
+  "coverage": {
+    "cities": [
+      "Cuiabá",
+      "Várzea Grande",
+      "Rondonópolis",
+      "Sinop",
+      "Sorriso"
+    ],
+    "selection": "Cinco municípios mais populosos de Mato Grosso segundo as Estimativas da População 2025 do IBGE/SIDRA",
+    "source": "https://apisidra.ibge.gov.br/values/t/6579/n6/all/v/9324/p/2025",
+    "records": 20,
+    "verified": "2026-07-02"
+  },
+  "cityCount": 5,
+  "serviceCount": 37,
+  "officialServiceCount": 20,
+  "cities": [
+    {
+      "name": "Cuiabá",
+      "folder": "Cuiabá",
+      "serviceCount": 13,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Rondonópolis",
+      "folder": "Rondonópolis",
+      "serviceCount": 6,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Sinop",
+      "folder": "Sinop",
+      "serviceCount": 5,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Sorriso",
+      "folder": "Sorriso",
+      "serviceCount": 5,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Várzea Grande",
+      "folder": "Várzea Grande",
+      "serviceCount": 8,
+      "officialServiceCount": 4
+    }
+  ]
+}

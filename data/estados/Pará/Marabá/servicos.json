@@ -1,0 +1,34 @@
+{
+  "uf": "PA",
+  "state": "Pará",
+  "city": "Marabá",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00079-pa-maraba-hospital-municipal-de-maraba",
+      "name": "Hospital Municipal de Marabá",
+      "category": "saude",
+      "region": "Norte",
+      "uf": "PA",
+      "state": "Pará",
+      "city": "Marabá",
+      "address": "Hospital Municipal de Marabá, Marabá - PA",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Municipal+de+Marab%C3%A1%2C+Marab%C3%A1+-+PA",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24h",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

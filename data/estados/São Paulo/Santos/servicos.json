@@ -1,0 +1,59 @@
+{
+  "uf": "SP",
+  "state": "São Paulo",
+  "city": "Santos",
+  "serviceCount": 2,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00402-sp-santos-creas-santos",
+      "name": "CREAS Santos",
+      "category": "assistencia",
+      "region": "Sudeste",
+      "uf": "SP",
+      "state": "São Paulo",
+      "city": "Santos",
+      "address": "CREAS Santos, Santos - SP",
+      "map": "https://www.google.com/maps/search/?api=1&query=CREAS+Santos%2C+Santos+-+SP",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, 08:00 às 17:00",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Alta",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00403-sp-santos-upa-central",
+      "name": "UPA Central",
+      "category": "saude",
+      "region": "Sudeste",
+      "uf": "SP",
+      "state": "São Paulo",
+      "city": "Santos",
+      "address": "UPA Central, Santos - SP",
+      "map": "https://www.google.com/maps/search/?api=1&query=UPA+Central%2C+Santos+-+SP",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

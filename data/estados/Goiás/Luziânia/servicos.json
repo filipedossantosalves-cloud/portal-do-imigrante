@@ -1,0 +1,34 @@
+{
+  "uf": "GO",
+  "state": "Goiás",
+  "city": "Luziânia",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00327-go-luziania-hospital-regional-de-luziania",
+      "name": "Hospital Regional de Luziânia",
+      "category": "saude",
+      "region": "Centro-Oeste",
+      "uf": "GO",
+      "state": "Goiás",
+      "city": "Luziânia",
+      "address": "Hospital Regional de Luziânia, Luziânia - GO",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Regional+de+Luzi%C3%A2nia%2C+Luzi%C3%A2nia+-+GO",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "uf": "TO",
+  "state": "Tocantins",
+  "city": "Gurupi",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00142-to-gurupi-hospital-regional-de-gurupi",
+      "name": "Hospital Regional de Gurupi",
+      "category": "saude",
+      "region": "Norte",
+      "uf": "TO",
+      "state": "Tocantins",
+      "city": "Gurupi",
+      "address": "Hospital Regional de Gurupi, Gurupi - TO",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Regional+de+Gurupi%2C+Gurupi+-+TO",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24h",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

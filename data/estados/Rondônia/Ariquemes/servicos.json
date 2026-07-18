@@ -1,0 +1,109 @@
+{
+  "uf": "RO",
+  "state": "Rondônia",
+  "city": "Ariquemes",
+  "serviceCount": 4,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00088-ro-ariquemes-cras-ariquemes",
+      "name": "CRAS Ariquemes",
+      "category": "assistencia",
+      "region": "Norte",
+      "uf": "RO",
+      "state": "Rondônia",
+      "city": "Ariquemes",
+      "address": "CRAS Ariquemes, Ariquemes - RO",
+      "map": "https://www.google.com/maps/search/?api=1&query=CRAS+Ariquemes%2C+Ariquemes+-+RO",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, 08:00 às 17:00",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Alta",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00089-ro-ariquemes-hospital-regional-de-ariquemes",
+      "name": "Hospital Regional de Ariquemes",
+      "category": "saude",
+      "region": "Norte",
+      "uf": "RO",
+      "state": "Rondônia",
+      "city": "Ariquemes",
+      "address": "Hospital Regional de Ariquemes, Ariquemes - RO",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Regional+de+Ariquemes%2C+Ariquemes+-+RO",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00090-ro-ariquemes-sine-ariquemes",
+      "name": "SINE Ariquemes",
+      "category": "trabalho",
+      "region": "Norte",
+      "uf": "RO",
+      "state": "Rondônia",
+      "city": "Ariquemes",
+      "address": "SINE Ariquemes, Ariquemes - RO",
+      "map": "https://www.google.com/maps/search/?api=1&query=SINE+Ariquemes%2C+Ariquemes+-+RO",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, Horário Comercial",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Alta",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00091-ro-ariquemes-upa-ariquemes",
+      "name": "UPA Ariquemes",
+      "category": "saude",
+      "region": "Norte",
+      "uf": "RO",
+      "state": "Rondônia",
+      "city": "Ariquemes",
+      "address": "UPA Ariquemes, Ariquemes - RO",
+      "map": "https://www.google.com/maps/search/?api=1&query=UPA+Ariquemes%2C+Ariquemes+-+RO",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

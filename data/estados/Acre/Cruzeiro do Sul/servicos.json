@@ -1,0 +1,84 @@
+{
+  "uf": "AC",
+  "state": "Acre",
+  "city": "CRUZEIRO DO SUL",
+  "serviceCount": 3,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00005-ac-cruzeiro-do-sul-cras-cruzeiro-do-sul",
+      "name": "CRAS Cruzeiro do Sul",
+      "category": "assistencia",
+      "region": "Norte",
+      "uf": "AC",
+      "state": "Acre",
+      "city": "CRUZEIRO DO SUL",
+      "address": "CRAS Cruzeiro do Sul, CRUZEIRO DO SUL - AC",
+      "map": "https://www.google.com/maps/search/?api=1&query=CRAS+Cruzeiro+do+Sul%2C+CRUZEIRO+DO+SUL+-+AC",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, Horário Comercial",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Alta",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00006-ac-cruzeiro-do-sul-hospital-regional-do-jurua",
+      "name": "Hospital Regional do Juruá",
+      "category": "saude",
+      "region": "Norte",
+      "uf": "AC",
+      "state": "Acre",
+      "city": "CRUZEIRO DO SUL",
+      "address": "Hospital Regional do Juruá, CRUZEIRO DO SUL - AC",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Regional+do+Juru%C3%A1%2C+CRUZEIRO+DO+SUL+-+AC",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, Horário Comercial",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00007-ac-cruzeiro-do-sul-upa-24h-cruzeiro-do-sul",
+      "name": "UPA 24h Cruzeiro do Sul",
+      "category": "saude",
+      "region": "Norte",
+      "uf": "AC",
+      "state": "Acre",
+      "city": "CRUZEIRO DO SUL",
+      "address": "UPA 24h Cruzeiro do Sul, CRUZEIRO DO SUL - AC",
+      "map": "https://www.google.com/maps/search/?api=1&query=UPA+24h+Cruzeiro+do+Sul%2C+CRUZEIRO+DO+SUL+-+AC",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, Horário Comercial",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

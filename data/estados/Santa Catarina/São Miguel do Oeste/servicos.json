@@ -1,0 +1,33 @@
+{
+  "uf": "SC",
+  "state": "Santa Catarina",
+  "city": "São Miguel do Oeste",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00536-sc-sao-miguel-do-oeste-hospital-regional-terezinha-gaio-basso",
+      "name": "Hospital Regional Terezinha Gaio Basso",
+      "category": "saude",
+      "region": "Sul",
+      "uf": "SC",
+      "state": "Santa Catarina",
+      "city": "São Miguel do Oeste",
+      "address": "Rua Terezinha Gaio Basso, 800",
+      "map": "",
+      "phone": "(49) 3631-5000",
+      "phoneLabel": "(49) 3631-5000",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": true,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Média",
+      "reasons": [
+        "Fonte não registrada"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

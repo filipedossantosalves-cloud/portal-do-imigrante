@@ -1,0 +1,34 @@
+{
+  "uf": "MS",
+  "state": "Mato Grosso do Sul",
+  "city": "Naviraí",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00358-ms-navirai-hospital-municipal-de-navirai",
+      "name": "Hospital Municipal de Naviraí",
+      "category": "saude",
+      "region": "Centro-Oeste",
+      "uf": "MS",
+      "state": "Mato Grosso do Sul",
+      "city": "Naviraí",
+      "address": "Hospital Municipal de Naviraí, Naviraí - MS",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Municipal+de+Navira%C3%AD%2C+Navira%C3%AD+-+MS",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

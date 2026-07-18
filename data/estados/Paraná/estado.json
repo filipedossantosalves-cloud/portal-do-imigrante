@@ -1,0 +1,71 @@
+{
+  "uf": "PR",
+  "state": "Paraná",
+  "coverageKey": null,
+  "coverage": null,
+  "cityCount": 10,
+  "serviceCount": 51,
+  "officialServiceCount": 0,
+  "cities": [
+    {
+      "name": "Araucária",
+      "folder": "Araucária",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Cascavel",
+      "folder": "Cascavel",
+      "serviceCount": 4,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Curitiba",
+      "folder": "Curitiba",
+      "serviceCount": 13,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Foz do Iguaçu",
+      "folder": "Foz do Iguaçu",
+      "serviceCount": 6,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Francisco Beltrão",
+      "folder": "Francisco Beltrão",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Londrina",
+      "folder": "Londrina",
+      "serviceCount": 12,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Maringá",
+      "folder": "Maringá",
+      "serviceCount": 11,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Paranaguá",
+      "folder": "Paranaguá",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Pinhais",
+      "folder": "Pinhais",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Ponta Grossa",
+      "folder": "Ponta Grossa",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    }
+  ]
+}

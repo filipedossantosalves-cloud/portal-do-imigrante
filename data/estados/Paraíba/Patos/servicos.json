@@ -1,0 +1,34 @@
+{
+  "uf": "PB",
+  "state": "Paraíba",
+  "city": "Patos",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00188-pb-patos-hospital-regional-de-patos",
+      "name": "Hospital Regional de Patos",
+      "category": "saude",
+      "region": "Nordeste",
+      "uf": "PB",
+      "state": "Paraíba",
+      "city": "Patos",
+      "address": "Hospital Regional de Patos, Patos - PB",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Regional+de+Patos%2C+Patos+-+PB",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, Horário Comercial",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "syntax": "ok",
+  "indexLoadsLocalData": true,
+  "records": 19,
+  "cities": {
+    "Porto Alegre": 4,
+    "Caxias do Sul": 4,
+    "Canoas": 4,
+    "Pelotas": 4,
+    "Santa Maria": 3
+  },
+  "allHaveOfficialSource": true,
+  "allHaveAddress": true,
+  "totalPortal": 583
+}

@@ -1,0 +1,102 @@
+{
+  "state": "Minas Gerais",
+  "uf": "MG",
+  "city": "Belo Horizonte",
+  "updated": "2026-07-18",
+  "status": "research",
+  "sources": [
+    {
+      "title": "Centro de Referencia de Assistencia Social (CRAS) - Prefeitura de Belo Horizonte",
+      "url": "https://prefeitura.pbh.gov.br/assistencia-social/equipamentos/cras",
+      "sourceType": "official",
+      "serviceArea": "assistencia",
+      "notes": "Fonte oficial da PBH com lista de unidades CRAS, enderecos, contatos e funcionamento informado como 8h as 18h.",
+      "checkedAt": "2026-07-18"
+    },
+    {
+      "title": "Centro de Referencia Especializado de Assistencia Social (CREAS) - Prefeitura de Belo Horizonte",
+      "url": "https://prefeitura.pbh.gov.br/assistencia-social/equipamentos/creas",
+      "sourceType": "official",
+      "serviceArea": "assistencia",
+      "notes": "Fonte oficial da PBH com unidades CREAS, enderecos, telefones e emails por regional.",
+      "checkedAt": "2026-07-18"
+    },
+    {
+      "title": "Centro de Referencia para a Populacao em Situacao de Rua - Centro POP - Prefeitura de Belo Horizonte",
+      "url": "https://prefeitura.pbh.gov.br/node/28141",
+      "sourceType": "official",
+      "serviceArea": "acolhimento",
+      "notes": "Fonte oficial da PBH sobre Centro POP, incluindo atendimento gratuito e informacoes de endereco/funcionamento publicadas.",
+      "checkedAt": "2026-07-18"
+    },
+    {
+      "title": "Unidade de Atendimento e Acolhimento ao Migrante - Prefeitura de Belo Horizonte",
+      "url": "https://prefeitura.pbh.gov.br/assistencia-social/equipamentos/migrante",
+      "sourceType": "official",
+      "serviceArea": "acolhimento",
+      "notes": "Fonte oficial da PBH para atendimento imediato, orientacao, protecao social e possibilidade de acolhimento provisorio para pessoas migrantes em vulnerabilidade.",
+      "checkedAt": "2026-07-18"
+    },
+    {
+      "title": "Acolhimento Institucional - Populacao em Situacao de Rua - Prefeitura de Belo Horizonte",
+      "url": "https://prefeitura.pbh.gov.br/assistencia-social/acolhimento/poprua",
+      "sourceType": "official",
+      "serviceArea": "acolhimento",
+      "notes": "Fonte oficial da PBH informa Hospedagem Social, Unidades de Acolhimento Temporario e Acolhimento Noturno. Casa de Passagem aparece como 'em breve no municipio', portanto nao deve ser publicada como servico ativo.",
+      "checkedAt": "2026-07-18"
+    },
+    {
+      "title": "Coordenacao de Politicas para Migrantes e Refugiados - Prefeitura de Belo Horizonte",
+      "url": "https://prefeitura.pbh.gov.br/direitos-humanos/migrantes-e-refugiados",
+      "sourceType": "official",
+      "serviceArea": "regularizacao",
+      "notes": "Fonte oficial municipal com orientacoes e rede de referencia para migrantes e refugiados, incluindo unidade da Policia Federal em Belo Horizonte.",
+      "checkedAt": "2026-07-18"
+    },
+    {
+      "title": "Rede de apoio a refugiados - Ministerio da Justica e Seguranca Publica",
+      "url": "https://www.gov.br/mj/pt-br/assuntos/seus-direitos/refugio/integracao-local/rede-de-apoio-a-refugiados",
+      "sourceType": "official",
+      "serviceArea": "acolhimento",
+      "notes": "Fonte oficial federal lista o Servico Jesuita a Migrantes e Refugiados em Belo Horizonte e a Fraternidade - Federacao Humanitaria Internacional em Minas Gerais.",
+      "checkedAt": "2026-07-18"
+    },
+    {
+      "title": "Portal das Parcerias - Servico de acolhimento para populacao migrante e refugiada indigena - PBH",
+      "url": "https://prefeitura.pbh.gov.br/portaldasparcerias/parceria/96262/ij/01202410110004",
+      "sourceType": "official",
+      "serviceArea": "acolhimento",
+      "notes": "Fonte oficial da PBH registra termo de colaboracao com Caritas Brasileira para programas de atendimento a populacao de rua e ao migrante. Nao e atendimento direto; registrar como parceria/rede.",
+      "checkedAt": "2026-07-18"
+    },
+    {
+      "title": "Superintendencia Regional da Policia Federal em Minas Gerais",
+      "url": "https://www.gov.br/pf/pt-br/acesso-a-informacao/institucional/quem-e-quem/superintendencias-e-delegacias/minas-gerais/superintendencia-regional-em-minas-gerais",
+      "sourceType": "official",
+      "serviceArea": "regularizacao",
+      "notes": "Fonte oficial federal com endereco, telefone e horario da Delegacia de Policia de Imigracao e Unidade de Registro de Estrangeiros em Belo Horizonte.",
+      "checkedAt": "2026-07-18"
+    },
+    {
+      "title": "Unidade de Pronto Atendimento (UPA) - Prefeitura de Belo Horizonte",
+      "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/urgencia-e-emergencia/upa",
+      "sourceType": "official",
+      "serviceArea": "saude",
+      "notes": "Fonte oficial da PBH com enderecos e telefones das UPAs, incluindo UPA Centro-Sul e UPA Venda Nova. Horario 24h confirmado por pagina oficial de funcionamento da rede de urgencia.",
+      "checkedAt": "2026-07-18"
+    },
+    {
+      "title": "Contato do Hospital Metropolitano Odilon Behrens - Prefeitura de Belo Horizonte",
+      "url": "https://prefeitura.pbh.gov.br/hospital-metropolitano-odilon-behrens/contato",
+      "sourceType": "official",
+      "serviceArea": "saude",
+      "notes": "Fonte oficial identificada para endereco, telefone e funcionamento 24h. Pagina retornou manutencao em nova abertura; revisar antes de promover o rascunho.",
+      "checkedAt": "2026-07-18"
+    }
+  ],
+  "sourceRules": [
+    "Use only official city, state, or federal sources for validation.",
+    "Do not use blogs, maps, social media, or directories as final validation sources.",
+    "If the official page does not publish a field, keep the field empty and mark it for confirmation."
+  ]
+}

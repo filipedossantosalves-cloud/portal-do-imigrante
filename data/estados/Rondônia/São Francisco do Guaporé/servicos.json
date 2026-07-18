@@ -1,0 +1,34 @@
+{
+  "uf": "RO",
+  "state": "Rondônia",
+  "city": "São Francisco do Guaporé",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00127-ro-sao-francisco-do-guapore-hospital-regional-de-sao-francisco-do-guapore",
+      "name": "Hospital Regional de São Francisco do Guaporé",
+      "category": "saude",
+      "region": "Norte",
+      "uf": "RO",
+      "state": "Rondônia",
+      "city": "São Francisco do Guaporé",
+      "address": "Hospital Regional de São Francisco do Guaporé, São Francisco do Guaporé - RO",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Regional+de+S%C3%A3o+Francisco+do+Guapor%C3%A9%2C+S%C3%A3o+Francisco+do+Guapor%C3%A9+-+RO",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

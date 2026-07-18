@@ -1,0 +1,153 @@
+{
+  "uf": "SC",
+  "state": "Santa Catarina",
+  "city": "Blumenau",
+  "serviceCount": 6,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00467-sc-blumenau-caps-ad",
+      "name": "CAPS AD",
+      "category": "saude",
+      "region": "Sul",
+      "uf": "SC",
+      "state": "Santa Catarina",
+      "city": "Blumenau",
+      "address": "Rua Álcool e Drogas, 400",
+      "map": "",
+      "phone": "(47) 3330-5100",
+      "phoneLabel": "(47) 3330-5100",
+      "hours": "Segunda a sexta, 8h às 18h",
+      "source": "",
+      "contactConfirmed": true,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Média",
+      "reasons": [
+        "Fonte não registrada"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00468-sc-blumenau-cras-itoupava-central",
+      "name": "CRAS Itoupava Central",
+      "category": "saude",
+      "region": "Sul",
+      "uf": "SC",
+      "state": "Santa Catarina",
+      "city": "Blumenau",
+      "address": "Rua Itoupava Central, 500",
+      "map": "",
+      "phone": "(47) 3330-5200",
+      "phoneLabel": "(47) 3330-5200",
+      "hours": "Segunda a sexta, 8h às 17h",
+      "source": "",
+      "contactConfirmed": true,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Média",
+      "reasons": [
+        "Fonte não registrada"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00469-sc-blumenau-creas-blumenau",
+      "name": "CREAS Blumenau",
+      "category": "assistencia",
+      "region": "Sul",
+      "uf": "SC",
+      "state": "Santa Catarina",
+      "city": "Blumenau",
+      "address": "Rua CREAS, 600",
+      "map": "",
+      "phone": "(47) 3330-5300",
+      "phoneLabel": "(47) 3330-5300",
+      "hours": "Segunda a sexta, 8h às 17h",
+      "source": "",
+      "contactConfirmed": true,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Média",
+      "reasons": [
+        "Fonte não registrada"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00470-sc-blumenau-rodoviaria-de-blumenau",
+      "name": "Rodoviária de Blumenau",
+      "category": "acolhimento",
+      "region": "Sul",
+      "uf": "SC",
+      "state": "Santa Catarina",
+      "city": "Blumenau",
+      "address": "Rua Rodoviária, 800",
+      "map": "",
+      "phone": "(47) 3330-5500",
+      "phoneLabel": "(47) 3330-5500",
+      "hours": "Segunda a domingo, 5h às 23h",
+      "source": "",
+      "contactConfirmed": true,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Média",
+      "reasons": [
+        "Fonte não registrada"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00471-sc-blumenau-sine-blumenau",
+      "name": "SINE Blumenau",
+      "category": "trabalho",
+      "region": "Sul",
+      "uf": "SC",
+      "state": "Santa Catarina",
+      "city": "Blumenau",
+      "address": "Rua SINE, 700",
+      "map": "",
+      "phone": "(47) 3330-5400",
+      "phoneLabel": "(47) 3330-5400",
+      "hours": "Segunda a sexta, 8h às 17h",
+      "source": "",
+      "contactConfirmed": true,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Média",
+      "reasons": [
+        "Fonte não registrada"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00472-sc-blumenau-ubs-central",
+      "name": "UBS Central",
+      "category": "saude",
+      "region": "Sul",
+      "uf": "SC",
+      "state": "Santa Catarina",
+      "city": "Blumenau",
+      "address": "Rua Central, 300",
+      "map": "",
+      "phone": "(47) 3330-5000",
+      "phoneLabel": "(47) 3330-5000",
+      "hours": "Segunda a sexta, 7h às 17h",
+      "source": "",
+      "contactConfirmed": true,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Média",
+      "reasons": [
+        "Fonte não registrada"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

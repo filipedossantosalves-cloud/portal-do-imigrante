@@ -1,0 +1,42 @@
+{
+  "uf": "MG",
+  "state": "Minas Gerais",
+  "coverageKey": null,
+  "coverage": null,
+  "cityCount": 5,
+  "serviceCount": 32,
+  "officialServiceCount": 26,
+  "cities": [
+    {
+      "name": "Belo Horizonte",
+      "folder": "Belo Horizonte",
+      "serviceCount": 13,
+      "officialServiceCount": 11
+    },
+    {
+      "name": "Betim",
+      "folder": "Betim",
+      "serviceCount": 7,
+      "officialServiceCount": 6
+    },
+    {
+      "name": "Contagem",
+      "folder": "Contagem",
+      "serviceCount": 9,
+      "officialServiceCount": 9
+    },
+    {
+      "name": "Juiz de Fora",
+      "folder": "Juiz de Fora",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Uberlândia",
+      "folder": "Uberlândia",
+      "serviceCount": 2,
+      "officialServiceCount": 0
+    }
+  ],
+  "updated": "2026-07-18"
+}

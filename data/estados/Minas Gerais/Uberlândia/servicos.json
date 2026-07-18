@@ -1,0 +1,59 @@
+{
+  "uf": "MG",
+  "state": "Minas Gerais",
+  "city": "Uberlândia",
+  "serviceCount": 2,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00383-mg-uberlandia-cras-uberlandia",
+      "name": "CRAS Uberlândia",
+      "category": "assistencia",
+      "region": "Sudeste",
+      "uf": "MG",
+      "state": "Minas Gerais",
+      "city": "Uberlândia",
+      "address": "CRAS Uberlândia, Uberlândia - MG",
+      "map": "https://www.google.com/maps/search/?api=1&query=CRAS+Uberl%C3%A2ndia%2C+Uberl%C3%A2ndia+-+MG",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, 08:00 às 17:00",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Alta",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00384-mg-uberlandia-hospital-regional-de-uberlandia",
+      "name": "Hospital Regional de Uberlândia",
+      "category": "saude",
+      "region": "Sudeste",
+      "uf": "MG",
+      "state": "Minas Gerais",
+      "city": "Uberlândia",
+      "address": "Hospital Regional de Uberlândia, Uberlândia - MG",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Regional+de+Uberl%C3%A2ndia%2C+Uberl%C3%A2ndia+-+MG",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

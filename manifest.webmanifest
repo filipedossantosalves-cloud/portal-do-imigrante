@@ -1,0 +1,10 @@
+{
+  "name": "Portal do Imigrante",
+  "short_name": "Imigrante",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#123c69",
+  "lang": "pt-BR",
+  "description": "Orientação humanitária gratuita para migrantes e refugiados no Brasil."
+}

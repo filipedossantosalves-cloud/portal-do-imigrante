@@ -1,0 +1,225 @@
+{
+  "meta": {
+    "title": "Portal do Imigrante",
+    "updated": "2026-07-18",
+    "disclaimer": "Base informativa em validação. Confirme todos os dados antes do deslocamento.",
+    "stats": {
+      "total": 834,
+      "withPhone": 273,
+      "withSource": 296,
+      "urgent": 362,
+      "states": 27,
+      "cities": 164,
+      "updated": "2026-07-18"
+    },
+    "coverage": {
+      "rioGrandeDoSul": {
+        "cities": [
+          "Porto Alegre",
+          "Caxias do Sul",
+          "Canoas",
+          "Pelotas",
+          "Santa Maria"
+        ],
+        "selection": "Cinco municípios mais populosos segundo as Estimativas da População 2025 do IBGE",
+        "source": "https://ftp.ibge.gov.br/Estimativas_de_Populacao/Estimativas_2025/estimativa_dou_2025.pdf",
+        "records": 19,
+        "verified": "2026-06-28"
+      },
+      "pernambuco": {
+        "cities": [
+          "Recife",
+          "Jaboatão dos Guararapes",
+          "Petrolina",
+          "Caruaru",
+          "Olinda"
+        ],
+        "selection": "Cinco municípios mais populosos segundo as Estimativas da População 2025 do IBGE",
+        "source": "https://ftp.ibge.gov.br/Estimativas_de_Populacao/Estimativas_2025/estimativa_dou_2025.pdf",
+        "records": 19,
+        "verified": "2026-06-28"
+      },
+      "acre": {
+        "cities": [
+          "Rio Branco",
+          "Cruzeiro do Sul",
+          "Tarauacá",
+          "Sena Madureira",
+          "Feijó"
+        ],
+        "selection": "Cinco municípios mais populosos segundo as Estimativas da População 2025 do IBGE",
+        "source": "https://ftp.ibge.gov.br/Estimativas_de_Populacao/Estimativas_2025/estimativa_dou_2025.pdf",
+        "records": 12,
+        "verified": "2026-06-28"
+      },
+      "alagoas": {
+        "cities": [
+          "Maceió",
+          "Arapiraca",
+          "Rio Largo",
+          "Palmeira dos Índios",
+          "Marechal Deodoro"
+        ],
+        "selection": "Cinco municípios mais populosos segundo as Estimativas da População 2025 do IBGE",
+        "source": "https://ftp.ibge.gov.br/Estimativas_de_Populacao/Estimativas_2025/estimativa_dou_2025.pdf",
+        "records": 20,
+        "verified": "2026-06-28"
+      },
+      "amapa": {
+        "cities": [
+          "Macapá",
+          "Santana",
+          "Laranjal do Jari",
+          "Oiapoque",
+          "Mazagão"
+        ],
+        "selection": "Cinco municípios mais populosos segundo as Estimativas da População 2025 do IBGE",
+        "source": "https://ftp.ibge.gov.br/Estimativas_de_Populacao/Estimativas_2025/estimativa_dou_2025.pdf",
+        "records": 20,
+        "verified": "2026-06-28"
+      },
+      "amazonas": {
+        "cities": [
+          "Manaus",
+          "Itacoatiara",
+          "Manacapuru",
+          "Parintins",
+          "Tefé"
+        ],
+        "selection": "Cinco municípios mais populosos segundo as Estimativas da População 2025 do IBGE",
+        "source": "https://ftp.ibge.gov.br/Estimativas_de_Populacao/Estimativas_2025/estimativa_dou_2025.pdf",
+        "records": 20,
+        "verified": "2026-06-28"
+      },
+      "bahia": {
+        "cities": [
+          "Salvador",
+          "Feira de Santana",
+          "Vitória da Conquista",
+          "Camaçari",
+          "Juazeiro"
+        ],
+        "selection": "Cinco municípios mais populosos segundo as Estimativas da População 2025 do IBGE",
+        "source": "https://ftp.ibge.gov.br/Estimativas_de_Populacao/Estimativas_2025/estimativa_dou_2025.pdf",
+        "records": 20,
+        "verified": "2026-06-28"
+      },
+      "ceara": {
+        "cities": [
+          "Fortaleza",
+          "Caucaia",
+          "Juazeiro do Norte",
+          "Maracanaú",
+          "Sobral"
+        ],
+        "selection": "Cinco municípios mais populosos segundo as Estimativas da População 2025 do IBGE",
+        "source": "https://ftp.ibge.gov.br/Estimativas_de_Populacao/Estimativas_2025/estimativa_dou_2025.pdf",
+        "records": 20,
+        "verified": "2026-06-29"
+      },
+      "distritoFederal": {
+        "cities": [
+          "Ceilândia",
+          "Samambaia",
+          "Plano Piloto",
+          "Planaltina",
+          "Taguatinga"
+        ],
+        "territorialUnit": "Regiões administrativas",
+        "selection": "Cinco regiões administrativas mais populosas na projeção oficial de 2025 do IPEDF",
+        "source": "https://www.ipe.df.gov.br/documents/d/ipedf/estudo-projecoes-populacionais-para-as-regioes-administrativas-do-distrito-federal-2020-2030-resultados-pdf",
+        "records": 20,
+        "verified": "2026-06-29"
+      },
+      "espiritoSanto": {
+        "cities": [
+          "Serra",
+          "Vila Velha",
+          "Cariacica",
+          "Vitória",
+          "Cachoeiro de Itapemirim"
+        ],
+        "selection": "Cinco municípios mais populosos do Espírito Santo segundo panorama/estimativas oficiais do IBGE",
+        "source": "https://cidades.ibge.gov.br/brasil/es/panorama",
+        "records": 20,
+        "verified": "2026-06-29"
+      },
+      "goias": {
+        "cities": [
+          "Goiânia",
+          "Aparecida de Goiânia",
+          "Anápolis",
+          "Águas Lindas de Goiás",
+          "Rio Verde"
+        ],
+        "selection": "Cinco municípios mais populosos de Goiás segundo as Estimativas da População 2025 do IBGE/SIDRA",
+        "source": "https://apisidra.ibge.gov.br/values/t/6579/n6/all/v/9324/p/2025",
+        "records": 20,
+        "verified": "2026-06-29"
+      },
+      "maranhao": {
+        "cities": [
+          "São Luís",
+          "Imperatriz",
+          "São José de Ribamar",
+          "Timon",
+          "Caxias"
+        ],
+        "selection": "Cinco municípios mais populosos do Maranhão segundo as Estimativas da População 2025 do IBGE/SIDRA",
+        "source": "https://apisidra.ibge.gov.br/values/t/6579/n6/all/v/9324/p/2025",
+        "records": 20,
+        "verified": "2026-06-30"
+      },
+      "matoGrosso": {
+        "cities": [
+          "Cuiabá",
+          "Várzea Grande",
+          "Rondonópolis",
+          "Sinop",
+          "Sorriso"
+        ],
+        "selection": "Cinco municípios mais populosos de Mato Grosso segundo as Estimativas da População 2025 do IBGE/SIDRA",
+        "source": "https://apisidra.ibge.gov.br/values/t/6579/n6/all/v/9324/p/2025",
+        "records": 20,
+        "verified": "2026-07-02"
+      },
+      "matoGrossoDoSul": {
+        "cities": [
+          "Campo Grande",
+          "Dourados",
+          "Três Lagoas",
+          "Corumbá",
+          "Ponta Porã"
+        ],
+        "selection": "Cinco municípios mais populosos de Mato Grosso do Sul segundo as Estimativas da População 2025 do IBGE/SIDRA",
+        "source": "https://apisidra.ibge.gov.br/values/t/6579/n6/all/v/9324/p/2025",
+        "records": 20,
+        "verified": "2026-07-02"
+      },
+      "minasGerais": {
+        "cities": [
+          "Belo Horizonte",
+          "Betim",
+          "Contagem",
+          "Juiz de Fora",
+          "Uberlândia"
+        ],
+        "selection": "Cinco municipios usados na etapa revisada do Portal do Imigrante.",
+        "source": "",
+        "records": 26,
+        "verified": "2026-07-18"
+      }
+    },
+    "consolidated": "2026-07-18",
+    "coverageSummary": {
+      "reviewedUnits": 15,
+      "pendingUnits": 12,
+      "totalUnits": 27,
+      "reviewedCities": 75,
+      "officialRecords": 296
+    }
+  },
+  "exportedFrom": "data/services.json",
+  "exportedAt": "2026-07-09T05:35:34.384Z",
+  "note": "Edite os arquivos data/estados/<estado>/<cidade>/servicos.json durante a pesquisa. Use scripts/consolidate-state-city-data.js para recompor a base principal."
+}

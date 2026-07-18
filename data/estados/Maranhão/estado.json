@@ -1,0 +1,53 @@
+{
+  "uf": "MA",
+  "state": "Maranhão",
+  "coverageKey": "maranhao",
+  "coverage": {
+    "cities": [
+      "São Luís",
+      "Imperatriz",
+      "São José de Ribamar",
+      "Timon",
+      "Caxias"
+    ],
+    "selection": "Cinco municípios mais populosos do Maranhão segundo as Estimativas da População 2025 do IBGE/SIDRA",
+    "source": "https://apisidra.ibge.gov.br/values/t/6579/n6/all/v/9324/p/2025",
+    "records": 20,
+    "verified": "2026-06-30"
+  },
+  "cityCount": 5,
+  "serviceCount": 26,
+  "officialServiceCount": 20,
+  "cities": [
+    {
+      "name": "Caxias",
+      "folder": "Caxias",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Imperatriz",
+      "folder": "Imperatriz",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "São José de Ribamar",
+      "folder": "São José de Ribamar",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "São Luís",
+      "folder": "São Luís",
+      "serviceCount": 10,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Timon",
+      "folder": "Timon",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    }
+  ]
+}

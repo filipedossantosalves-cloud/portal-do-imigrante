@@ -1,0 +1,34 @@
+{
+  "uf": "SP",
+  "state": "São Paulo",
+  "city": "Sorocaba",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00404-sp-sorocaba-hospital-regional-de-sorocaba",
+      "name": "Hospital Regional de Sorocaba",
+      "category": "saude",
+      "region": "Sudeste",
+      "uf": "SP",
+      "state": "São Paulo",
+      "city": "Sorocaba",
+      "address": "Hospital Regional de Sorocaba, Sorocaba - SP",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Regional+de+Sorocaba%2C+Sorocaba+-+SP",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

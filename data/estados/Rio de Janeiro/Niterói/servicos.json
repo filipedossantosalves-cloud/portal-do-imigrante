@@ -1,0 +1,34 @@
+{
+  "uf": "RJ",
+  "state": "Rio de Janeiro",
+  "city": "Niterói",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00386-rj-niteroi-creas-niteroi",
+      "name": "CREAS Niterói",
+      "category": "assistencia",
+      "region": "Sudeste",
+      "uf": "RJ",
+      "state": "Rio de Janeiro",
+      "city": "Niterói",
+      "address": "CREAS Niterói, Niterói - RJ",
+      "map": "https://www.google.com/maps/search/?api=1&query=CREAS+Niter%C3%B3i%2C+Niter%C3%B3i+-+RJ",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, 08:00 às 17:00",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Alta",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

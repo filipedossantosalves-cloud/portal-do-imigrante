@@ -1,0 +1,53 @@
+{
+  "uf": "BA",
+  "state": "Bahia",
+  "coverageKey": "bahia",
+  "coverage": {
+    "cities": [
+      "Salvador",
+      "Feira de Santana",
+      "Vitória da Conquista",
+      "Camaçari",
+      "Juazeiro"
+    ],
+    "selection": "Cinco municípios mais populosos segundo as Estimativas da População 2025 do IBGE",
+    "source": "https://ftp.ibge.gov.br/Estimativas_de_Populacao/Estimativas_2025/estimativa_dou_2025.pdf",
+    "records": 20,
+    "verified": "2026-06-28"
+  },
+  "cityCount": 5,
+  "serviceCount": 27,
+  "officialServiceCount": 20,
+  "cities": [
+    {
+      "name": "Camaçari",
+      "folder": "Camaçari",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Feira de Santana",
+      "folder": "Feira de Santana",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Juazeiro",
+      "folder": "Juazeiro",
+      "serviceCount": 5,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Salvador",
+      "folder": "Salvador",
+      "serviceCount": 10,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Vitória da Conquista",
+      "folder": "Vitória da Conquista",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    }
+  ]
+}

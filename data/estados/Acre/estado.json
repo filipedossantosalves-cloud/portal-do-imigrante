@@ -1,0 +1,84 @@
+{
+  "uf": "AC",
+  "state": "Acre",
+  "coverageKey": "acre",
+  "coverage": {
+    "cities": [
+      "Rio Branco",
+      "Cruzeiro do Sul",
+      "Tarauacá",
+      "Sena Madureira",
+      "Feijó"
+    ],
+    "selection": "Cinco municípios mais populosos segundo as Estimativas da População 2025 do IBGE",
+    "source": "https://ftp.ibge.gov.br/Estimativas_de_Populacao/Estimativas_2025/estimativa_dou_2025.pdf",
+    "records": 12,
+    "verified": "2026-06-28"
+  },
+  "cityCount": 10,
+  "serviceCount": 33,
+  "officialServiceCount": 12,
+  "cities": [
+    {
+      "name": "Acrelândia",
+      "folder": "Acrelândia",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Brasiléia",
+      "folder": "Brasiléia",
+      "serviceCount": 3,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "CRUZEIRO DO SUL",
+      "folder": "Cruzeiro do Sul",
+      "serviceCount": 3,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Feijó",
+      "folder": "Feijó",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Não informado",
+      "folder": "Não informado",
+      "serviceCount": 3,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Plácido de Castro",
+      "folder": "Plácido de Castro",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "RIO BRANCO",
+      "folder": "Rio Branco",
+      "serviceCount": 8,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Sena Madureira",
+      "folder": "Sena Madureira",
+      "serviceCount": 5,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Senador Guiomard",
+      "folder": "Senador Guiomard",
+      "serviceCount": 1,
+      "officialServiceCount": 0
+    },
+    {
+      "name": "Tarauacá",
+      "folder": "Tarauacá",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    }
+  ],
+  "updated": "2026-07-18"
+}

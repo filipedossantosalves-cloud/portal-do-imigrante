@@ -1,0 +1,33 @@
+{
+  "uf": "SC",
+  "state": "Santa Catarina",
+  "city": "Balneário Camboriú",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00466-sc-balneario-camboriu-hospital-municipal-ruth-cardoso",
+      "name": "Hospital Municipal Ruth Cardoso",
+      "category": "saude",
+      "region": "Sul",
+      "uf": "SC",
+      "state": "Santa Catarina",
+      "city": "Balneário Camboriú",
+      "address": "Avenida Brasil, 2000",
+      "map": "",
+      "phone": "(47) 3367-8000",
+      "phoneLabel": "(47) 3367-8000",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": true,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Média",
+      "reasons": [
+        "Fonte não registrada"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

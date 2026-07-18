@@ -1,0 +1,109 @@
+{
+  "uf": "SE",
+  "state": "Sergipe",
+  "city": "Estância",
+  "serviceCount": 4,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00241-se-estancia-creas-estancia",
+      "name": "CREAS Estância",
+      "category": "assistencia",
+      "region": "Nordeste",
+      "uf": "SE",
+      "state": "Sergipe",
+      "city": "Estância",
+      "address": "CREAS Estância, Estância - SE",
+      "map": "https://www.google.com/maps/search/?api=1&query=CREAS+Est%C3%A2ncia%2C+Est%C3%A2ncia+-+SE",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, 08:00 às 17:00",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Alta",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00242-se-estancia-hospital-municipal-de-estancia",
+      "name": "Hospital Municipal de Estância",
+      "category": "saude",
+      "region": "Nordeste",
+      "uf": "SE",
+      "state": "Sergipe",
+      "city": "Estância",
+      "address": "Hospital Municipal de Estância, Estância - SE",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Municipal+de+Est%C3%A2ncia%2C+Est%C3%A2ncia+-+SE",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, Horário Comercial",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00243-se-estancia-hospital-regional-de-estancia-dr-jesse-de-andrade-fontes",
+      "name": "Hospital Regional de Estância (Dr. Jessé de Andrade Fontes)",
+      "category": "saude",
+      "region": "Nordeste",
+      "uf": "SE",
+      "state": "Sergipe",
+      "city": "Estância",
+      "address": "Hospital Regional de Estância (Dr. Jessé de Andrade Fontes), Estância - SE",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Regional+de+Est%C3%A2ncia+%28Dr.+Jess%C3%A9+de+Andrade+Fontes%29%2C+Est%C3%A2ncia+-+SE",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00244-se-estancia-nat-estancia",
+      "name": "NAT Estância",
+      "category": "trabalho",
+      "region": "Nordeste",
+      "uf": "SE",
+      "state": "Sergipe",
+      "city": "Estância",
+      "address": "NAT Estância, Estância - SE",
+      "map": "https://www.google.com/maps/search/?api=1&query=NAT+Est%C3%A2ncia%2C+Est%C3%A2ncia+-+SE",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, Horário Comercial",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Alta",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

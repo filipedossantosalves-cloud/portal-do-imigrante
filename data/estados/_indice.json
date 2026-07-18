@@ -1,0 +1,234 @@
+{
+  "totalFolders": 28,
+  "totalStatesWithUf": 27,
+  "totalWithoutUf": 1,
+  "totalCities": 164,
+  "totalServices": 834,
+  "totalOfficialServices": 296,
+  "states": [
+    {
+      "uf": "AC",
+      "state": "Acre",
+      "folder": "Acre",
+      "cityCount": 10,
+      "serviceCount": 33,
+      "officialServiceCount": 12
+    },
+    {
+      "uf": "AL",
+      "state": "Alagoas",
+      "folder": "Alagoas",
+      "cityCount": 5,
+      "serviceCount": 26,
+      "officialServiceCount": 20
+    },
+    {
+      "uf": "AP",
+      "state": "Amapá",
+      "folder": "Amapá",
+      "cityCount": 6,
+      "serviceCount": 34,
+      "officialServiceCount": 20
+    },
+    {
+      "uf": "AM",
+      "state": "Amazonas",
+      "folder": "Amazonas",
+      "cityCount": 7,
+      "serviceCount": 35,
+      "officialServiceCount": 20
+    },
+    {
+      "uf": "BA",
+      "state": "Bahia",
+      "folder": "Bahia",
+      "cityCount": 5,
+      "serviceCount": 27,
+      "officialServiceCount": 20
+    },
+    {
+      "uf": "CE",
+      "state": "Ceará",
+      "folder": "Ceará",
+      "cityCount": 5,
+      "serviceCount": 28,
+      "officialServiceCount": 20
+    },
+    {
+      "uf": "DF",
+      "state": "Distrito Federal",
+      "folder": "Distrito Federal",
+      "cityCount": 12,
+      "serviceCount": 75,
+      "officialServiceCount": 20
+    },
+    {
+      "uf": "ES",
+      "state": "Espírito Santo",
+      "folder": "Espírito Santo",
+      "cityCount": 6,
+      "serviceCount": 32,
+      "officialServiceCount": 20
+    },
+    {
+      "uf": "GO",
+      "state": "Goiás",
+      "folder": "Goiás",
+      "cityCount": 7,
+      "serviceCount": 36,
+      "officialServiceCount": 20
+    },
+    {
+      "uf": "MA",
+      "state": "Maranhão",
+      "folder": "Maranhão",
+      "cityCount": 5,
+      "serviceCount": 26,
+      "officialServiceCount": 20
+    },
+    {
+      "uf": "MT",
+      "state": "Mato Grosso",
+      "folder": "Mato Grosso",
+      "cityCount": 5,
+      "serviceCount": 37,
+      "officialServiceCount": 20
+    },
+    {
+      "uf": "MS",
+      "state": "Mato Grosso do Sul",
+      "folder": "Mato Grosso do Sul",
+      "cityCount": 6,
+      "serviceCount": 37,
+      "officialServiceCount": 20
+    },
+    {
+      "uf": "MG",
+      "state": "Minas Gerais",
+      "folder": "Minas Gerais",
+      "cityCount": 5,
+      "serviceCount": 32,
+      "officialServiceCount": 26
+    },
+    {
+      "uf": "",
+      "state": "Não informado",
+      "folder": "Não informado",
+      "cityCount": 1,
+      "serviceCount": 28,
+      "officialServiceCount": 0
+    },
+    {
+      "uf": "PA",
+      "state": "Pará",
+      "folder": "Pará",
+      "cityCount": 6,
+      "serviceCount": 15,
+      "officialServiceCount": 0
+    },
+    {
+      "uf": "PB",
+      "state": "Paraíba",
+      "folder": "Paraíba",
+      "cityCount": 2,
+      "serviceCount": 7,
+      "officialServiceCount": 0
+    },
+    {
+      "uf": "PR",
+      "state": "Paraná",
+      "folder": "Paraná",
+      "cityCount": 10,
+      "serviceCount": 51,
+      "officialServiceCount": 0
+    },
+    {
+      "uf": "PE",
+      "state": "Pernambuco",
+      "folder": "Pernambuco",
+      "cityCount": 6,
+      "serviceCount": 27,
+      "officialServiceCount": 19
+    },
+    {
+      "uf": "PI",
+      "state": "Piauí",
+      "folder": "Piauí",
+      "cityCount": 3,
+      "serviceCount": 7,
+      "officialServiceCount": 0
+    },
+    {
+      "uf": "RJ",
+      "state": "Rio de Janeiro",
+      "folder": "Rio de Janeiro",
+      "cityCount": 4,
+      "serviceCount": 14,
+      "officialServiceCount": 0
+    },
+    {
+      "uf": "RN",
+      "state": "Rio Grande do Norte",
+      "folder": "Rio Grande do Norte",
+      "cityCount": 2,
+      "serviceCount": 7,
+      "officialServiceCount": 0
+    },
+    {
+      "uf": "RS",
+      "state": "Rio Grande do Sul",
+      "folder": "Rio Grande do Sul",
+      "cityCount": 5,
+      "serviceCount": 19,
+      "officialServiceCount": 19
+    },
+    {
+      "uf": "RO",
+      "state": "Rondônia",
+      "folder": "Rondônia",
+      "cityCount": 8,
+      "serviceCount": 44,
+      "officialServiceCount": 0
+    },
+    {
+      "uf": "RR",
+      "state": "Roraima",
+      "folder": "Roraima",
+      "cityCount": 3,
+      "serviceCount": 10,
+      "officialServiceCount": 0
+    },
+    {
+      "uf": "SC",
+      "state": "Santa Catarina",
+      "folder": "Santa Catarina",
+      "cityCount": 9,
+      "serviceCount": 72,
+      "officialServiceCount": 0
+    },
+    {
+      "uf": "SP",
+      "state": "São Paulo",
+      "folder": "São Paulo",
+      "cityCount": 5,
+      "serviceCount": 15,
+      "officialServiceCount": 0
+    },
+    {
+      "uf": "SE",
+      "state": "Sergipe",
+      "folder": "Sergipe",
+      "cityCount": 11,
+      "serviceCount": 46,
+      "officialServiceCount": 0
+    },
+    {
+      "uf": "TO",
+      "state": "Tocantins",
+      "folder": "Tocantins",
+      "cityCount": 5,
+      "serviceCount": 14,
+      "officialServiceCount": 0
+    }
+  ]
+}

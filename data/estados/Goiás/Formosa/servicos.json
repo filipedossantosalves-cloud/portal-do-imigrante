@@ -1,0 +1,34 @@
+{
+  "uf": "GO",
+  "state": "Goiás",
+  "city": "Formosa",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00318-go-formosa-hospital-regional-de-formosa",
+      "name": "Hospital Regional de Formosa",
+      "category": "saude",
+      "region": "Centro-Oeste",
+      "uf": "GO",
+      "state": "Goiás",
+      "city": "Formosa",
+      "address": "Hospital Regional de Formosa, Formosa - GO",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Regional+de+Formosa%2C+Formosa+-+GO",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

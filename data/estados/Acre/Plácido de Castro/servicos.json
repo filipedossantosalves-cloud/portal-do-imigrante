@@ -1,0 +1,34 @@
+{
+  "uf": "AC",
+  "state": "Acre",
+  "city": "Plácido de Castro",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00016-ac-placido-de-castro-hospital-municipal-de-placido-de-castro",
+      "name": "Hospital Municipal de Plácido de Castro",
+      "category": "saude",
+      "region": "Norte",
+      "uf": "AC",
+      "state": "Acre",
+      "city": "Plácido de Castro",
+      "address": "Hospital Municipal de Plácido de Castro, Plácido de Castro - AC",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Municipal+de+Pl%C3%A1cido+de+Castro%2C+Pl%C3%A1cido+de+Castro+-+AC",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

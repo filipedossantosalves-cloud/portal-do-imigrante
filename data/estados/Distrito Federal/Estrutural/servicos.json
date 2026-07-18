@@ -1,0 +1,35 @@
+{
+  "uf": "DF",
+  "state": "Distrito Federal",
+  "city": "Estrutural",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00303-df-estrutural-cras-estrutural",
+      "name": "CRAS Estrutural",
+      "category": "assistencia",
+      "region": "Centro-Oeste",
+      "uf": "DF",
+      "state": "Distrito Federal",
+      "city": "Estrutural",
+      "address": "",
+      "map": "",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, 08:00 às 17:00",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": false,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado",
+        "Endereço a confirmar"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

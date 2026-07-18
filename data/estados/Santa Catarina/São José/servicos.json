@@ -1,0 +1,33 @@
+{
+  "uf": "SC",
+  "state": "Santa Catarina",
+  "city": "São José",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00535-sc-sao-jose-hospital-regional-de-sao-jose-homero-de-miranda-gomes",
+      "name": "Hospital Regional de São José (Homero de Miranda Gomes)",
+      "category": "saude",
+      "region": "Sul",
+      "uf": "SC",
+      "state": "Santa Catarina",
+      "city": "São José",
+      "address": "Rua Homero de Miranda Gomes, 1000",
+      "map": "",
+      "phone": "(48) 3251-8000",
+      "phoneLabel": "(48) 3251-8000",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": true,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Média",
+      "reasons": [
+        "Fonte não registrada"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

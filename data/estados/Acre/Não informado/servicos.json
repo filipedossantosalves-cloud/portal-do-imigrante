@@ -1,0 +1,88 @@
+{
+  "uf": "AC",
+  "state": "Acre",
+  "city": "Não informado",
+  "serviceCount": 3,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00013-ac-nao-informado-creas-rio-branco",
+      "name": "CREAS Rio Branco",
+      "category": "assistencia",
+      "region": "Norte",
+      "uf": "AC",
+      "state": "Acre",
+      "city": "Não informado",
+      "address": "CREAS Rio Branco, Não informado - AC",
+      "map": "https://www.google.com/maps/search/?api=1&query=CREAS+Rio+Branco%2C+N%C3%A3o+informado+-+AC",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, 08:00 às 17:00",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado",
+        "Cidade não informada"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00014-ac-nao-informado-hospital-municipal-de-acrelandia",
+      "name": "Hospital Municipal de Acrelândia",
+      "category": "saude",
+      "region": "Norte",
+      "uf": "AC",
+      "state": "Acre",
+      "city": "Não informado",
+      "address": "",
+      "map": "",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": false,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado",
+        "Endereço a confirmar",
+        "Cidade não informada"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    },
+    {
+      "id": "svc-00015-ac-nao-informado-terminal-rodoviario-de-rio-branco",
+      "name": "Terminal Rodoviário de Rio Branco",
+      "category": "acolhimento",
+      "region": "Norte",
+      "uf": "AC",
+      "state": "Acre",
+      "city": "Não informado",
+      "address": "Terminal Rodoviário de Rio Branco, Não informado - AC",
+      "map": "https://www.google.com/maps/search/?api=1&query=Terminal+Rodovi%C3%A1rio+de+Rio+Branco%2C+N%C3%A3o+informado+-+AC",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, Horário Comercial",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado",
+        "Cidade não informada"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "uf": "CE",
+  "state": "Ceará",
+  "coverageKey": "ceara",
+  "coverage": {
+    "cities": [
+      "Fortaleza",
+      "Caucaia",
+      "Juazeiro do Norte",
+      "Maracanaú",
+      "Sobral"
+    ],
+    "selection": "Cinco municípios mais populosos segundo as Estimativas da População 2025 do IBGE",
+    "source": "https://ftp.ibge.gov.br/Estimativas_de_Populacao/Estimativas_2025/estimativa_dou_2025.pdf",
+    "records": 20,
+    "verified": "2026-06-29"
+  },
+  "cityCount": 5,
+  "serviceCount": 28,
+  "officialServiceCount": 20,
+  "cities": [
+    {
+      "name": "Caucaia",
+      "folder": "Caucaia",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Fortaleza",
+      "folder": "Fortaleza",
+      "serviceCount": 10,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Juazeiro do Norte",
+      "folder": "Juazeiro do Norte",
+      "serviceCount": 5,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Maracanaú",
+      "folder": "Maracanaú",
+      "serviceCount": 5,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Sobral",
+      "folder": "Sobral",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "uf": "PR",
+  "state": "Paraná",
+  "city": "Ponta Grossa",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00464-pr-ponta-grossa-hospital-regional-de-ponta-grossa",
+      "name": "Hospital Regional de Ponta Grossa",
+      "category": "saude",
+      "region": "Sul",
+      "uf": "PR",
+      "state": "Paraná",
+      "city": "Ponta Grossa",
+      "address": "Hospital Regional de Ponta Grossa, Ponta Grossa - PR",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Regional+de+Ponta+Grossa%2C+Ponta+Grossa+-+PR",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

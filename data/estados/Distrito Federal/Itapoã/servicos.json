@@ -1,0 +1,35 @@
+{
+  "uf": "DF",
+  "state": "Distrito Federal",
+  "city": "Itapoã",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00305-df-itapoa-cras-itapoa",
+      "name": "CRAS Itapoã",
+      "category": "assistencia",
+      "region": "Centro-Oeste",
+      "uf": "DF",
+      "state": "Distrito Federal",
+      "city": "Itapoã",
+      "address": "",
+      "map": "",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "Segunda a Sexta, 08:00 às 17:00",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": false,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado",
+        "Endereço a confirmar"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

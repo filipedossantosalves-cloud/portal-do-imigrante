@@ -1,0 +1,34 @@
+{
+  "uf": "AC",
+  "state": "Acre",
+  "city": "Senador Guiomard",
+  "serviceCount": 1,
+  "officialServiceCount": 0,
+  "services": [
+    {
+      "id": "svc-00042-ac-senador-guiomard-hospital-municipal-de-senador-guiomard",
+      "name": "Hospital Municipal de Senador Guiomard",
+      "category": "saude",
+      "region": "Norte",
+      "uf": "AC",
+      "state": "Acre",
+      "city": "Senador Guiomard",
+      "address": "Hospital Municipal de Senador Guiomard, Senador Guiomard - AC",
+      "map": "https://www.google.com/maps/search/?api=1&query=Hospital+Municipal+de+Senador+Guiomard%2C+Senador+Guiomard+-+AC",
+      "phone": "",
+      "phoneLabel": "Não confirmado",
+      "hours": "24 horas",
+      "source": "",
+      "contactConfirmed": false,
+      "addressSpecific": true,
+      "hoursInformed": true,
+      "sourceRegistered": false,
+      "priority": "Urgente",
+      "reasons": [
+        "Fonte não registrada",
+        "Telefone não confirmado"
+      ],
+      "notice": "Informação de referência. Confirme no canal oficial antes de se deslocar."
+    }
+  ]
+}

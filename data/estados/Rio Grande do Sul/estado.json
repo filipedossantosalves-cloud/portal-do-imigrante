@@ -1,0 +1,53 @@
+{
+  "uf": "RS",
+  "state": "Rio Grande do Sul",
+  "coverageKey": "rioGrandeDoSul",
+  "coverage": {
+    "cities": [
+      "Porto Alegre",
+      "Caxias do Sul",
+      "Canoas",
+      "Pelotas",
+      "Santa Maria"
+    ],
+    "selection": "Cinco municípios mais populosos segundo as Estimativas da População 2025 do IBGE",
+    "source": "https://ftp.ibge.gov.br/Estimativas_de_Populacao/Estimativas_2025/estimativa_dou_2025.pdf",
+    "records": 19,
+    "verified": "2026-06-28"
+  },
+  "cityCount": 5,
+  "serviceCount": 19,
+  "officialServiceCount": 19,
+  "cities": [
+    {
+      "name": "Canoas",
+      "folder": "Canoas",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Caxias do Sul",
+      "folder": "Caxias do Sul",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Pelotas",
+      "folder": "Pelotas",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Porto Alegre",
+      "folder": "Porto Alegre",
+      "serviceCount": 4,
+      "officialServiceCount": 4
+    },
+    {
+      "name": "Santa Maria",
+      "folder": "Santa Maria",
+      "serviceCount": 3,
+      "officialServiceCount": 3
+    }
+  ]
+}
