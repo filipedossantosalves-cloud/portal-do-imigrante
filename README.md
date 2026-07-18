@@ -2,6 +2,8 @@
 
 Portal estatico e Research Desk para mapear, validar e publicar servicos publicos e redes de apoio para migrantes e refugiados no Brasil.
 
+Created by Filipe dos Santos Alves for OpenAI Build Week 2026.
+
 ## Hackathon pitch
 
 Migrants and refugees often need urgent access to shelter, health care, documentation, social assistance, work services, and trusted local support. The hard part is not only listing services; it is keeping public information traceable, conservative, and safe enough to use.
