@@ -4,8 +4,8 @@
   "coverageKey": null,
   "coverage": null,
   "cityCount": 9,
-  "serviceCount": 72,
-  "officialServiceCount": 0,
+  "serviceCount": 56,
+  "officialServiceCount": 26,
   "cities": [
     {
       "name": "Araranguá",
@@ -40,8 +40,8 @@
     {
       "name": "Joinville",
       "folder": "Joinville",
-      "serviceCount": 42,
-      "officialServiceCount": 0
+      "serviceCount": 26,
+      "officialServiceCount": 26
     },
     {
       "name": "Navegantes",
@@ -61,5 +61,6 @@
       "serviceCount": 1,
       "officialServiceCount": 0
     }
-  ]
+  ],
+  "updated": "2026-07-18"
 }

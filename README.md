@@ -14,11 +14,12 @@ Portal do Imigrante combines a public service portal with an internal Research D
 
 Consolidated on 2026-07-18:
 
-- 834 public service records in the final portal dataset.
-- 296 records with official-source evidence.
-- 15 of 27 Brazilian federative units reviewed.
-- 12 federative units still pending.
+- 818 public service records in the final portal dataset.
+- 322 records with official-source evidence.
+- 16 of 27 Brazilian federative units reviewed.
+- 11 federative units still pending.
 - Minas Gerais pilot: 32 services, 26 official-source records, 5 cities organized.
+- Santa Catarina review: 56 services, 26 official-source records, Joinville rebuilt with official municipal evidence.
 - Recommended next state: Para.
 
 The public portal keeps historical records without UF in `data/estados/Nao informado/`. The Research Desk focuses on the 27 states with UF.

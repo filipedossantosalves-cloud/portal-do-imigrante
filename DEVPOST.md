@@ -27,7 +27,7 @@ Portal do Imigrante has two parts:
 1. A public portal where migrants, refugees, volunteers, and support workers can search services by location, category, urgency, and available information.
 2. A Research Desk where the team organizes research by Brazilian state and city, checks official-source evidence, tracks validation progress, keeps drafts separate from published records, and exports the reviewed dataset back into the public portal.
 
-The current pilot includes 834 public service records, 296 official-source records, 15 reviewed federative units, and a Minas Gerais pilot with 32 mapped services across 5 cities, including shelter, social assistance, health, work, documentation, and migrant-support organizations.
+The current pilot includes 818 public service records, 322 official-source records, 16 reviewed federative units, a Minas Gerais pilot with 32 mapped services across 5 cities, and a Santa Catarina review where Joinville was rebuilt from official municipal evidence for shelter, social assistance, health, work, documentation, food, and migrant-support channels.
 
 ### How we built it
 
@@ -71,9 +71,9 @@ This creates an auditable path from source research to public display.
 
 ## Try it out links
 
-- Public portal: add hosted URL here.
-- Research Desk: add hosted URL here.
-- Source code: add GitHub URL here.
+- Public portal: https://filipedossantosalves-cloud.github.io/portal-do-imigrante/
+- Research Desk: https://filipedossantosalves-cloud.github.io/portal-do-imigrante/research-desk/
+- Source code: https://github.com/filipedossantosalves-cloud/portal-do-imigrante
 
 ## Video demo notes
 

@@ -3,8 +3,8 @@
   "totalStatesWithUf": 27,
   "totalWithoutUf": 1,
   "totalCities": 164,
-  "totalServices": 834,
-  "totalOfficialServices": 296,
+  "totalServices": 818,
+  "totalOfficialServices": 322,
   "states": [
     {
       "uf": "AC",
@@ -203,8 +203,8 @@
       "state": "Santa Catarina",
       "folder": "Santa Catarina",
       "cityCount": 9,
-      "serviceCount": 72,
-      "officialServiceCount": 0
+      "serviceCount": 56,
+      "officialServiceCount": 26
     },
     {
       "uf": "SP",

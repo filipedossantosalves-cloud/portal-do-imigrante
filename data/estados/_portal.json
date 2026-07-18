@@ -4,10 +4,10 @@
     "updated": "2026-07-18",
     "disclaimer": "Base informativa em validação. Confirme todos os dados antes do deslocamento.",
     "stats": {
-      "total": 834,
-      "withPhone": 273,
-      "withSource": 296,
-      "urgent": 362,
+      "total": 818,
+      "withPhone": 271,
+      "withSource": 322,
+      "urgent": 365,
       "states": 27,
       "cities": 164,
       "updated": "2026-07-18"
@@ -208,15 +208,28 @@
         "source": "",
         "records": 26,
         "verified": "2026-07-18"
+      },
+      "santaCatarina": {
+        "cities": [
+          "Araranguá",
+          "Balneário Camboriú",
+          "Blumenau",
+          "Florianópolis",
+          "Itajaí"
+        ],
+        "selection": "Cinco municipios usados na etapa revisada do Portal do Imigrante.",
+        "source": "",
+        "records": 26,
+        "verified": "2026-07-18"
       }
     },
     "consolidated": "2026-07-18",
     "coverageSummary": {
-      "reviewedUnits": 15,
-      "pendingUnits": 12,
+      "reviewedUnits": 16,
+      "pendingUnits": 11,
       "totalUnits": 27,
-      "reviewedCities": 75,
-      "officialRecords": 296
+      "reviewedCities": 80,
+      "officialRecords": 322
     }
   },
   "exportedFrom": "data/services.json",

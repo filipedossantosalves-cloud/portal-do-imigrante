@@ -16,11 +16,9 @@ Reason: Devpost judges can open the code and the live site without permission is
 
 ## Links after publishing
 
-Replace `SEU-USUARIO` with your GitHub username:
-
-- Public portal: `https://SEU-USUARIO.github.io/portal-do-imigrante/`
-- Research Desk: `https://SEU-USUARIO.github.io/portal-do-imigrante/research-desk/`
-- Source code: `https://github.com/SEU-USUARIO/portal-do-imigrante`
+- Public portal: `https://filipedossantosalves-cloud.github.io/portal-do-imigrante/`
+- Research Desk: `https://filipedossantosalves-cloud.github.io/portal-do-imigrante/research-desk/`
+- Source code: `https://github.com/filipedossantosalves-cloud/portal-do-imigrante`
 
 ## One-time GitHub setup
 
@@ -61,20 +59,20 @@ GitHub usually takes 1 to 3 minutes to publish.
 
 Use these links:
 
-- Demo site: `https://SEU-USUARIO.github.io/portal-do-imigrante/`
-- Research Desk: `https://SEU-USUARIO.github.io/portal-do-imigrante/research-desk/`
-- Code repository: `https://github.com/SEU-USUARIO/portal-do-imigrante`
+- Demo site: `https://filipedossantosalves-cloud.github.io/portal-do-imigrante/`
+- Research Desk: `https://filipedossantosalves-cloud.github.io/portal-do-imigrante/research-desk/`
+- Code repository: `https://github.com/filipedossantosalves-cloud/portal-do-imigrante`
 
 ## Final check
 
 After GitHub Pages publishes, open:
 
-`https://SEU-USUARIO.github.io/portal-do-imigrante/research-desk/`
+`https://filipedossantosalves-cloud.github.io/portal-do-imigrante/research-desk/`
 
 Confirm these numbers appear:
 
 - 27 UFs organized.
-- 806 UF-linked services.
-- 296 official-source records.
-- 12 pending UFs.
+- 790 UF-linked services.
+- 322 official-source records.
+- 11 pending UFs.
 - Recommended next state: Para.
