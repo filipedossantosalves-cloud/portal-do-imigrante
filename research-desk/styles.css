@@ -553,6 +553,107 @@ pre {
   white-space: pre-wrap;
 }
 
+.packet-report {
+  display: grid;
+  gap: 14px;
+}
+
+.packet-status-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.packet-status-grid div,
+.packet-section,
+.packet-file,
+.risk-row,
+.json-details {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcff;
+}
+
+.packet-status-grid div {
+  min-height: 82px;
+  padding: 12px;
+}
+
+.packet-status-grid span {
+  display: block;
+  color: var(--teal);
+  font-size: 1.2rem;
+  font-weight: 850;
+}
+
+.packet-status-grid small {
+  display: block;
+  margin-top: 6px;
+  font-weight: 750;
+}
+
+.packet-section {
+  padding: 14px;
+}
+
+.packet-section h4 {
+  margin: 0 0 10px;
+  font-size: 0.95rem;
+}
+
+.packet-section p {
+  margin: 8px 0 0;
+}
+
+.packet-section ol {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.packet-file,
+.risk-row {
+  display: grid;
+  gap: 5px;
+  padding: 10px;
+}
+
+.packet-file + .packet-file,
+.risk-row + .risk-row {
+  margin-top: 8px;
+}
+
+.packet-file span,
+.risk-row span {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.packet-file code {
+  overflow-wrap: anywhere;
+  font-size: 0.82rem;
+}
+
+.packet-ok {
+  color: var(--teal);
+  font-weight: 750;
+}
+
+.json-details {
+  padding: 12px;
+}
+
+.json-details summary {
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.json-details pre {
+  min-height: 220px;
+  margin-top: 12px;
+}
+
 .rules {
   margin: 28px clamp(16px, 4vw, 48px) 48px;
 }
@@ -605,7 +706,8 @@ pre {
   .city-grid,
   .rule-list,
   .state-insights,
-  .packet-summary {
+  .packet-summary,
+  .packet-status-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -645,7 +747,8 @@ pre {
   .city-grid,
   .rule-list,
   .state-insights,
-  .packet-summary {
+  .packet-summary,
+  .packet-status-grid {
     grid-template-columns: 1fr;
   }
 

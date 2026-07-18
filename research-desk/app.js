@@ -156,8 +156,8 @@
     return risks;
   }
 
-  function buildPacket() {
-    if (!selectedState || !selectedCity) return "";
+  function buildPacketObject() {
+    if (!selectedState || !selectedCity) return null;
     var existing = selectedCity.services || [];
     var riskRows = existing.map(function (service) {
       return {
@@ -206,13 +206,88 @@
       },
     };
 
-    return JSON.stringify(packet, null, 2);
+    return packet;
+  }
+
+  function buildPacket() {
+    var packet = buildPacketObject();
+    return packet ? JSON.stringify(packet, null, 2) : "";
+  }
+
+  function renderTargetFiles(files) {
+    return Object.keys(files)
+      .map(function (key) {
+        return [
+          '<div class="packet-file">',
+          "<span>" + esc(key.replace(/_/g, " ")) + "</span>",
+          "<code>" + esc(files[key]) + "</code>",
+          "</div>",
+        ].join("");
+      })
+      .join("");
+  }
+
+  function renderRiskList(rows) {
+    var risky = rows.filter(function (row) { return row.risks.length > 0; }).slice(0, 8);
+    if (!risky.length) {
+      return '<p class="packet-ok">All published records have the required validation fields.</p>';
+    }
+
+    return risky
+      .map(function (row) {
+        return [
+          '<div class="risk-row">',
+          "<strong>" + esc(row.name) + "</strong>",
+          "<span>" + esc(row.risks.join(", ")) + "</span>",
+          "</div>",
+        ].join("");
+      })
+      .join("");
+  }
+
+  function renderPacketReport(packet) {
+    if (!packet) {
+      packetOutput.innerHTML = "";
+      return;
+    }
+
+    var info = packet.research_packet;
+    var summary = info.validation_summary;
+    packetOutput.innerHTML = [
+      '<div class="packet-status-grid">',
+      '<div><span>' + fmt(info.existing_records) + "</span><small>published records</small></div>",
+      '<div><span>' + fmt(info.official_records) + "</span><small>official-source records</small></div>",
+      '<div><span>' + fmt(info.draft_records) + "</span><small>draft records</small></div>",
+      '<div><span>' + (info.research_packet_ready ? "Ready" : "Missing") + "</span><small>research packet</small></div>",
+      "</div>",
+      '<div class="packet-section">',
+      "<h4>Validation summary</h4>",
+      '<p><strong>' + fmt(summary.publish_ready) + "</strong> publish-ready records and <strong>" + fmt(summary.needs_review) + "</strong> records needing review.</p>",
+      "<p>" + esc(summary.rule) + "</p>",
+      "</div>",
+      '<div class="packet-section">',
+      "<h4>Target files</h4>",
+      renderTargetFiles(info.target_files),
+      "</div>",
+      '<div class="packet-section">',
+      "<h4>Workflow</h4>",
+      "<ol>" + info.workflow.map(function (step) { return "<li>" + esc(step) + "</li>"; }).join("") + "</ol>",
+      "</div>",
+      '<div class="packet-section">',
+      "<h4>Records needing attention</h4>",
+      renderRiskList(info.existing_record_risks),
+      "</div>",
+      '<details class="json-details">',
+      "<summary>View copyable JSON packet</summary>",
+      "<pre>" + esc(JSON.stringify(packet, null, 2)) + "</pre>",
+      "</details>",
+    ].join("");
   }
 
   function renderPacket() {
     if (!selectedCity) {
       packetTitle.textContent = "Choose a city";
-      packetOutput.textContent = "";
+      packetOutput.innerHTML = "";
       $("cityReady").textContent = "--";
       $("cityReview").textContent = "--";
       $("cityDrafts").textContent = "--";
@@ -226,7 +301,7 @@
     $("cityReview").textContent = fmt(riskRows.filter(function (risks) { return risks.length > 0; }).length);
     $("cityDrafts").textContent = fmt(selectedCity.draftServiceCount || 0);
     packetTitle.textContent = selectedCity.name + " research packet";
-    packetOutput.textContent = buildPacket();
+    renderPacketReport(buildPacketObject());
   }
 
   function renderChecklist() {
@@ -261,7 +336,7 @@
   });
 
   $("copyPacket").addEventListener("click", function () {
-    var text = packetOutput.textContent || "";
+    var text = buildPacket();
     if (!text) return;
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(function () {

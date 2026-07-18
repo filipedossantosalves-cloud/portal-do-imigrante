@@ -1,4 +1,4 @@
-const CACHE = "portal-imigrante-v18";
+const CACHE = "portal-imigrante-v19";
 const CORE = [
   "./",
   "index.html",
