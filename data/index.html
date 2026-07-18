@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Transparencia dos dados do Portal do Imigrante: cobertura, validacao, arquivos publicos e estado da pesquisa.">
+  <title>Dados | Portal do Imigrante</title>
+  <link rel="stylesheet" href="../research-desk/styles.css">
+  <link rel="stylesheet" href="data-page.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html" aria-label="Abrir Portal do Imigrante">
+      <span class="brand-mark">PI</span>
+      <span>
+        <strong>Dados</strong>
+        <small>Portal do Imigrante</small>
+      </span>
+    </a>
+    <nav class="top-actions" aria-label="Atalhos">
+      <a href="../index.html">Portal</a>
+      <a href="../research-desk/">Research Desk</a>
+      <a href="services.json">JSON publico</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero data-hero" aria-labelledby="dataTitle">
+      <div class="hero-copy">
+        <p class="eyebrow">Transparencia publica</p>
+        <h1 id="dataTitle">Base de servicos, cobertura e criterios de validacao.</h1>
+        <p class="lead">Esta pagina resume o que ja foi publicado, o que esta validado por fonte oficial e o que ainda precisa de revisao antes de ser tratado como confiavel.</p>
+      </div>
+      <div class="hero-panel" aria-label="Resumo da base">
+        <span class="status-pill">Atualizado em <span id="updatedAt">--</span></span>
+        <strong id="headline">Carregando dados</strong>
+        <dl class="audit-list">
+          <div>
+            <dt>Registros oficiais</dt>
+            <dd id="officialRate">--</dd>
+          </div>
+          <div>
+            <dt>UFs revisadas</dt>
+            <dd id="reviewedStates">--</dd>
+          </div>
+          <div>
+            <dt>Proximo alvo</dt>
+            <dd id="nextTarget">--</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="Metricas principais">
+      <div>
+        <span id="totalServices">--</span>
+        <small>servicos publicados</small>
+      </div>
+      <div>
+        <span id="officialServices">--</span>
+        <small>com fonte oficial</small>
+      </div>
+      <div>
+        <span id="statesCount">--</span>
+        <small>UFs organizadas</small>
+      </div>
+      <div>
+        <span id="citiesCount">--</span>
+        <small>cidades na base</small>
+      </div>
+    </section>
+
+    <section class="audit-strip" aria-label="Arquivos e fluxo">
+      <div class="audit-tile">
+        <strong>Arquivo publico</strong>
+        <span><a href="services.json">data/services.json</a></span>
+      </div>
+      <div class="audit-tile">
+        <strong>Workspace modular</strong>
+        <span><a href="estados/_indice.json">data/estados/_indice.json</a></span>
+      </div>
+      <div class="audit-tile accent">
+        <strong>Painel de pesquisa</strong>
+        <span><a href="../research-desk/">Abrir Research Desk</a></span>
+      </div>
+    </section>
+
+    <section class="data-layout">
+      <article class="data-panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Cobertura por UF</p>
+            <h2>Estados, cidades e registros oficiais</h2>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>UF</th>
+                <th>Estado</th>
+                <th>Status</th>
+                <th>Cidades</th>
+                <th>Servicos</th>
+                <th>Oficiais</th>
+              </tr>
+            </thead>
+            <tbody id="stateRows"></tbody>
+          </table>
+        </div>
+      </article>
+
+      <aside class="data-side">
+        <section class="data-panel">
+          <p class="eyebrow">Categorias</p>
+          <h2>Distribuicao publicada</h2>
+          <div id="categoryList" class="mini-list"></div>
+        </section>
+
+        <section class="data-panel">
+          <p class="eyebrow">Regra de seguranca</p>
+          <h2>Como um registro entra no portal</h2>
+          <ol class="method-list">
+            <li>O dado novo fica separado por estado e cidade.</li>
+            <li>Fontes oficiais, data de verificacao e riscos sao registrados.</li>
+            <li>Rascunhos ficam fora da base publica ate revisao humana.</li>
+            <li>Sem fonte oficial, o portal mostra aviso de confirmacao.</li>
+          </ol>
+        </section>
+
+        <section class="data-panel">
+          <p class="eyebrow">Arquivos</p>
+          <h2>Dados abertos do projeto</h2>
+          <div class="file-links">
+            <a href="services.json">Base publica JSON</a>
+            <a href="services.js">Base publica JS</a>
+            <a href="estados/_portal.json">Resumo consolidado</a>
+            <a href="estados/_indice.json">Indice por UF</a>
+          </div>
+        </section>
+      </aside>
+    </section>
+  </main>
+
+  <script src="services.js"></script>
+  <script src="../research-desk/data.js"></script>
+  <script src="data-page.js"></script>
+</body>
+</html>
