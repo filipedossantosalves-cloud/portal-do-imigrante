@@ -84,7 +84,7 @@
       footerSteps: "6 passos",
       footerSources: "Fontes oficiais",
       categories: {
-        todos: "Todas as necessidades",
+        todos: "TODAS",
         saude: "Saude",
         assistencia: "Assistencia social",
         acolhimento: "Acolhimento",
@@ -227,7 +227,7 @@
       footerSteps: "6 steps",
       footerSources: "Official sources",
       categories: {
-        todos: "All needs",
+        todos: "ALL",
         saude: "Healthcare",
         assistencia: "Social assistance",
         acolhimento: "Shelter",
@@ -370,7 +370,7 @@
       footerSteps: "6 pasos",
       footerSources: "Fuentes oficiales",
       categories: {
-        todos: "Todas las necesidades",
+        todos: "TODAS",
         saude: "Salud",
         assistencia: "Asistencia social",
         acolhimento: "Acogida",
