@@ -3,6 +3,7 @@ const CORE = [
   "./",
   "index.html",
   "styles.css",
+  "language.css",
   "app.js",
   "manifest.webmanifest",
   "data/services.json",

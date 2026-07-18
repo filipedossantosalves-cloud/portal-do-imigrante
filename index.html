@@ -10,6 +10,7 @@
   <title>Portal do Imigrante | Orientacao segura e gratuita</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="language.css">
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteudo</a>
@@ -21,9 +22,9 @@
       </a>
       <div class="header-actions" aria-label="Acessibilidade e idioma">
         <div class="language" role="group" aria-label="Idioma da interface">
-          <button class="chip active" data-lang="pt" aria-pressed="true">PT</button>
-          <button class="chip" data-lang="es" aria-pressed="false">ES</button>
-          <button class="chip" data-lang="en" aria-pressed="false">EN</button>
+          <button class="chip active" type="button" data-lang="pt" aria-label="Português do Brasil" aria-pressed="true"><span class="language-flag" aria-hidden="true">🇧🇷</span><span>PT</span></button>
+          <button class="chip" type="button" data-lang="en" aria-label="English" aria-pressed="false"><span class="language-flag" aria-hidden="true">🇺🇸</span><span>EN</span></button>
+          <button class="chip" type="button" data-lang="es" aria-label="Español" aria-pressed="false"><span class="language-flag" aria-hidden="true">🇪🇸</span><span>ES</span></button>
         </div>
         <button class="icon-button" id="fontButton" aria-label="Aumentar tamanho do texto">A+</button>
         <button class="icon-button" id="contrastButton" aria-pressed="false">Alto contraste</button>
