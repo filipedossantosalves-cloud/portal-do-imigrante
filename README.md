@@ -36,6 +36,10 @@ Open the public portal directly:
 
 `index.html`
 
+Open the multilingual rights and documents guide:
+
+`guia/index.html`
+
 Open the research and validation dashboard:
 
 `research-desk/index.html`
@@ -50,7 +54,9 @@ A local server is optional because the portal uses `data/services.js` and the Re
 
 - `index.html`: public Portal do Imigrante interface.
 - `styles.css`: public portal layout and responsive design.
+- `steps.css`: expandable explanations for the six-step checklist.
 - `app.js`: public portal search, filters, checklist, favorites, and language support.
+- `guia/`: multilingual guide to rights, documents, and current official channels.
 - `research-desk/`: internal research and validation dashboard.
 - `data/services.json`: consolidated public dataset.
 - `data/services.js`: browser-ready copy of the public dataset.

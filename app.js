@@ -7,6 +7,7 @@
   var pageSize = 18;
   var favorites = new Set(JSON.parse(localStorage.getItem("pi_favorites") || "[]"));
   var checklist = JSON.parse(localStorage.getItem("pi_checklist") || "{}");
+  var openStepDetails = new Set();
   var currentLang = localStorage.getItem("pi_lang") || "pt";
 
   var i18n = {
@@ -34,6 +35,7 @@
       heroText: "Regularizacao, CPF, saude, assistencia, acolhimento, trabalho e educacao em uma jornada simples.",
       findService: "Encontrar um servico",
       seeSteps: "Ver os 6 passos",
+      rightsGuide: "Guia de direitos e documentos",
       safetyTitle: "Sua seguranca vem primeiro",
       safetyText: "O portal nao cobra, nao pede documentos e nao substitui orgaos publicos. Nunca pague a terceiros por uma orientacao daqui.",
       trustPrivacyTitle: "Privacidade por padrao",
@@ -93,16 +95,21 @@
         outros: "Outros",
       },
       steps: {
-        regularizacao: { title: "Regularizacao migratoria", text: "Consulte a Policia Federal ou apoio juridico gratuito." },
-        cpf: { title: "CPF", text: "Veja como solicitar ou regularizar seu CPF." },
-        acolhimento: { title: "Emergencia e acolhimento", text: "Procure protecao, abrigo e alimentacao segura." },
-        saude: { title: "Saude e Cartao SUS", text: "Encontre atendimento de saude. Em urgencia, ligue 192." },
-        assistencia: { title: "Assistencia social", text: "Localize CRAS, CREAS, Centro POP e orientacao social." },
-        integracao: { title: "Trabalho, escola e integracao", text: "Busque emprego, qualificacao e caminhos para estudar." },
+        regularizacao: { title: "Regularizacao migratoria", text: "Consulte a Policia Federal ou apoio juridico gratuito.", purpose: "Ajuda a identificar qual documento ou procedimento comprova sua situacao migratoria no Brasil.", action: "Consulte os servicos oficiais da Policia Federal e, se tiver duvidas, procure orientacao juridica gratuita antes de iniciar o pedido.", attention: "Observe prazos e validade dos documentos. Nao entregue originais nem pague intermediarios sem confirmar o canal oficial." },
+        cpf: { title: "CPF", text: "Veja como solicitar ou regularizar seu CPF.", purpose: "O CPF e usado para acessar diversos servicos, como conta bancaria, matricula, trabalho e programas publicos.", action: "Solicite ou consulte o CPF pelos canais oficiais da Receita Federal e guarde o comprovante de inscricao.", attention: "CPF nao substitui documento migratorio. Evite sites e pessoas que cobram para fazer um servico disponivel nos canais oficiais." },
+        acolhimento: { title: "Emergencia e acolhimento", text: "Procure protecao, abrigo e alimentacao segura.", purpose: "Oferece uma resposta imediata quando falta moradia segura, alimentacao ou protecao contra violencia.", action: "Em risco imediato, use os numeros de emergencia. Para acolhimento, confirme vagas, criterios de entrada, horario e documentos aceitos antes de se deslocar.", attention: "Nao compartilhe sua localizacao ou documentos com contatos desconhecidos. Em perigo, priorize um canal publico ou uma organizacao verificada." },
+        saude: { title: "Saude e Cartao SUS", text: "Encontre atendimento de saude. Em urgencia, ligue 192.", purpose: "O SUS oferece atendimento de urgencia, consultas, vacinacao e acompanhamento de saude.", action: "Em urgencia, ligue 192 ou procure uma unidade de pronto atendimento. Para cuidados regulares, busque a UBS mais proxima e leve os documentos que possuir.", attention: "A falta de um documento especifico nao deve impedir o acolhimento inicial. Nunca adie uma emergencia por causa de documentacao." },
+        assistencia: { title: "Assistencia social", text: "Localize CRAS, CREAS, Centro POP e orientacao social.", purpose: "A rede de assistencia orienta sobre Cadastro Unico, beneficios, protecao de direitos e apoio para pessoas sem moradia.", action: "Procure o CRAS para protecao social e Cadastro Unico, o CREAS em situacoes de violacao de direitos e o Centro POP para atendimento a pessoas em situacao de rua.", attention: "Cada programa possui regras proprias. Fazer cadastro nao garante beneficio e o atendimento publico nao exige pagamento a intermediarios." },
+        integracao: { title: "Trabalho, escola e integracao", text: "Busque emprego, qualificacao e caminhos para estudar.", purpose: "Reune caminhos para estudar, procurar trabalho, reconhecer habilidades e construir autonomia no Brasil.", action: "Consulte escola ou secretaria de educacao para matricula, use canais oficiais de emprego e verifique como emitir a Carteira de Trabalho Digital.", attention: "Desconfie de vagas que cobram taxas, retem documentos ou prometem contratacao imediata. Confirme cursos e empregadores antes de fornecer dados." },
       },
       done: "Concluido",
       markDone: "Marcar como feito",
       seeServices: "Ver servicos",
+      explainStep: "Entenda este passo",
+      hideExplanation: "Fechar explicacao",
+      stepPurpose: "Para que serve",
+      stepAction: "O que fazer",
+      stepAttention: "Cuidado importante",
       stepDoneToast: "Passo concluido.",
       stepOpenToast: "Passo reaberto.",
       resetToast: "Checklist reiniciado.",
@@ -177,6 +184,7 @@
       heroText: "Migration status, CPF, healthcare, social support, shelter, work and education in one simple journey.",
       findService: "Find a service",
       seeSteps: "See the 6 steps",
+      rightsGuide: "Rights and documents guide",
       safetyTitle: "Your safety comes first",
       safetyText: "This portal does not charge fees, request documents or replace public authorities. Never pay third parties for this guidance.",
       trustPrivacyTitle: "Privacy by default",
@@ -236,16 +244,21 @@
         outros: "Other",
       },
       steps: {
-        regularizacao: { title: "Migration regularization", text: "Check the Federal Police or free legal support." },
-        cpf: { title: "CPF", text: "Learn how to request or regularize your CPF." },
-        acolhimento: { title: "Emergency and shelter", text: "Look for protection, shelter and safe food." },
-        saude: { title: "Healthcare and SUS Card", text: "Find healthcare services. In an emergency, call 192." },
-        assistencia: { title: "Social assistance", text: "Find CRAS, CREAS, Centro POP and social guidance." },
-        integracao: { title: "Work, school and integration", text: "Find jobs, training and ways to study." },
+        regularizacao: { title: "Migration regularization", text: "Check the Federal Police or free legal support.", purpose: "It helps identify which document or procedure proves your migration status in Brazil.", action: "Check the official Federal Police services and, if you are unsure, seek free legal guidance before starting an application.", attention: "Watch deadlines and document expiry dates. Do not hand over originals or pay intermediaries without confirming the official channel." },
+        cpf: { title: "CPF", text: "Learn how to request or regularize your CPF.", purpose: "A CPF is used to access many services, including banking, enrollment, work and public programs.", action: "Apply for or check your CPF through official Federal Revenue channels and keep the registration receipt.", attention: "A CPF does not replace a migration document. Avoid websites or people charging for a service available through official channels." },
+        acolhimento: { title: "Emergency and shelter", text: "Look for protection, shelter and safe food.", purpose: "It provides an immediate response when you lack safe housing, food or protection from violence.", action: "If you face immediate danger, use the emergency numbers. For shelter, confirm vacancies, admission rules, opening hours and accepted documents before traveling.", attention: "Do not share your location or documents with unknown contacts. In danger, prioritize a public channel or a verified organization." },
+        saude: { title: "Healthcare and SUS Card", text: "Find healthcare services. In an emergency, call 192.", purpose: "SUS provides emergency care, appointments, vaccination and ongoing healthcare.", action: "In an emergency, call 192 or go to an emergency care unit. For regular care, find the nearest UBS and bring any documents you have.", attention: "Missing a specific document should not prevent initial care. Never delay an emergency because of documentation." },
+        assistencia: { title: "Social assistance", text: "Find CRAS, CREAS, Centro POP and social guidance.", purpose: "The social assistance network provides guidance on Cadastro Unico, benefits, rights protection and support for people without housing.", action: "Go to CRAS for social protection and Cadastro Unico, CREAS for rights violations, and Centro POP for services for people experiencing homelessness.", attention: "Each program has its own rules. Registration does not guarantee a benefit, and public assistance does not require payment to intermediaries." },
+        integracao: { title: "Work, school and integration", text: "Find jobs, training and ways to study.", purpose: "It brings together ways to study, look for work, recognize skills and build autonomy in Brazil.", action: "Contact a school or education office for enrollment, use official employment channels and check how to obtain the Digital Work Card.", attention: "Be cautious of jobs that charge fees, retain documents or promise immediate hiring. Verify courses and employers before providing data." },
       },
       done: "Done",
       markDone: "Mark as done",
       seeServices: "See services",
+      explainStep: "Understand this step",
+      hideExplanation: "Close explanation",
+      stepPurpose: "What it is for",
+      stepAction: "What to do",
+      stepAttention: "Important precaution",
       stepDoneToast: "Step completed.",
       stepOpenToast: "Step reopened.",
       resetToast: "Checklist reset.",
@@ -320,6 +333,7 @@
       heroText: "Regularización, CPF, salud, asistencia, acogida, trabajo y educación en un recorrido sencillo.",
       findService: "Encontrar un servicio",
       seeSteps: "Ver los 6 pasos",
+      rightsGuide: "Guía de derechos y documentos",
       safetyTitle: "Su seguridad es lo primero",
       safetyText: "El portal no cobra, no solicita documentos y no sustituye a organismos públicos. Nunca pague a terceros por esta orientación.",
       trustPrivacyTitle: "Privacidad por defecto",
@@ -379,16 +393,21 @@
         outros: "Otros",
       },
       steps: {
-        regularizacao: { title: "Regularización migratoria", text: "Consulte a la Policía Federal o apoyo jurídico gratuito." },
-        cpf: { title: "CPF", text: "Vea cómo solicitar o regularizar su CPF." },
-        acolhimento: { title: "Emergencia y acogida", text: "Busque protección, refugio y alimentación segura." },
-        saude: { title: "Salud y Tarjeta SUS", text: "Encuentre atención de salud. En urgencia, llame al 192." },
-        assistencia: { title: "Asistencia social", text: "Localice CRAS, CREAS, Centro POP y orientación social." },
-        integracao: { title: "Trabajo, escuela e integración", text: "Busque empleo, capacitación y caminos para estudiar." },
+        regularizacao: { title: "Regularización migratoria", text: "Consulte a la Policía Federal o apoyo jurídico gratuito.", purpose: "Ayuda a identificar qué documento o trámite acredita su situación migratoria en Brasil.", action: "Consulte los servicios oficiales de la Policía Federal y, si tiene dudas, busque orientación jurídica gratuita antes de iniciar una solicitud.", attention: "Revise los plazos y la vigencia de los documentos. No entregue originales ni pague a intermediarios sin confirmar el canal oficial." },
+        cpf: { title: "CPF", text: "Vea cómo solicitar o regularizar su CPF.", purpose: "El CPF se utiliza para acceder a diversos servicios, como cuentas bancarias, matrícula, trabajo y programas públicos.", action: "Solicite o consulte su CPF por los canales oficiales de la Receita Federal y guarde el comprobante de inscripción.", attention: "El CPF no sustituye un documento migratorio. Evite sitios o personas que cobran por un servicio disponible en los canales oficiales." },
+        acolhimento: { title: "Emergencia y acogida", text: "Busque protección, refugio y alimentación segura.", purpose: "Ofrece una respuesta inmediata cuando falta vivienda segura, alimentación o protección frente a la violencia.", action: "Ante un riesgo inmediato, use los números de emergencia. Para acogida, confirme plazas, criterios de ingreso, horarios y documentos aceptados antes de desplazarse.", attention: "No comparta su ubicación ni documentos con contactos desconocidos. En peligro, priorice un canal público o una organización verificada." },
+        saude: { title: "Salud y Tarjeta SUS", text: "Encuentre atención de salud. En urgencia, llame al 192.", purpose: "El SUS ofrece atención de urgencia, consultas, vacunación y seguimiento de salud.", action: "En una urgencia, llame al 192 o vaya a una unidad de atención inmediata. Para cuidados regulares, busque la UBS más cercana y lleve los documentos que tenga.", attention: "La falta de un documento específico no debe impedir la atención inicial. Nunca retrase una emergencia por la documentación." },
+        assistencia: { title: "Asistencia social", text: "Localice CRAS, CREAS, Centro POP y orientación social.", purpose: "La red de asistencia orienta sobre Cadastro Único, beneficios, protección de derechos y apoyo para personas sin vivienda.", action: "Busque el CRAS para protección social y Cadastro Único, el CREAS ante vulneraciones de derechos y el Centro POP para personas en situación de calle.", attention: "Cada programa tiene sus propias reglas. Inscribirse no garantiza un beneficio y la atención pública no requiere pagos a intermediarios." },
+        integracao: { title: "Trabajo, escuela e integración", text: "Busque empleo, capacitación y caminos para estudiar.", purpose: "Reúne caminos para estudiar, buscar trabajo, reconocer habilidades y construir autonomía en Brasil.", action: "Consulte una escuela o secretaría de educación para la matrícula, use canales oficiales de empleo y verifique cómo obtener la Tarjeta de Trabajo Digital.", attention: "Desconfíe de empleos que cobran tasas, retienen documentos o prometen contratación inmediata. Verifique cursos y empleadores antes de facilitar datos." },
       },
       done: "Concluido",
       markDone: "Marcar como hecho",
       seeServices: "Ver servicios",
+      explainStep: "Entender este paso",
+      hideExplanation: "Cerrar explicación",
+      stepPurpose: "Para qué sirve",
+      stepAction: "Qué hacer",
+      stepAttention: "Precaución importante",
       stepDoneToast: "Paso concluido.",
       stepOpenToast: "Paso reabierto.",
       resetToast: "Lista reiniciada.",
@@ -847,13 +866,23 @@
       .map(function (step, index) {
         var done = Boolean(checklist[step.id]);
         var content = t("steps")[step.id];
+        var detailOpen = openStepDetails.has(step.id);
+        var detailId = "step-detail-" + step.id;
         return [
           '<article class="step ' + (done ? "done" : "") + '">',
           '<div class="step-top"><span class="step-number">' + (index + 1) + '</span><span class="step-icon" aria-hidden="true">' + step.icon + "</span></div>",
           "<h3>" + escapeHTML(content.title) + "</h3>",
-          "<p>" + escapeHTML(content.text) + "</p>",
+          '<p class="step-summary">' + escapeHTML(content.text) + "</p>",
           '<label><input type="checkbox" data-step="' + step.id + '" ' + (done ? "checked" : "") + "> " + (done ? t("done") : t("markDone")) + "</label>",
+          '<div class="step-actions">',
+          '<button class="step-explain-button" type="button" data-step-explain="' + step.id + '" aria-expanded="' + detailOpen + '" aria-controls="' + detailId + '"><span>' + (detailOpen ? t("hideExplanation") : t("explainStep")) + '</span><b aria-hidden="true">' + (detailOpen ? "-" : "+") + "</b></button>",
           '<button class="text-button" type="button" data-step-category="' + step.category + '">' + t("seeServices") + "</button>",
+          "</div>",
+          '<div class="step-detail" id="' + detailId + '" ' + (detailOpen ? "" : "hidden") + ">",
+          '<div><strong>' + t("stepPurpose") + '</strong><p>' + escapeHTML(content.purpose) + "</p></div>",
+          '<div><strong>' + t("stepAction") + '</strong><p>' + escapeHTML(content.action) + "</p></div>",
+          '<div class="step-attention"><strong>' + t("stepAttention") + '</strong><p>' + escapeHTML(content.attention) + "</p></div>",
+          "</div>",
           "</article>",
         ].join("");
       })
@@ -878,6 +907,17 @@
         page = 1;
         renderServices();
         $("busca").scrollIntoView({ behavior: "smooth" });
+      });
+    });
+
+    grid.querySelectorAll("[data-step-explain]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var stepId = btn.dataset.stepExplain;
+        if (openStepDetails.has(stepId)) openStepDetails.delete(stepId);
+        else openStepDetails.add(stepId);
+        renderSteps();
+        var nextButton = grid.querySelector('[data-step-explain="' + stepId + '"]');
+        if (nextButton) nextButton.focus();
       });
     });
   }
