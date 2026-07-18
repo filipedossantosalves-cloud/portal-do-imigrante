@@ -30,7 +30,7 @@
 
   function statusLabel(status) {
     if (status === "reviewed") return "revisado";
-    if (status === "in-progress") return "em revisao";
+    if (status === "in-progress") return "em revisão";
     return "pendente";
   }
 
@@ -42,14 +42,16 @@
     var officialRate = total ? Math.round((official / total) * 100) : 0;
 
     $("updatedAt").textContent = portal.meta.updated || portal.meta.consolidated || "--";
-    $("headline").textContent = fmt(total) + " registros publicados com trilha de validacao";
+    $("headline").textContent = fmt(total) + " registros no export público seguro";
     $("officialRate").textContent = fmt(official) + " (" + officialRate + "%)";
     $("reviewedStates").textContent = fmt(reviewed) + " revisadas, " + fmt(pending) + " pendentes";
-    $("nextTarget").textContent = next ? next.state : "Sem pendencias";
+    $("nextTarget").textContent = next ? next.state : "Sem pendências";
     $("totalServices").textContent = fmt(total);
     $("officialServices").textContent = fmt(official);
     $("statesCount").textContent = fmt(stats.states || desk.totals.states);
     $("citiesCount").textContent = fmt(stats.cities);
+    $("rawWorkspaceCount").textContent = fmt(stats.rawWorkspaceRecords || total);
+    $("legacyCount").textContent = fmt(stats.supersededLegacyRecords || 0);
   }
 
   function renderStates() {
@@ -72,11 +74,13 @@
   function renderCategories() {
     var labels = {
       acolhimento: "Acolhimento",
-      assistencia: "Assistencia social",
-      saude: "Saude",
+      assistencia: "Assistência social",
+      saude: "Saúde",
       trabalho: "Trabalho",
-      educacao: "Educacao",
+      alimentacao: "Alimentação",
+      educacao: "Educação",
       documentos: "Documentos",
+      outros: "Outros",
     };
     var counts = services.reduce(function (acc, service) {
       var key = service.category || "outros";

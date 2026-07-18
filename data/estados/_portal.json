@@ -4,10 +4,12 @@
     "updated": "2026-07-18",
     "disclaimer": "Base informativa em validação. Confirme todos os dados antes do deslocamento.",
     "stats": {
-      "total": 818,
-      "withPhone": 271,
+      "total": 807,
+      "rawWorkspaceRecords": 818,
+      "supersededLegacyRecords": 11,
+      "withPhone": 240,
       "withSource": 322,
-      "urgent": 365,
+      "urgent": 356,
       "states": 27,
       "cities": 164,
       "updated": "2026-07-18"

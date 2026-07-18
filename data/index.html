@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Transparencia dos dados do Portal do Imigrante: cobertura, validacao, arquivos publicos e estado da pesquisa.">
+  <meta name="description" content="Transparência dos dados do Portal do Imigrante: cobertura, validação, arquivos públicos e estado da pesquisa.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
   <title>Dados | Portal do Imigrante</title>
   <link rel="stylesheet" href="../research-desk/styles.css">
   <link rel="stylesheet" href="data-page.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
   <header class="topbar">
     <a class="brand" href="../index.html" aria-label="Abrir Portal do Imigrante">
       <span class="brand-mark">PI</span>
@@ -20,16 +22,16 @@
     <nav class="top-actions" aria-label="Atalhos">
       <a href="../index.html">Portal</a>
       <a href="../research-desk/">Research Desk</a>
-      <a href="services.json">JSON publico</a>
+      <a href="services.json">JSON público</a>
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="hero data-hero" aria-labelledby="dataTitle">
       <div class="hero-copy">
-        <p class="eyebrow">Transparencia publica</p>
-        <h1 id="dataTitle">Base de servicos, cobertura e criterios de validacao.</h1>
-        <p class="lead">Esta pagina resume o que ja foi publicado, o que esta validado por fonte oficial e o que ainda precisa de revisao antes de ser tratado como confiavel.</p>
+        <p class="eyebrow">Transparência pública</p>
+        <h1 id="dataTitle">Base de serviços, cobertura e critérios de validação.</h1>
+        <p class="lead">Esta página distingue o export público seguro, as evidências oficiais e o workspace bruto de pesquisa. Dados candidatos nunca recebem selo de fonte oficial.</p>
       </div>
       <div class="hero-panel" aria-label="Resumo da base">
         <span class="status-pill">Atualizado em <span id="updatedAt">--</span></span>
@@ -44,7 +46,7 @@
             <dd id="reviewedStates">--</dd>
           </div>
           <div>
-            <dt>Proximo alvo</dt>
+            <dt>Próximo alvo</dt>
             <dd id="nextTarget">--</dd>
           </div>
         </dl>
@@ -54,7 +56,7 @@
     <section class="metrics" aria-label="Metricas principais">
       <div>
         <span id="totalServices">--</span>
-        <small>servicos publicados</small>
+        <small>registros no export seguro</small>
       </div>
       <div>
         <span id="officialServices">--</span>
@@ -66,22 +68,22 @@
       </div>
       <div>
         <span id="citiesCount">--</span>
-        <small>cidades na base</small>
+        <small>localidades na base</small>
       </div>
     </section>
 
     <section class="audit-strip" aria-label="Arquivos e fluxo">
       <div class="audit-tile">
-        <strong>Arquivo publico</strong>
+        <strong>Export público seguro</strong>
         <span><a href="services.json">data/services.json</a></span>
       </div>
       <div class="audit-tile">
-        <strong>Workspace modular</strong>
-        <span><a href="estados/_indice.json">data/estados/_indice.json</a></span>
+        <strong>Workspace modular bruto</strong>
+        <span><a href="estados/_indice.json"><b id="rawWorkspaceCount">--</b> registros de pesquisa</a></span>
       </div>
       <div class="audit-tile accent">
-        <strong>Painel de pesquisa</strong>
-        <span><a href="../research-desk/">Abrir Research Desk</a></span>
+        <strong>Legados substituídos</strong>
+        <span><b id="legacyCount">--</b> duplicatas removidas do export</span>
       </div>
     </section>
 
@@ -91,6 +93,7 @@
           <div>
             <p class="eyebrow">Cobertura por UF</p>
             <h2>Estados, cidades e registros oficiais</h2>
+            <p class="lead">A tabela mostra 779 registros ligados às 27 UFs. Outros 28 registros históricos sem UF permanecem identificados separadamente no export público.</p>
           </div>
         </div>
         <div class="table-wrap">
@@ -101,7 +104,7 @@
                 <th>Estado</th>
                 <th>Status</th>
                 <th>Cidades</th>
-                <th>Servicos</th>
+                <th>Serviços</th>
                 <th>Oficiais</th>
               </tr>
             </thead>
@@ -113,18 +116,19 @@
       <aside class="data-side">
         <section class="data-panel">
           <p class="eyebrow">Categorias</p>
-          <h2>Distribuicao publicada</h2>
+          <h2>Distribuição publicada</h2>
           <div id="categoryList" class="mini-list"></div>
         </section>
 
         <section class="data-panel">
-          <p class="eyebrow">Regra de seguranca</p>
+          <p class="eyebrow">Regra de segurança</p>
           <h2>Como um registro entra no portal</h2>
           <ol class="method-list">
             <li>O dado novo fica separado por estado e cidade.</li>
-            <li>Fontes oficiais, data de verificacao e riscos sao registrados.</li>
-            <li>Rascunhos ficam fora da base publica ate revisao humana.</li>
-            <li>Sem fonte oficial, o portal mostra aviso de confirmacao.</li>
+            <li>Google Maps pode indicar um candidato, mas não vale como evidência oficial.</li>
+            <li>Fontes oficiais, data de verificação e riscos são registrados.</li>
+            <li>Rascunhos ficam fora da base pública até revisão humana.</li>
+            <li>Sem fonte oficial, telefone, endereço e horário não entram no export público.</li>
           </ol>
         </section>
 
@@ -132,10 +136,10 @@
           <p class="eyebrow">Arquivos</p>
           <h2>Dados abertos do projeto</h2>
           <div class="file-links">
-            <a href="services.json">Base publica JSON</a>
-            <a href="services.js">Base publica JS</a>
+            <a href="services.json">Base pública JSON</a>
+            <a href="services.js">Base pública JS</a>
             <a href="estados/_portal.json">Resumo consolidado</a>
-            <a href="estados/_indice.json">Indice por UF</a>
+            <a href="estados/_indice.json">Índice por UF</a>
           </div>
         </section>
       </aside>

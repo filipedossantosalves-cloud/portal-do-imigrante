@@ -34,9 +34,7 @@ This is the easiest path if you do not use terminal.
 
 1. Open GitHub Desktop.
 2. Choose `File > Add local repository`.
-3. Select this folder:
-
-`C:\Users\Filipix\Documents\Codex\2026-07-09\fo\work\Poject-X\portal-do-imigrante`
+3. Select the local `<project-folder>` that contains `index.html` and `README.md`.
 
 4. If asked to create a repository from this folder, confirm.
 5. Publish it to GitHub as `portal-do-imigrante`.
@@ -72,7 +70,8 @@ After GitHub Pages publishes, open:
 Confirm these numbers appear:
 
 - 27 UFs organized.
-- 790 UF-linked services.
+- 779 deduplicated UF-linked services.
+- 807 records in the safe public export.
 - 322 official-source records.
 - 11 pending UFs.
 - Recommended next state: Para.

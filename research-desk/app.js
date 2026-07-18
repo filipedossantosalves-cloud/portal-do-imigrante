@@ -36,6 +36,16 @@
     return Math.min(100, Math.round((official / total) * 100));
   }
 
+  function plural(value, singular, pluralForm) {
+    return fmt(value) + " " + (Number(value) === 1 ? singular : pluralForm);
+  }
+
+  function statusLabel(status) {
+    if (status === "reviewed") return "reviewed";
+    if (status === "in-progress") return "in progress";
+    return "pending";
+  }
+
   function showToast(message) {
     toast.textContent = message;
     toast.classList.add("show");
@@ -84,7 +94,9 @@
     $("pilotState").textContent = fmt(reviewed) + " reviewed, " + fmt(data.totals.pendingStates) + " pending";
     $("nextState").textContent = next ? next.state : "No pending state";
     $("reviewedUnits").textContent = fmt(reviewed) + " / " + fmt(data.totals.states);
-    $("exportStatus").textContent = fmt(data.totals.officialServices) + " official-source records ready";
+    $("exportStatus").textContent =
+      fmt(data.totals.publicServices || data.totals.services) + " safe public records; " +
+      fmt(data.totals.officialServices) + " with official evidence";
     $("evidenceStatus").textContent = officialRate + "% official evidence across UF-linked services";
     $("nextTarget").textContent = next
       ? next.state + ": " + fmt(next.officialServiceCount) + "/" + fmt(next.targetOfficialServiceCount || 20)
@@ -101,7 +113,7 @@
           '<button class="state-button ' + esc(status) + (active ? " active" : "") + '" type="button" data-uf="' + esc(state.uf) + '">',
           '<span class="uf">' + esc(state.uf) + "</span>",
           "<span><strong>" + esc(state.state) + "</strong><small>" + fmt(state.serviceCount) + " services, " + fmt(state.officialServiceCount) + "/" + fmt(state.targetOfficialServiceCount || 20) + " official</small></span>",
-          '<span class="badge ' + (reviewed ? "good" : status === "in-progress" ? "work" : "") + '">' + esc(status) + "</span>",
+          '<span class="badge ' + (reviewed ? "good" : status === "in-progress" ? "work" : "") + '">' + esc(statusLabel(status)) + "</span>",
           "</button>",
         ].join("");
       })
@@ -138,7 +150,7 @@
           "<small>" + fmt(city.serviceCount) + " services in folder</small>",
           "<span>" + fmt(city.officialServiceCount) + "</span>",
           "<small>official-source records</small>",
-          "<small>" + (city.hasResearchPacket ? "packet ready" : "packet missing") + " - " + fmt(city.draftServiceCount) + " drafts</small>",
+          "<small>" + (city.hasResearchPacket ? "packet ready" : "packet missing") + " - " + plural(city.draftServiceCount, "pending draft", "pending drafts") + "</small>",
           "</button>",
         ].join("");
       })
@@ -161,6 +173,10 @@
     if (!service.address) risks.push("address missing");
     if (!service.hours) risks.push("hours missing");
     return risks;
+  }
+
+  function isPublishReady(service) {
+    return Boolean(service.sourceRegistered && service.sourceUrl && service.verified);
   }
 
   function buildPacketObject() {
@@ -198,8 +214,8 @@
         draft_records: selectedCity.draftServiceCount || 0,
         official_draft_records: selectedCity.draftOfficialServiceCount || 0,
         validation_summary: {
-          publish_ready: riskRows.filter(function (row) { return row.risks.length === 0; }).length,
-          needs_review: riskRows.filter(function (row) { return row.risks.length > 0; }).length,
+          publish_ready: existing.filter(isPublishReady).length,
+          needs_review: existing.filter(function (service) { return !isPublishReady(service); }).length,
           rule: "No official source, no validation badge.",
         },
         existing_record_risks: riskRows,
@@ -269,7 +285,8 @@
       "</div>",
       '<div class="packet-section">',
       "<h4>Validation summary</h4>",
-      '<p><strong>' + fmt(summary.publish_ready) + "</strong> publish-ready records and <strong>" + fmt(summary.needs_review) + "</strong> records needing review.</p>",
+      '<p><strong>' + fmt(summary.publish_ready) + "</strong> publish-ready records and <strong>" + fmt(summary.needs_review) + "</strong> records blocked for review.</p>",
+      "<p>Missing optional phone, address, or hours remains visible as an advisory and does not create invented data.</p>",
       "<p>" + esc(summary.rule) + "</p>",
       "</div>",
       '<div class="packet-section">',
@@ -301,11 +318,9 @@
       return;
     }
 
-    var riskRows = (selectedCity.services || []).map(function (service) {
-      return serviceRisks(service);
-    });
-    $("cityReady").textContent = fmt(riskRows.filter(function (risks) { return risks.length === 0; }).length);
-    $("cityReview").textContent = fmt(riskRows.filter(function (risks) { return risks.length > 0; }).length);
+    var services = selectedCity.services || [];
+    $("cityReady").textContent = fmt(services.filter(isPublishReady).length);
+    $("cityReview").textContent = fmt(services.filter(function (service) { return !isPublishReady(service); }).length);
     $("cityDrafts").textContent = fmt(selectedCity.draftServiceCount || 0);
     packetTitle.textContent = selectedCity.name + " research packet";
     renderPacketReport(buildPacketObject());

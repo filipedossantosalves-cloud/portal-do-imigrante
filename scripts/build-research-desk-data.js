@@ -34,7 +34,39 @@ function toCoverageKey(value) {
     .join("");
 }
 
+function normalizeKey(value) {
+  return String(value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+function entityKey(service) {
+  return [service.uf, service.city, service.name].map(normalizeKey).join("|");
+}
+
+function deduplicateLegacyServices(services) {
+  const officialKeys = new Set(
+    services.filter((service) => service.sourceRegistered).map(entityKey),
+  );
+
+  return services.filter(
+    (service) => service.sourceRegistered || !officialKeys.has(entityKey(service)),
+  );
+}
+
+function pendingDrafts(services, drafts) {
+  const publishedIds = new Set(services.map((service) => service.id).filter(Boolean));
+  const publishedKeys = new Set(services.map(entityKey));
+  return drafts.filter(
+    (draft) => !publishedIds.has(draft.id) && !publishedKeys.has(entityKey(draft)),
+  );
+}
+
 function summarizeService(service) {
+  const official = Boolean(service.sourceRegistered);
   return {
     id: service.id || "",
     name: service.name || "",
@@ -42,18 +74,19 @@ function summarizeService(service) {
     city: service.city || "",
     state: service.state || "",
     uf: service.uf || "",
-    sourceRegistered: Boolean(service.sourceRegistered),
-    sourceUrl: service.sourceUrl || "",
-    phone: service.phone || "",
-    address: service.address || "",
-    hours: service.hours || "",
+    sourceRegistered: official,
+    sourceUrl: official ? service.sourceUrl || "" : "",
+    phone: official ? service.phone || "" : "",
+    address: official ? service.address || "" : "",
+    hours: official ? service.hours || "" : "Confirmar no canal oficial",
     priority: service.priority || "",
-    verified: service.verified || "",
+    verified: official ? service.verified || "" : "",
   };
 }
 
 const index = readJson(path.join(statesRoot, "_indice.json"));
 const portalMeta = readJson(path.join(statesRoot, "_portal.json")).meta || {};
+const publicData = readJson(path.join(root, "data", "services.json"));
 const states = [];
 
 for (const state of index.states.filter((item) => item.uf)) {
@@ -71,13 +104,17 @@ for (const state of index.states.filter((item) => item.uf)) {
     const sourcesFile = path.join(statePath, cityFolder, "fontes-encontradas.json");
     const reportFile = path.join(statePath, cityFolder, "relatorio-validacao.md");
     const cityData = readJson(cityFile);
-    const services = Array.isArray(cityData.services) ? cityData.services : [];
+    const rawServices = Array.isArray(cityData.services) ? cityData.services : [];
+    const services = deduplicateLegacyServices(rawServices);
     const draftData = fs.existsSync(draftFile) ? readJson(draftFile) : { services: [] };
-    const drafts = Array.isArray(draftData.services) ? draftData.services : [];
+    const rawDrafts = Array.isArray(draftData.services) ? draftData.services : [];
+    const drafts = pendingDrafts(services, rawDrafts);
     cities.push({
       name: cityData.city || cityFolder,
       folder: cityFolder,
       serviceCount: services.length,
+      rawServiceCount: rawServices.length,
+      supersededLegacyCount: rawServices.length - services.length,
       officialServiceCount: services.filter((service) => service.sourceRegistered).length,
       missingSourceCount: services.filter((service) => !service.sourceRegistered).length,
       hasResearchPacket: fs.existsSync(sourcesFile) && fs.existsSync(draftFile) && fs.existsSync(reportFile),
@@ -118,8 +155,18 @@ const payload = {
     states: states.length,
     cities: states.reduce((total, state) => total + state.cities.length, 0),
     services: states.reduce((total, state) => total + state.serviceCount, 0),
+    rawWorkspaceServices: states.reduce(
+      (total, state) => total + state.cities.reduce((cityTotal, city) => cityTotal + city.rawServiceCount, 0),
+      0,
+    ),
+    supersededLegacyRecords: states.reduce(
+      (total, state) => total + state.cities.reduce((cityTotal, city) => cityTotal + city.supersededLegacyCount, 0),
+      0,
+    ),
     officialServices: states.reduce((total, state) => total + state.officialServiceCount, 0),
     pendingStates: pendingStates.length,
+    publicServices: publicData.services.length,
+    unassignedPublicServices: publicData.services.filter((service) => !service.uf).length,
   },
   recommendedNext:
     pendingStates.find((state) => state.uf === "MG") ||
@@ -129,6 +176,7 @@ const payload = {
   states,
   validationRules: [
     "No official source, no validation badge.",
+    "Google Maps may identify a research candidate, but it is not official evidence.",
     "Do not infer phone numbers, addresses, or opening hours.",
     "Keep drafts separate from published service files.",
     "Mark missing official information explicitly.",

@@ -20,6 +20,74 @@ function unique(values) {
   return new Set(values.filter(Boolean)).size;
 }
 
+function normalizeKey(value) {
+  return String(value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+function entityKey(service) {
+  return [service.uf, service.city, service.name].map(normalizeKey).join("|");
+}
+
+function deduplicateLegacyServices(services) {
+  const officialKeys = new Set(
+    services.filter((service) => service.sourceRegistered).map(entityKey),
+  );
+
+  return services.filter(
+    (service) => service.sourceRegistered || !officialKeys.has(entityKey(service)),
+  );
+}
+
+function sanitizeForPublic(service) {
+  if (service.sourceRegistered) return { ...service };
+
+  return {
+    ...service,
+    address: "",
+    map: "",
+    phone: "",
+    phoneLabel: "Não confirmado",
+    hours: "Confirmar no canal oficial",
+    source: "",
+    sourceUrl: "",
+    verified: "",
+    contactConfirmed: false,
+    addressSpecific: false,
+    hoursInformed: false,
+    reasons: [
+      "Fonte não registrada",
+      "Telefone não confirmado",
+      "Endereço a confirmar",
+      "Horário a confirmar",
+    ],
+    notice: "Informação de referência. Confirme no canal oficial antes de se deslocar.",
+  };
+}
+
+function isValidVerificationDate(value) {
+  const match = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(String(value || ""));
+  if (!match) return false;
+  const date = new Date(Date.UTC(Number(match[3]), Number(match[2]) - 1, Number(match[1])));
+  return (
+    date.getUTCFullYear() === Number(match[3]) &&
+    date.getUTCMonth() === Number(match[2]) - 1 &&
+    date.getUTCDate() === Number(match[1])
+  );
+}
+
+function isHttpsUrl(value) {
+  try {
+    return new URL(value).protocol === "https:";
+  } catch (_error) {
+    return false;
+  }
+}
+
 function sortServices(a, b) {
   return (
     String(a.uf || "").localeCompare(String(b.uf || ""), "pt-BR") ||
@@ -143,6 +211,9 @@ for (const stateFolder of listDirs(stateRoot)) {
   }
 }
 
+const rawServiceCount = portal.services.length;
+portal.services = deduplicateLegacyServices(portal.services).map(sanitizeForPublic);
+const supersededLegacyRecords = rawServiceCount - portal.services.length;
 portal.services.sort(sortServices);
 
 const consolidated =
@@ -176,6 +247,38 @@ for (const service of portal.services) {
 
   if (service.sourceRegistered && !service.sourceUrl) {
     errors.push(`${service.id}: fonte oficial marcada sem URL`);
+  }
+
+  if (service.sourceRegistered && !service.source) {
+    errors.push(`${service.id}: fonte oficial marcada sem nome da fonte`);
+  }
+
+  if (service.sourceRegistered && !isHttpsUrl(service.sourceUrl)) {
+    errors.push(`${service.id}: URL oficial ausente, invalida ou sem HTTPS`);
+  }
+
+  if (service.sourceRegistered && !isValidVerificationDate(service.verified)) {
+    errors.push(`${service.id}: data de verificacao ausente ou invalida`);
+  }
+
+  if (service.sourceRegistered && service.contactConfirmed && !service.phone) {
+    errors.push(`${service.id}: contato confirmado sem telefone`);
+  }
+
+  if (!service.sourceRegistered) {
+    const unsafeFields = [
+      service.phone,
+      service.address,
+      service.map,
+      service.sourceUrl,
+      service.verified,
+      service.contactConfirmed,
+      service.addressSpecific,
+      service.hoursInformed,
+    ];
+    if (unsafeFields.some(Boolean)) {
+      errors.push(`${service.id}: registro sem fonte vazou dado operacional no export publico`);
+    }
   }
 }
 
@@ -219,6 +322,8 @@ portal.meta.coverageSummary = {
 
 portal.meta.stats = {
   total: portal.services.length,
+  rawWorkspaceRecords: rawServiceCount,
+  supersededLegacyRecords,
   withPhone: portal.services.filter((service) => service.contactConfirmed).length,
   withSource: officialRecords,
   urgent: portal.services.filter((service) => service.priority === "Urgente").length,
@@ -243,6 +348,8 @@ console.log(
     {
       consolidated,
       services: portal.meta.stats.total,
+      rawWorkspaceRecords: rawServiceCount,
+      supersededLegacyRecords,
       officialRecords,
       reviewedUnits,
       pendingUnits: totalUnits - reviewedUnits,

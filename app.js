@@ -108,6 +108,8 @@
       resetToast: "Checklist reiniciado.",
       confirmBefore: "Confirme antes de ir.",
       basicData: "Dados basicos disponiveis",
+      additionalReview: "Confirmacao adicional recomendada",
+      appointmentRequired: "Atendimento mediante agendamento previo",
       address: "Endereco",
       phone: "Telefone",
       hours: "Horario",
@@ -249,6 +251,8 @@
       resetToast: "Checklist reset.",
       confirmBefore: "Confirm before going.",
       basicData: "Basic data available",
+      additionalReview: "Additional confirmation recommended",
+      appointmentRequired: "Service by prior appointment",
       address: "Address",
       phone: "Phone",
       hours: "Hours",
@@ -390,6 +394,8 @@
       resetToast: "Lista reiniciada.",
       confirmBefore: "Confirme antes de ir.",
       basicData: "Datos básicos disponibles",
+      additionalReview: "Se recomienda confirmación adicional",
+      appointmentRequired: "Atención con cita previa",
       address: "Dirección",
       phone: "Teléfono",
       hours: "Horario",
@@ -575,6 +581,11 @@
     replacements.forEach(function (item) {
       result = result.replace(item[0], item[1]);
     });
+    if (/\b(n[aã]o|fonte|telefone|endere[cç]o|hor[aá]rio|atendimento|agendamento|funcionamento|servi[cç]o|antes de se deslocar)\b/i.test(result)) {
+      return currentLang === "en"
+        ? "Reference information. Confirm details with the official source before traveling."
+        : "Información de referencia. Confirme los detalles con la fuente oficial antes de desplazarse.";
+    }
     return result;
   }
 
@@ -659,6 +670,14 @@
         .replace(/Funcionamento ininterrupto/gi, "Funcionamiento continuo")
         .replace(/Atendimento porta aberta, sem agendamento/gi, "Atención sin cita");
     }
+    var residualHours = currentLang === "en"
+      ? /\b(segunda(?:-feira)?|ter[cç]a-feira|quarta-feira|quinta-feira|sexta-feira|atendimento|agendamento|funcionamento|dias [uú]teis|ponto facultativo|hor[aá]rio|confirm o)\b/i
+      : /\b(segunda-feira|ter[cç]a-feira|quarta-feira|quinta-feira|sexta-feira|atendimento|agendamento|dias [uú]teis|ponto facultativo|horário|horario n[aã]o informado)\b/i;
+    if (residualHours.test(result)) {
+      return currentLang === "en"
+        ? "Confirm hours with the official source"
+        : "Confirme el horario con la fuente oficial";
+    }
     return result;
   }
 
@@ -728,9 +747,22 @@
     return translateDataText(reason);
   }
 
-  function translateReasons(reasons) {
-    if (!reasons || !reasons.length) return t("basicData");
-    return reasons.map(translateReason).join(" - ");
+  function translateReasons(service) {
+    var reasons = service.reasons || [];
+    if (currentLang === "pt") {
+      return reasons.length ? reasons.join(" - ") : t("basicData");
+    }
+
+    var translated = [];
+    if (!service.sourceRegistered || !service.sourceUrl) translated.push(translateReason("Fonte não registrada"));
+    if (!service.contactConfirmed || !service.phone) translated.push(translateReason("Telefone não confirmado"));
+    if (!service.addressSpecific || !service.address) translated.push(translateReason("Endereço a confirmar"));
+    if (!service.hoursInformed || !service.hours) translated.push(translateReason("Horário a confirmar"));
+    if (reasons.some(function (reason) { return /agendamento|cita|appointment/i.test(reason); })) {
+      translated.push(t("appointmentRequired"));
+    }
+    if (!translated.length && reasons.length) translated.push(t("additionalReview"));
+    return Array.from(new Set(translated)).join(" - ") || t("basicData");
   }
 
   function showToast(text) {
@@ -873,7 +905,11 @@
   function populateRegions() {
     var previous = $("region").value;
     $("region").innerHTML = option("", t("all")) + uniqueSorted(data.map(function (service) { return service.region; })).map(function (value) {
-      return option(value, value);
+      var labels = {
+        en: { Norte: "North", Nordeste: "Northeast", "Centro-Oeste": "Central-West", Sudeste: "Southeast", Sul: "South", "Não informado": "Not informed" },
+        es: { Norte: "Norte", Nordeste: "Nordeste", "Centro-Oeste": "Centro-Oeste", Sudeste: "Sudeste", Sul: "Sur", "Não informado": "No informado" },
+      };
+      return option(value, (labels[currentLang] && labels[currentLang][value]) || value);
     }).join("");
     $("region").value = previous;
   }
@@ -883,7 +919,7 @@
     var previous = $("state").value;
     var list = data.filter(function (service) { return !region || service.region === region; }).map(function (service) { return service.state; });
     $("state").innerHTML = option("", t("allMasc")) + uniqueSorted(list).map(function (value) {
-      return option(value, value);
+      return option(value, translateKnownValue(value));
     }).join("");
     $("state").value = Array.from($("state").options).some(function (item) { return item.value === previous; }) ? previous : "";
   }
@@ -896,7 +932,7 @@
       .filter(function (service) { return (!region || service.region === region) && (!state || service.state === state); })
       .map(function (service) { return service.city; });
     $("city").innerHTML = option("", t("all")) + uniqueSorted(list).map(function (value) {
-      return option(value, value);
+      return option(value, translateKnownValue(value));
     }).join("");
     $("city").value = Array.from($("city").options).some(function (item) { return item.value === previous; }) ? previous : "";
   }
@@ -923,18 +959,21 @@
       .sort(function (a, b) {
         var official = Number(Boolean(b.sourceRegistered)) - Number(Boolean(a.sourceRegistered));
         var priority = { Urgente: 0, Alta: 1, "Media": 2, "Média": 2, Baixa: 3 };
-        return official || ((priority[a.priority] || 9) - (priority[b.priority] || 9)) || a.name.localeCompare(b.name, "pt-BR");
+        var aPriority = Object.prototype.hasOwnProperty.call(priority, a.priority) ? priority[a.priority] : 9;
+        var bPriority = Object.prototype.hasOwnProperty.call(priority, b.priority) ? priority[b.priority] : 9;
+        return official || (aPriority - bPriority) || a.name.localeCompare(b.name, "pt-BR");
       });
   }
 
   function card(service) {
-    var canRoute = service.addressSpecific && service.map;
-    var dial = service.contactConfirmed ? (service.phone.match(/\+?\d[\d\s().-]{2,}/) || [service.phone])[0].replace(/[^0-9+]/g, "") : "";
-    var phone = service.contactConfirmed ? '<a href="tel:' + escapeHTML(dial) + '">' + t("call") + "</a>" : "";
+    var canCall = service.sourceRegistered && service.contactConfirmed && service.phone;
+    var canRoute = service.sourceRegistered && service.addressSpecific && service.map;
+    var dial = canCall ? (service.phone.match(/\+?\d[\d\s().-]{2,}/) || [service.phone])[0].replace(/[^0-9+]/g, "") : "";
+    var phone = canCall ? '<a href="tel:' + escapeHTML(dial) + '">' + t("call") + "</a>" : "";
     var route = canRoute ? '<a class="route" href="' + escapeHTML(service.map) + '" target="_blank" rel="noopener noreferrer">' + t("route") + "</a>" : "";
-    var source = service.sourceUrl ? '<a href="' + escapeHTML(service.sourceUrl) + '" target="_blank" rel="noopener noreferrer">' + t("source") + "</a>" : "";
+    var source = service.sourceRegistered && service.sourceUrl ? '<a href="' + escapeHTML(service.sourceUrl) + '" target="_blank" rel="noopener noreferrer">' + t("source") + "</a>" : "";
     var saved = favorites.has(service.id);
-    var reasons = translateReasons(service.reasons);
+    var reasons = translateReasons(service);
     var verified = service.verified ? " - " + t("checkedAt") + " " + escapeHTML(service.verified) : "";
     var notice = service.notice ? translateDataText(service.notice) : "";
 
@@ -1005,8 +1044,12 @@
   function clearFilters() {
     $("query").value = "";
     $("region").value = "";
+    $("state").value = "";
+    $("city").value = "";
     populateStates();
+    $("state").value = "";
     populateCities();
+    $("city").value = "";
     $("category").value = "";
     page = 1;
     renderServices();

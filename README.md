@@ -14,7 +14,9 @@ Portal do Imigrante combines a public service portal with an internal Research D
 
 Consolidated on 2026-07-18:
 
-- 818 public service records in the final portal dataset.
+- 807 records in the safer public export.
+- 818 raw records in the modular research workspace.
+- 11 superseded legacy records removed from the public export.
 - 322 records with official-source evidence.
 - 16 of 27 Brazilian federative units reviewed.
 - 11 federative units still pending.
@@ -22,7 +24,9 @@ Consolidated on 2026-07-18:
 - Santa Catarina review: 56 services, 26 official-source records, Joinville rebuilt with official municipal evidence.
 - Recommended next state: Para.
 
-The public portal keeps historical records without UF in `data/estados/Nao informado/`. The Research Desk focuses on the 27 states with UF.
+The public portal keeps 28 historical records without UF in `data/estados/Nao informado/`. The Research Desk contains 779 deduplicated UF-linked records and focuses on the 27 states with UF.
+
+Google Maps may be kept as a candidate-discovery aid in the research workspace, but it is not treated as official evidence. Records without an official source are exported without operational phone, address, route, or opening-hour details.
 
 ## How to open
 
@@ -33,6 +37,10 @@ Open the public portal directly:
 Open the research and validation dashboard:
 
 `research-desk/index.html`
+
+Open the public data and methodology page:
+
+`data/index.html`
 
 A local server is optional because the portal uses `data/services.js` and the Research Desk uses `research-desk/data.js`.
 
@@ -71,6 +79,8 @@ The main rule is conservative:
 
 Missing phone numbers, addresses, and opening hours are marked as missing. They are not guessed.
 
+Human review remains the publication gate. Official-source status requires a named source, an HTTPS source URL, and a valid verification date.
+
 ## Validation commands
 
 Use the bundled or system Node executable:
@@ -82,11 +92,21 @@ node --check research-desk/app.js
 node --check scripts/consolidate-state-city-data.js
 node scripts/consolidate-state-city-data.js
 node scripts/build-research-desk-data.js
+node scripts/clean-promoted-drafts.js
+node scripts/audit-project.js
 ```
+
+`clean-promoted-drafts.js` runs in dry-run mode by default. Use `--write` only after reviewing the listed exact matches.
 
 ## Built with
 
-HTML, CSS, JavaScript, JSON, Node.js, OpenAI Codex, public government sources, official city/state/federal service pages.
+HTML, CSS, JavaScript, JSON, Node.js, OpenAI GPT-5.6 through Codex, public government sources, and official city/state/federal service pages.
+
+GPT-5.6 and Codex were used as development and research assistants for restructuring data, reviewing translations, strengthening validation, and testing the interface. The deployed static portal does not claim to run an AI model or OpenAI API at runtime.
+
+## License and attribution
+
+The project code is released under the MIT License. Public-service information remains attributed to its original sources, and the license does not replace the terms or authority of those sources.
 
 ## Devpost positioning
 

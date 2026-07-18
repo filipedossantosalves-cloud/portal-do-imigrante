@@ -10,7 +10,7 @@ AI-assisted public-service research and validation for migrants and refugees in 
 
 ## Built with
 
-HTML, CSS, JavaScript, JSON, Node.js, OpenAI Codex, public government sources, official municipal/state/federal service pages.
+HTML, CSS, JavaScript, JSON, Node.js, OpenAI GPT-5.6, OpenAI Codex, GitHub Pages, public government sources, official municipal/state/federal service pages.
 
 ## About the project
 
@@ -27,7 +27,7 @@ Portal do Imigrante has two parts:
 1. A public portal where migrants, refugees, volunteers, and support workers can search services by location, category, urgency, and available information.
 2. A Research Desk where the team organizes research by Brazilian state and city, checks official-source evidence, tracks validation progress, keeps drafts separate from published records, and exports the reviewed dataset back into the public portal.
 
-The current pilot includes 818 public service records, 322 official-source records, 16 reviewed federative units, a Minas Gerais pilot with 32 mapped services across 5 cities, and a Santa Catarina review where Joinville was rebuilt from official municipal evidence for shelter, social assistance, health, work, documentation, food, and migrant-support channels.
+The current pilot includes 807 records in a safer public export, 322 official-source records, 16 reviewed federative units, a Minas Gerais pilot with 32 mapped services across 5 cities, and a Santa Catarina review where Joinville has 26 official-source records and no pending drafts. The modular research workspace retains 818 raw records, while 11 superseded legacy duplicates are excluded from the public export.
 
 ### How we built it
 
@@ -41,7 +41,9 @@ The data workflow is modular:
 - `relatorio-validacao.md` stores review notes, risks, and blocked records.
 - Node.js validation scripts rebuild the public dataset only after consistency checks pass.
 
-OpenAI Codex helped accelerate research organization, validation logic, data restructuring, interface polishing, and the submission narrative. The important design choice was to use AI assistance while keeping a conservative human-validation gate: no official source means no validation badge.
+OpenAI GPT-5.6 through Codex helped accelerate research organization, validation logic, data restructuring, translation review, interface polishing, and the submission narrative. AI proposed and checked changes, while Filipe dos Santos Alves directed the product, reviewed results, chose the safety policy, and kept the final human publication gate: no official source means no validation badge.
+
+The project began as a smaller static service portal. During Build Week, we added the state/city research workspace, Research Desk, validation and consolidation scripts, safer public export, data-transparency page, multilingual review, and GitHub Pages deployment. The live portal does not run an OpenAI model at runtime; GPT-5.6 and Codex were used transparently in the build and review workflow.
 
 ### Challenges
 
@@ -64,7 +66,6 @@ This creates an auditable path from source research to public display.
 ### What's next
 
 - Finish more Brazilian states using the same state/city workflow.
-- Add hosted deployment and a public demo link.
 - Add a guided reviewer mode for volunteers.
 - Add multilingual public-facing content for Portuguese, Spanish, English, French, and Haitian Creole.
 - Add safer update reminders for services that have not been rechecked recently.
@@ -73,6 +74,7 @@ This creates an auditable path from source research to public display.
 
 - Public portal: https://filipedossantosalves-cloud.github.io/portal-do-imigrante/
 - Research Desk: https://filipedossantosalves-cloud.github.io/portal-do-imigrante/research-desk/
+- Data and methodology: https://filipedossantosalves-cloud.github.io/portal-do-imigrante/data/
 - Source code: https://github.com/filipedossantosalves-cloud/portal-do-imigrante
 
 ## Video demo notes
@@ -85,3 +87,6 @@ Show this sequence:
 4. Select Belo Horizonte or Contagem and show the research packet.
 5. Explain the safety rule: no official source, no validation badge.
 6. Show that the validated data is consolidated back into the public portal.
+7. Show the Data page and explain the 807 safe public records versus 818 raw workspace records.
+
+Upload the final demo with the visibility required by the Official Rules and verify that it plays without requiring a judge to sign in.
