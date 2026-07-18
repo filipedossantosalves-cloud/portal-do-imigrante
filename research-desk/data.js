@@ -1,5 +1,5 @@
 window.RESEARCH_DESK_DATA={
-  "generatedAt": "2026-07-18T02:51:22.632Z",
+  "generatedAt": "2026-07-18T19:53:46.725Z",
   "totals": {
     "states": 27,
     "cities": 163,

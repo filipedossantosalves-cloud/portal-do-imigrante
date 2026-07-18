@@ -2,7 +2,7 @@
 
 (function () {
   var data = window.RESEARCH_DESK_DATA || { states: [], totals: {}, validationRules: [], sourceChecklist: [] };
-  var selectedState = data.recommendedNext || data.states[0] || null;
+  var selectedState = getRecommendedNext() || data.states[0] || null;
   var selectedCity = selectedState && selectedState.cities ? selectedState.cities[0] : null;
   var statusFilter = document.getElementById("statusFilter");
   var stateButtons = document.getElementById("stateButtons");
@@ -49,6 +49,15 @@
     return state.status === "reviewed";
   }
 
+  function getRecommendedNext() {
+    var next = data.recommendedNext;
+    if (!next) return null;
+    if (typeof next === "string") {
+      return data.states.find(function (state) { return state.state === next || state.uf === next; }) || null;
+    }
+    return next;
+  }
+
   function filteredStates() {
     var filter = statusFilter.value;
     if (filter === "pending") return data.states.filter(function (state) { return state.status !== "reviewed"; });
@@ -65,16 +74,14 @@
 
   function renderOverview() {
     var reviewed = (data.totals.states || 0) - (data.totals.pendingStates || 0);
-    var pilot = data.states.find(function (state) { return state.state === "Minas Gerais"; });
-    var next = data.recommendedNext;
+    var next = getRecommendedNext();
     var officialRate = data.totals.services
       ? Math.round((data.totals.officialServices / data.totals.services) * 100)
       : 0;
 
-    $("pilotHeadline").textContent = pilot
-      ? fmt(pilot.officialServiceCount) + " official records validated in Minas Gerais"
-      : "Research pipeline ready";
-    $("pilotState").textContent = pilot ? pilot.state + " (" + pilot.status + ")" : "--";
+    $("pilotHeadline").textContent =
+      fmt(data.totals.officialServices) + " official-source records across reviewed UFs";
+    $("pilotState").textContent = fmt(reviewed) + " reviewed, " + fmt(data.totals.pendingStates) + " pending";
     $("nextState").textContent = next ? next.state : "No pending state";
     $("reviewedUnits").textContent = fmt(reviewed) + " / " + fmt(data.totals.states);
     $("exportStatus").textContent = fmt(data.totals.officialServices) + " official-source records ready";
