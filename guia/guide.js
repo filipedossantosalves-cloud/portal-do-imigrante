@@ -85,7 +85,23 @@
     }
   };
 
-  var currentLang = localStorage.getItem("pi_lang") || "pt";
+  function readLanguage() {
+    try {
+      return localStorage.getItem("pi_lang") || "pt";
+    } catch (error) {
+      return "pt";
+    }
+  }
+
+  function saveLanguage(language) {
+    try {
+      localStorage.setItem("pi_lang", language);
+    } catch (error) {
+      // Language switching still works when browser storage is unavailable.
+    }
+  }
+
+  var currentLang = readLanguage();
   if (!i18n[currentLang]) currentLang = "pt";
 
   function translate() {
@@ -111,7 +127,7 @@
   document.querySelectorAll("[data-lang]").forEach(function (button) {
     button.addEventListener("click", function () {
       currentLang = button.dataset.lang;
-      localStorage.setItem("pi_lang", currentLang);
+      saveLanguage(currentLang);
       translate();
     });
   });

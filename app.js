@@ -1,14 +1,45 @@
 "use strict";
 
 (function () {
+  function readStorage(key) {
+    try {
+      return localStorage.getItem(key);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function writeStorage(key, value) {
+    try {
+      localStorage.setItem(key, value);
+    } catch (error) {
+      // The portal remains usable when storage is blocked or full.
+    }
+  }
+
+  function readJsonStorage(key, fallback) {
+    try {
+      var raw = readStorage(key);
+      return raw ? JSON.parse(raw) : fallback;
+    } catch (error) {
+      return fallback;
+    }
+  }
+
+  var storedFavorites = readJsonStorage("pi_favorites", []);
+  var storedChecklist = readJsonStorage("pi_checklist", {});
   var data = [];
   var meta = {};
   var page = 1;
   var pageSize = 18;
-  var favorites = new Set(JSON.parse(localStorage.getItem("pi_favorites") || "[]"));
-  var checklist = JSON.parse(localStorage.getItem("pi_checklist") || "{}");
+  var favorites = new Set(Array.isArray(storedFavorites) ? storedFavorites.filter(function (id) {
+    return typeof id === "string" && id.length <= 160;
+  }) : []);
+  var checklist = storedChecklist && typeof storedChecklist === "object" && !Array.isArray(storedChecklist)
+    ? storedChecklist
+    : {};
   var openStepDetails = new Set();
-  var currentLang = localStorage.getItem("pi_lang") || "pt";
+  var currentLang = readStorage("pi_lang") || "pt";
 
   var i18n = {
     pt: {
@@ -497,6 +528,15 @@
     });
   }
 
+  function safeHttpsUrl(value) {
+    try {
+      var url = new URL(String(value || ""), window.location.href);
+      return url.protocol === "https:" && !url.username && !url.password ? url.href : "";
+    } catch (error) {
+      return "";
+    }
+  }
+
   function normalize(value) {
     return String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
   }
@@ -845,7 +885,7 @@
 
   function setLanguage(lang) {
     currentLang = i18n[lang] ? lang : "pt";
-    localStorage.setItem("pi_lang", currentLang);
+    writeStorage("pi_lang", currentLang);
     translateStatic();
     document.querySelectorAll("[data-lang]").forEach(function (btn) {
       var active = btn.dataset.lang === currentLang;
@@ -891,7 +931,7 @@
     grid.querySelectorAll("[data-step]").forEach(function (input) {
       input.addEventListener("change", function () {
         checklist[input.dataset.step] = input.checked;
-        localStorage.setItem("pi_checklist", JSON.stringify(checklist));
+        writeStorage("pi_checklist", JSON.stringify(checklist));
         renderSteps();
         showToast(input.checked ? t("stepDoneToast") : t("stepOpenToast"));
       });
@@ -1008,10 +1048,13 @@
   function card(service) {
     var canCall = service.sourceRegistered && service.contactConfirmed && service.phone;
     var canRoute = service.sourceRegistered && service.addressSpecific && service.map;
-    var dial = canCall ? (service.phone.match(/\+?\d[\d\s().-]{2,}/) || [service.phone])[0].replace(/[^0-9+]/g, "") : "";
-    var phone = canCall ? '<a href="tel:' + escapeHTML(dial) + '">' + t("call") + "</a>" : "";
-    var route = canRoute ? '<a class="route" href="' + escapeHTML(service.map) + '" target="_blank" rel="noopener noreferrer">' + t("route") + "</a>" : "";
-    var source = service.sourceRegistered && service.sourceUrl ? '<a href="' + escapeHTML(service.sourceUrl) + '" target="_blank" rel="noopener noreferrer">' + t("source") + "</a>" : "";
+    var rawPhone = String(service.phone || "");
+    var dial = canCall ? (rawPhone.match(/\+?\d[\d\s().-]{2,}/) || [rawPhone])[0].replace(/[^0-9+]/g, "") : "";
+    var mapUrl = canRoute ? safeHttpsUrl(service.map) : "";
+    var sourceUrl = service.sourceRegistered ? safeHttpsUrl(service.sourceUrl) : "";
+    var phone = dial && /^\+?\d{3,15}$/.test(dial) ? '<a href="tel:' + escapeHTML(dial) + '">' + t("call") + "</a>" : "";
+    var route = mapUrl ? '<a class="route" href="' + escapeHTML(mapUrl) + '" target="_blank" rel="noopener noreferrer">' + t("route") + "</a>" : "";
+    var source = sourceUrl ? '<a href="' + escapeHTML(sourceUrl) + '" target="_blank" rel="noopener noreferrer">' + t("source") + "</a>" : "";
     var saved = favorites.has(service.id);
     var reasons = translateReasons(service);
     var verified = service.verified ? " - " + t("checkedAt") + " " + escapeHTML(service.verified) : "";
@@ -1074,7 +1117,7 @@
         var id = btn.dataset.favorite;
         if (favorites.has(id)) favorites.delete(id);
         else favorites.add(id);
-        localStorage.setItem("pi_favorites", JSON.stringify(Array.from(favorites)));
+        writeStorage("pi_favorites", JSON.stringify(Array.from(favorites)));
         renderServices();
         showToast(favorites.has(id) ? t("favoriteAdded") : t("favoriteRemoved"));
       });
@@ -1131,7 +1174,7 @@
   $("clearFilters").addEventListener("click", clearFilters);
   $("resetSteps").addEventListener("click", function () {
     checklist = {};
-    localStorage.setItem("pi_checklist", "{}");
+    writeStorage("pi_checklist", "{}");
     renderSteps();
     showToast(t("resetToast"));
   });
@@ -1143,20 +1186,22 @@
   $("contrastButton").addEventListener("click", function () {
     var active = document.body.classList.toggle("contrast");
     this.setAttribute("aria-pressed", String(active));
-    localStorage.setItem("pi_contrast", active ? "1" : "0");
+    writeStorage("pi_contrast", active ? "1" : "0");
   });
   $("fontButton").addEventListener("click", function () {
     var current = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--font-size"), 10) || 16;
     var next = current >= 20 ? 16 : current + 2;
     document.documentElement.style.setProperty("--font-size", next + "px");
-    localStorage.setItem("pi_font", String(next));
+    writeStorage("pi_font", String(next));
   });
 
-  if (localStorage.getItem("pi_contrast") === "1") {
+  if (readStorage("pi_contrast") === "1") {
     document.body.classList.add("contrast");
     $("contrastButton").setAttribute("aria-pressed", "true");
   }
-  document.documentElement.style.setProperty("--font-size", (localStorage.getItem("pi_font") || "16") + "px");
+  var storedFont = parseInt(readStorage("pi_font"), 10);
+  var safeFont = [16, 18, 20].indexOf(storedFont) >= 0 ? storedFont : 16;
+  document.documentElement.style.setProperty("--font-size", safeFont + "px");
   if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) {
     navigator.serviceWorker.register("sw.js").catch(function () {});
   }

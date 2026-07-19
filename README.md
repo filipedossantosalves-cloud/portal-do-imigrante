@@ -107,6 +107,22 @@ node scripts/audit-project.js
 
 `clean-promoted-drafts.js` runs in dry-run mode by default. Use `--write` only after reviewing the listed exact matches.
 
+## Security and privacy
+
+The deployed portal is static and has no login, server database, analytics, or
+personal-data form. Favorites, language, accessibility preferences, and the
+six-step checklist stay in browser storage on the user's device.
+
+Browser-delivered HTML, CSS, JavaScript, and public JSON are visible by design.
+No token, password, private key, personal document, or private research note may
+be added to them. Research drafts, discovered-source files, and validation
+reports are local-only and excluded by `.gitignore`.
+
+The project applies a restrictive Content Security Policy, validates external
+URLs before rendering them, isolates its service-worker cache, and runs the
+same security and data audit on GitHub Actions. See `SECURITY.md` for reporting
+and publication rules.
+
 ## Built with
 
 HTML, CSS, JavaScript, JSON, Node.js, OpenAI GPT-5.6 through Codex, public government sources, and official city/state/federal service pages.
@@ -115,7 +131,17 @@ GPT-5.6 and Codex were used as development and research assistants for restructu
 
 ## License and attribution
 
-The project code is released under the MIT License. Public-service information remains attributed to its original sources, and the license does not replace the terms or authority of those sources.
+Copyright (c) 2026 Filipe dos Santos Alves. All rights reserved.
+
+The source code, interface, visual identity, original writing, research
+workflow, validation methodology, and data organization may not be copied,
+modified, redistributed, or used in derivative products without prior written
+permission. Public-service facts and third-party materials remain attributed
+to and governed by their original sources. See `LICENSE` and `NOTICE.md`.
+
+Versions previously distributed under the MIT License remain governed by the
+license attached to those versions. The reserved license applies to this
+version and future releases.
 
 ## Devpost positioning
 

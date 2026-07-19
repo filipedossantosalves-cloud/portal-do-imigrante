@@ -1,4 +1,5 @@
-const CACHE = "portal-imigrante-v34";
+const CACHE_PREFIX = "portal-imigrante-";
+const CACHE = CACHE_PREFIX + "v35";
 const CORE = [
   "./",
   "index.html",
@@ -29,10 +30,41 @@ const CORE = [
   "research-desk/data.js",
 ];
 
+const CORE_URLS = new Set(CORE.map(function (path) {
+  return new URL(path, self.registration.scope).href;
+}));
+
+function cacheKey(request) {
+  const url = new URL(request.url);
+  url.hash = "";
+  url.search = "";
+  return url.href;
+}
+
+function canCache(response) {
+  return response && response.ok && response.type === "basic";
+}
+
+async function networkFirst(request, key, fallbackKey) {
+  try {
+    const response = await fetch(request);
+    if (CORE_URLS.has(key) && canCache(response)) {
+      const cache = await caches.open(CACHE);
+      await cache.put(key, response.clone());
+    }
+    return response;
+  } catch (error) {
+    const cached = await caches.match(key);
+    if (cached) return cached;
+    if (fallbackKey) return caches.match(fallbackKey);
+    throw error;
+  }
+}
+
 self.addEventListener("install", function (event) {
   event.waitUntil(
     caches.open(CACHE).then(function (cache) {
-      return cache.addAll(CORE);
+      return cache.addAll(Array.from(CORE_URLS));
     }),
   );
   self.skipWaiting();
@@ -44,7 +76,7 @@ self.addEventListener("activate", function (event) {
       return Promise.all(
         keys
           .filter(function (key) {
-            return key !== CACHE;
+            return key.startsWith(CACHE_PREFIX) && key !== CACHE;
           })
           .map(function (key) {
             return caches.delete(key);
@@ -59,36 +91,15 @@ self.addEventListener("fetch", function (event) {
   const request = event.request;
   const url = new URL(request.url);
   if (request.method !== "GET" || url.origin !== self.location.origin) return;
+  if (!url.href.startsWith(self.registration.scope)) return;
 
+  const key = cacheKey(request);
   if (request.mode === "navigate") {
-    event.respondWith(
-      fetch(request)
-        .then(function (response) {
-          if (response.ok) {
-            const copy = response.clone();
-            event.waitUntil(caches.open(CACHE).then(function (cache) { return cache.put(request, copy); }));
-          }
-          return response;
-        })
-        .catch(function () {
-          return caches.match(request).then(function (hit) {
-            return hit || caches.match("index.html");
-          });
-        }),
-    );
+    event.respondWith(networkFirst(request, key, new URL("./", self.registration.scope).href));
     return;
   }
 
-  event.respondWith(
-    caches.match(request).then(function (hit) {
-      if (hit) return hit;
-      return fetch(request).then(function (response) {
-        if (response.ok) {
-          const copy = response.clone();
-          event.waitUntil(caches.open(CACHE).then(function (cache) { return cache.put(request, copy); }));
-        }
-        return response;
-      });
-    }),
-  );
+  if (CORE_URLS.has(key)) {
+    event.respondWith(networkFirst(request, key));
+  }
 });
